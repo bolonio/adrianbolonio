@@ -1,9 +1,9 @@
 import { BlogPostContainer } from "@components/BlogPostContainer"
+import { PageHeading } from "@components/core/Headings"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import introImage from "@images/blog.jpg"
 import { getBlogPosts } from "@lib/blog"
-import { PageHeading } from "@components/core/Headings"
 import Image from "next/image"
 import { useRouter } from "next/router"
 
@@ -28,7 +28,7 @@ const Blog = ({
       />
       <Image src={introImage} alt="" hidden />
       <PageLayoutContent>
-        <PageHeading text="Blog" />
+        <PageHeading level={1}>Blog</PageHeading>
         <BlogPostContainer posts={posts} />
       </PageLayoutContent>
     </section>

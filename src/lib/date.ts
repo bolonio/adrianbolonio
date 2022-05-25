@@ -17,7 +17,10 @@ const MONTHS = [
  * Returns a date formatted with the format DD mm YYYY
  * @param date
  */
-export const getFormattedDate = (date: string, locale: string): string => {
+export const getFormattedDate = (
+  date: string,
+  locale: string | undefined = "en"
+): string => {
   const formattedDate = new Date(date)
   return formattedDate.getTime()
     ? `${formattedDate.getDate()} ${getMonthName(
@@ -29,7 +32,7 @@ export const getFormattedDate = (date: string, locale: string): string => {
 
 export const getFormattedDateMMMYYYY = (
   date: string,
-  locale: string
+  locale: string | undefined = "en"
 ): string => {
   const formattedDate = new Date(date)
   return formattedDate.getTime()
@@ -45,7 +48,7 @@ export const getFormattedDateYYYY = (date: string): string => {
   return formattedDate.getTime() ? formattedDate.getFullYear().toString() : date
 }
 
-const getMonthName = (idx: number, locale: string) => {
+const getMonthName = (idx: number, locale: string | undefined = "en") => {
   var objDate = new Date()
   objDate.setDate(1)
   objDate.setMonth(idx)

@@ -1,11 +1,11 @@
+import Box from "@components/core/Box"
+import { PageHeading } from "@components/core/Headings"
+import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { TalkCard } from "@components/TalkCard"
 import { talks } from "@data/talks"
 import introImage from "@images/talks.jpg"
-import Box from "@components/core/Box"
-import { PageHeading } from "@components/core/Headings"
-import Text from "@components/core/Text"
 import type { NextPage } from "next"
 import Image from "next/image"
 import { useRouter } from "next/router"
@@ -25,7 +25,9 @@ const Home: NextPage = () => {
       />
       <Image src={introImage} alt="" />
       <PageLayoutContent>
-        <PageHeading text={intl.formatMessage({ id: "title_talks" })} />
+        <PageHeading level={1}>
+          {intl.formatMessage({ id: "title_talks" })}
+        </PageHeading>
         <Text as="p" fontSize="1.5rem" lineHeight="2rem" fontWeight={300}>
           <FormattedMessage
             id={"speaker_invitation"}

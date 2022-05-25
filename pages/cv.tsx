@@ -1,3 +1,6 @@
+import Box from "@components/core/Box"
+import { PageHeading } from "@components/core/Headings"
+import Text from "@components/core/Text"
 import { Contact } from "@components/cv/Contact"
 import { EducationCard } from "@components/cv/EducationCard"
 import { JobCard } from "@components/cv/JobCard"
@@ -5,9 +8,6 @@ import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { cv, EducationItemType, JobItemType } from "@data/cv"
 import { getBlogPosts } from "@lib/blog"
-import Box from "@components/core/Box"
-import { PageHeading } from "@components/core/Headings"
-import Text from "@components/core/Text"
 import { useRouter } from "next/router"
 import { FormattedMessage, useIntl } from "react-intl"
 
@@ -40,7 +40,7 @@ const Home = ({
           marginBottom="16px"
         >
           <Box>
-            <PageHeading text="Adrián Bolonio" />
+            <PageHeading level={1}>Adrián Bolonio</PageHeading>
             <Text
               as="p"
               fontSize="1.5rem"

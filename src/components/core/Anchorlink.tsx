@@ -5,6 +5,7 @@ type AnchorlinkProps = PropsWithChildren<{
   target?: string
   inverted?: boolean
   underlined?: boolean
+  rel?: string
 }>
 
 const Link = styled.a<AnchorlinkProps>`

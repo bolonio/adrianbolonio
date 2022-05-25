@@ -1,8 +1,8 @@
+import { PageHeading } from "@components/core/Headings"
+import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import introImage from "@images/about.jpg"
-import { PageHeading } from "@components/core/Headings"
-import Text from "@components/core/Text"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import { FormattedMessage, useIntl } from "react-intl"
@@ -20,7 +20,9 @@ const About = () => {
       />
       <Image src={introImage} alt="" />
       <PageLayoutContent>
-        <PageHeading text={intl.formatMessage({ id: "title_about" })} />
+        <PageHeading level={1}>
+          {intl.formatMessage({ id: "title_about" })}
+        </PageHeading>
         <Text as="p" fontSize="1.5rem" lineHeight="2rem" fontWeight={300}>
           <FormattedMessage id="bio" />
         </Text>

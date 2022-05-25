@@ -34,9 +34,9 @@ const Tag = ({
       />
       <Image src={introImage} alt="" hidden />
       <PageLayoutContent>
-        <PageHeading
-          text={`${intl.formatMessage({ id: "title_tag" })}: ${tag}`}
-        />
+        <PageHeading level={1}>
+          {`${intl.formatMessage({ id: "title_tag" })}: ${tag}`}
+        </PageHeading>
         <BlogPostContainer posts={posts} />
       </PageLayoutContent>
     </section>

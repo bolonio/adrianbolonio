@@ -1,11 +1,11 @@
 import { BlogPostContainer } from "@components/BlogPostContainer"
+import Box from "@components/core/Box"
+import { PageHeading } from "@components/core/Headings"
+import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import introImage from "@images/about.jpg"
 import { getBlogPosts } from "@lib/blog"
-import Box from "@components/core/Box"
-import { PageHeading } from "@components/core/Headings"
-import Text from "@components/core/Text"
 import Image from "next/image"
 import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
@@ -35,10 +35,9 @@ const Home = ({
           alignItems="baseline"
           justifyContent="space-between"
         >
-          <PageHeading
-            text={intl.formatMessage({ id: "latest_post" })}
-            as="h2"
-          />
+          <PageHeading level={2}>
+            {intl.formatMessage({ id: "latest_post" })}
+          </PageHeading>
           <Link href="/blog" passHref>
             <a>
               <Text fontSize="1.5rem" fontWeight={700}>

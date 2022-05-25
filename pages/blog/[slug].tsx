@@ -174,7 +174,7 @@ const BlogPost = ({
         {relatedPosts.length > 0 && (
           <RelatedPostsContainer display="flex">
             <PageLayoutContent>
-              <PageHeading text="Related Posts" as="h2" />
+              <PageHeading level={2}>Related Posts</PageHeading>
               <BlogPostContainer posts={relatedPosts} />
             </PageLayoutContent>
           </RelatedPostsContainer>

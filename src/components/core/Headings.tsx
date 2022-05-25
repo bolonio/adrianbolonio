@@ -1,23 +1,26 @@
 import styled from "styled-components"
-import Text from "@components/core/Text"
+import { typography, TypographyProps } from "styled-system"
 
-const PageHeadingStyled = styled(Text)`
-  margin-bottom: 32px !important;
-`
+export type HeadingProps = TypographyProps
 
-type PageHeading = { text: string; as?: string }
+const HeadingBase = ({
+  level = 1,
+  as: Component = `h${level}`,
+  ...props
+}: {
+  [x: string]: any
+  level: number
+  as?: string | undefined
+}) => <Component {...props} />
 
-export const PageHeading = ({ text, as = "h1" }: PageHeading) => {
-  return (
-    <PageHeadingStyled
-      as={as}
-      fontSize="5rem"
-      fontWeight={800}
-      letterSpacing="-.03em"
-      lineHeight="76px"
-      style={{ margin: 0 }}
-    >
-      {text}
-    </PageHeadingStyled>
-  )
-}
+export const PageHeading = styled(HeadingBase)(
+  {
+    margin: 0,
+    fontSize: "5rem",
+    fontWeight: 800,
+    letterSpacing: "-.03em",
+    lineHeight: "76px",
+    marginBottom: "32px",
+  },
+  typography
+)

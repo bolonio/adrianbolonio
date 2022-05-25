@@ -5,5 +5,4 @@ package = "@netlify/plugin-nextjs"
 included_files = [
   "!node_modules/playwright-aws-lambda/**/*",
   "!node_modules/playwright-core/**/*",
-  "!node_modules/sharp/**/*",
   ]

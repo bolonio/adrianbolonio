@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# adrianbolonio.com
 
-## Getting Started
+<img src="https://pbs.twimg.com/profile_banners/22399077/1615901743/1500x500" alt="A banner with my logo and the url of my website: www.adrianbolonio.com" />
 
-First, run the development server:
+Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineering at [GitHub](https://github.com/) as part of a talented, diverse, and motivated team that will work on making GitHub and the Internet a better and more accessible place for everyone.
 
-```bash
-npm run dev
-# or
-yarn dev
+When I’m not at the office I enjoy a good read, working my way through any delicious recipe, and indulging my love for travelling to new places.
+
+I write post about frontend and web accessibility in my [blog](http://adrianbolonio.com/en/blog), and as well I regularly give talks at conferences about accessibility. You can find my [speaker experience in my website](http://adrianbolonio.com/en/talks).
+
+### You can find me in:
+
+- Web: [adrianbolonio.com](http://adrianbolonio.com/)
+- Twitter: [@bolonio](https://twitter.com/bolonio)
+- LinkedIn: [bolonio](https://linkedin.com/in/adrianbolonio)
+
+## Running it locally
+
+1.  **Fork and clone** the repo on GitHub.
+2.  **Configure and install** the dependencies.
+
+```
+$ yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3.  **Run** the project.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+$ yarn dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+4. You can **open** `http://localhost:3000/` in your browser
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contributing
 
-## Learn More
+If you have any suggestion for how this project could be improved, please read the [contributing guidelines](https://github.com/bolonio/adrianbolonio/blob/master/CONTRIBUTING.md).
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+http://adrianbolonio.com/ is my personal website and is created by [Adrián Bolonio](https://twitter.com/bolonio).

@@ -1,3 +1,4 @@
+import Link, { LinkProps as NextLinkProps } from "next/link"
 import { PropsWithChildren } from "react"
 import styled from "styled-components"
 
@@ -8,7 +9,7 @@ type AnchorlinkProps = PropsWithChildren<{
   rel?: string
 }>
 
-const Link = styled.a<AnchorlinkProps>`
+const AnchorlinkStyled = styled.a<AnchorlinkProps>`
   color: ${(props) => props.theme.secondary};
   text-decoration: ${(props) => (props.underlined ? "" : "none !important;")};
 
@@ -25,6 +26,20 @@ const Link = styled.a<AnchorlinkProps>`
   }
 `
 
-export const Anchorlink = ({ children, ...rest }: AnchorlinkProps) => (
-  <Link {...rest}>{children}</Link>
+export const Anchorlink = ({
+  children,
+  href,
+  target,
+  inverted,
+  underlined,
+}: AnchorlinkProps & NextLinkProps) => (
+  <Link href={href} passHref>
+    <AnchorlinkStyled
+      target={target}
+      inverted={inverted}
+      underlined={underlined}
+    >
+      {children}
+    </AnchorlinkStyled>
+  </Link>
 )

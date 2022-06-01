@@ -7,6 +7,7 @@ import Link from "next/link"
 import React, { PropsWithChildren, useContext, useState } from "react"
 import { FormattedMessage, useIntl } from "react-intl"
 import styled from "styled-components"
+import Box from "./core/Box"
 import { LanguageSelector } from "./LanguageSelector"
 import { ThemeSwitcher } from "./ThemeSwitcher"
 
@@ -52,7 +53,7 @@ const HeaderMenuLink = styled.a`
   color: ${(props) => props.theme.secondary};
 
   @media screen and (max-width: 700px) {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 
   :focus {
@@ -82,6 +83,7 @@ const BurgerMenuContainer = styled.div`
   width: 100%;
   top: 80px;
   height: 100%;
+  padding-top: 32px;
 `
 
 const BurgerMenuButton = styled.button`
@@ -168,8 +170,10 @@ export const Header = ({ alternate }: HeaderProps) => {
                     </HeaderMenuLink>
                   </Link>
                 ))}
-                <ThemeSwitcher />
-                <LanguageSelector alternate={alternate} />
+                <Box display="flex" gridGap="24px">
+                  <ThemeSwitcher />
+                  <LanguageSelector alternate={alternate} />
+                </Box>
               </BurgerMenuContainer>
             )}
           </HeaderBurgerMenu>

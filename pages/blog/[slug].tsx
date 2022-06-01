@@ -7,14 +7,12 @@ import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { languages } from "@data/languages"
 import { getBlogPostBySlug, getBlogPostsByTag } from "@lib/blog"
-import { PrismjsStyles } from "@lib/prismjs"
+import { HightlightStyles } from "@lib/hightlightStyles"
 import fs from "fs"
 import type { GetStaticProps } from "next"
-import Link from "next/link"
 import { useRouter } from "next/router"
-import Prism from "prismjs"
-import { useEffect } from "react"
 import ReactMarkdown from "react-markdown"
+import rehypeHighlight from "rehype-highlight"
 import { getFormattedDate } from "src/lib/date"
 import styled, { createGlobalStyle } from "styled-components"
 
@@ -84,31 +82,23 @@ const BlogPost = ({
   content: string
 }) => {
   const { locale } = useRouter()
-  useEffect(() => {
-    Prism.highlightAll()
-  }, [locale])
   return (
     <>
       <BlogPostStyles />
-      <PrismjsStyles />
+      <HightlightStyles />
       <SEO
         metadata={{
           title: frontmatter.title,
           description: frontmatter.description,
           slug: `${locale === "es" ? "es/" : ""}blog/${slug}`,
           image: {
-            path: `/api/og-image?title=${frontmatter.title}`,
+            path: `/images/blog/${slug}/${frontmatter.image}`,
             alt: frontmatter.imageAlt,
           },
           date: frontmatter.publishedAt,
         }}
       />
       <section>
-        {/* <OGImageTemplate
-          title={frontmatter.title}
-          publishedAt={frontmatter.publishedAt}
-          slug={slug}
-        /> */}
         <PageLayoutContent>
           <Box display="flex" flexDirection="column">
             <Text
@@ -131,18 +121,16 @@ const BlogPost = ({
                 {getFormattedDate(frontmatter.publishedAt, locale)}
               </Text>
               {frontmatter.tags.map((tag: string) => (
-                <Link key={tag} href={`/blog/tag/${tag}`} passHref>
-                  <Anchorlink underlined>
-                    <Text
-                      fontSize="1.5rem"
-                      fontWeight={700}
-                      letterSpacing="-.03em"
-                      lineHeight="1.5rem"
-                    >
-                      {tag}
-                    </Text>
-                  </Anchorlink>
-                </Link>
+                <Anchorlink key={tag} href={`/blog/tag/${tag}`} underlined>
+                  <Text
+                    fontSize="1.5rem"
+                    fontWeight={700}
+                    letterSpacing="-.03em"
+                    lineHeight="1.5rem"
+                  >
+                    {tag}
+                  </Text>
+                </Anchorlink>
               ))}
             </Box>
             <Text
@@ -154,12 +142,10 @@ const BlogPost = ({
               {frontmatter.description}
             </Text>
           </Box>
-          {/* <HeroImage src={`/images/blog/${slug}/${frontmatter.image}`} /> */}
-          <HeroImage
-            src={`/api/og-image/?title=${frontmatter.title}&publishedAt=${frontmatter.publishedAt}&slug=${slug}&locale=${locale}`}
-          />
+          <HeroImage src={`/images/blog/${slug}/${frontmatter.image}`} />
           <StyledReactMarkdown
             className="post-container"
+            rehypePlugins={[rehypeHighlight]}
             components={{
               pre: ({ node, children, ...props }) => (
                 <div className="highlight">
@@ -211,9 +197,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { content, frontmatter } = await getBlogPostBySlug(
     context?.params?.slug as string
   )
-
   const relatedPosts = await getBlogPostsByTag(frontmatter.tags[0], 2)
-
   return {
     props: {
       relatedPosts,

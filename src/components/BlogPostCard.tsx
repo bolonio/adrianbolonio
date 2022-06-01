@@ -2,7 +2,6 @@ import { Anchorlink } from "@components/core/Anchorlink"
 import Box from "@components/core/Box"
 import Text from "@components/core/Text"
 import { getFormattedDate } from "@lib/date"
-import Link from "next/link"
 import { useRouter } from "next/router"
 import React from "react"
 import { useIntl } from "react-intl"
@@ -21,30 +20,28 @@ const PostTitle = styled.h2`
   margin-bottom: 10px;
 `
 
-export const BlogPostCard = ({
-  direction = "vertical",
-  slug,
-  frontmatter,
-}: BlogPostCardProps) => {
-  const { locale } = useRouter()
-  const intl = useIntl()
+type PropsWithDirection = {
+  direction: string
+}
 
-  const PostContainer = styled.div`
-    display: flex;
-    flex-direction: ${direction === "horizontal" ? "row" : "column"};
-    align-items: flex-start;
-    @media screen and (max-width: 700px) {
-      flex-direction: column;
-    }
+const PostContainer = styled.div<PropsWithDirection>`
+  display: flex;
+  flex-direction: ${(props) =>
+    props.direction === "horizontal" ? "row" : "column"};
+  align-items: flex-start;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
 
-    ${direction === "horizontal" ? `` : `max-width: 350px`};
-  `
+  ${(props) => (props.direction === "horizontal" ? `` : `max-width: 350px`)};
+`
 
-  const PostImage = styled.img`
-    margin-bottom: 0px;
-    border-radius: 8px;
+const PostImage = styled.img<PropsWithDirection>`
+  margin-bottom: 0px;
+  border-radius: 8px;
 
-    ${direction === "horizontal"
+  ${(props) =>
+    props.direction === "horizontal"
       ? `
         max-width: 350px;
         @media screen and (max-width: 1000px) {
@@ -54,37 +51,44 @@ export const BlogPostCard = ({
           max-width: 100%;
         }`
       : `max-width: 350px;`};
-  `
+`
+
+export const BlogPostCard = ({
+  direction = "vertical",
+  slug,
+  frontmatter,
+}: BlogPostCardProps) => {
+  const { locale } = useRouter()
+  const intl = useIntl()
 
   return (
-    <PostContainer>
+    <PostContainer direction={direction}>
       <Box
         position="relative"
         display="flex"
         marginRight={[0, 3, 3]}
-        marginBottom={[3, 0, 0]}
+        marginBottom={[3, 3, 0]}
       >
         <PostImage
           alt={frontmatter.imageAlt}
-          src={`/api/og-image/?title=${frontmatter.title}&publishedAt=${frontmatter.publishedAt}&slug=${slug}`}
-          // src={`/images/blog/${slug}/${frontmatter.image}`}
+          // src={`/api/og-image/?slug=${slug}`}
+          src={`/images/blog/${slug}/${frontmatter.image}`}
+          direction={direction}
         />
       </Box>
       <Box display="flex" flexDirection="column">
         <PostTitle>
-          <Link href={`/blog/${slug}`} passHref>
-            <Anchorlink underlined>
-              <Text
-                fontSize="2rem"
-                fontWeight={800}
-                letterSpacing="-.03em"
-                lineHeight="2rem"
-                style={{ margin: 0 }}
-              >
-                {frontmatter.title}
-              </Text>
-            </Anchorlink>
-          </Link>
+          <Anchorlink href={`/blog/${slug}`} underlined>
+            <Text
+              fontSize="2rem"
+              fontWeight={800}
+              letterSpacing="-.03em"
+              lineHeight="2rem"
+              style={{ margin: 0 }}
+            >
+              {frontmatter.title}
+            </Text>
+          </Anchorlink>
         </PostTitle>
         <Box display="flex" gridGap="16px" marginBottom={2}>
           <Text
@@ -97,24 +101,24 @@ export const BlogPostCard = ({
             {getFormattedDate(frontmatter.publishedAt, locale)}
           </Text>
           {frontmatter.tags.map((tag: string) => (
-            <Link key={tag} href={`/blog/tag/${tag}`} passHref>
-              <Anchorlink
-                underlined
-                aria-label={intl.formatMessage(
-                  { id: "see_posts_with_tag" },
-                  { tag }
-                )}
+            <Anchorlink
+              key={tag}
+              href={`/blog/tag/${tag}`}
+              underlined
+              aria-label={intl.formatMessage(
+                { id: "see_posts_with_tag" },
+                { tag }
+              )}
+            >
+              <Text
+                fontSize="1.25rem"
+                fontWeight={600}
+                letterSpacing="-.03em"
+                lineHeight="1.5rem"
               >
-                <Text
-                  fontSize="1.25rem"
-                  fontWeight={600}
-                  letterSpacing="-.03em"
-                  lineHeight="1.5rem"
-                >
-                  {tag}
-                </Text>
-              </Anchorlink>
-            </Link>
+                {tag}
+              </Text>
+            </Anchorlink>
           ))}
         </Box>
         <Text fontWeight="300" fontSize="1.25rem" lineHeight="1.25">

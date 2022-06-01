@@ -1,7 +1,6 @@
+import { BlogPostCard } from "@components/BlogPostCard"
 import { useRouter } from "next/router"
-import React from "react"
 import styled from "styled-components"
-import { BlogPostCard } from "./BlogPostCard"
 
 type BlogPostContainerProps = {
   direction?: "horizontal" | "vertical"
@@ -14,6 +13,24 @@ type BlogPostContainerProps = {
   }[]
 }
 
+type PropsWithDirection = {
+  direction: string
+}
+
+const PostsContainer = styled.div<PropsWithDirection>`
+  display: flex;
+  flex-direction: ${(props) =>
+    props.direction === "vertical" ? "row" : "column"};
+  flex-wrap: ${(props) => (props.direction === "vertical" ? "wrap" : "")};
+  justify-content: center;
+  gap: 24px;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: "row";
+    flex-wrap: "wrap";
+  }
+`
+
 export const BlogPostContainer = ({
   direction = "horizontal",
   limit,
@@ -23,21 +40,9 @@ export const BlogPostContainer = ({
   const filteredPosts = posts
     .filter(({ frontmatter }) => frontmatter.locale === locale)
     .slice(0, limit)
-  const PostsContainer = styled.div`
-    display: flex;
-    flex-direction: ${direction === "vertical" ? "row" : "column"};
-    flex-wrap: ${direction === "vertical" ? "wrap" : ""};
-    justify-content: center;
-    gap: 24px;
-
-    @media screen and (max-width: 700px) {
-      flex-direction: "row";
-      flex-wrap: "wrap";
-    }
-  `
 
   return (
-    <PostsContainer>
+    <PostsContainer direction={direction}>
       {filteredPosts.map(({ slug, frontmatter }) => (
         <BlogPostCard
           key={slug}

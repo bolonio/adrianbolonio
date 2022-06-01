@@ -3,7 +3,6 @@ import Box from "@components/core/Box"
 import Text from "@components/core/Text"
 import { EducationItemType } from "@data/cv"
 import { getFormattedDateMMMYYYY } from "@lib/date"
-import Link from "next/link"
 import { useRouter } from "next/router"
 import React from "react"
 import styled from "styled-components"
@@ -58,20 +57,18 @@ export const EducationCard = ({ education }: EducationCardProps) => {
           {education.degree}
         </Text>
         <Box display="flex" justifyContent="space-between">
-          <Link href={education.schoolUrl} passHref>
-            <Anchorlink target="_blank" underlined>
-              <Text
-                fontSize="1.5rem"
-                fontWeight={700}
-                letterSpacing="-.03em"
-                lineHeight="1.5rem"
-                style={{ margin: 0 }}
-              >
-                {education.school} ({education.location.city},{" "}
-                {education.location.country.name})
-              </Text>
-            </Anchorlink>
-          </Link>
+          <Anchorlink href={education.schoolUrl} target="_blank" underlined>
+            <Text
+              fontSize="1.5rem"
+              fontWeight={700}
+              letterSpacing="-.03em"
+              lineHeight="1.5rem"
+              style={{ margin: 0 }}
+            >
+              {education.school} ({education.location.city},{" "}
+              {education.location.country.name})
+            </Text>
+          </Anchorlink>
           <Text
             fontSize="1.25rem"
             fontWeight={700}

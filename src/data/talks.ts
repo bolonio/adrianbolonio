@@ -26,7 +26,7 @@ export const talks = [
         date: "05/07/2022",
         location: "Tenerife, Spain",
         link: "https://jsdaycanarias.com/",
-        video: "",
+        video: "https://www.youtube.com/watch?v=f3C_7Hf7AmI",
         image: "canariasjs.jpg",
       },
       {

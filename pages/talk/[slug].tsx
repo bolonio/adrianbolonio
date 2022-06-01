@@ -1,15 +1,13 @@
+import Box from "@components/core/Box"
+import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { languages } from "@data/languages"
-import { PrismjsStyles } from "@lib/prismjs"
+import { HightlightStyles } from "@lib/hightlightStyles"
 import { getTalkBySlug } from "@lib/talks"
-import Box from "@components/core/Box"
-import Text from "@components/core/Text"
 import fs from "fs"
 import type { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import Prism from "prismjs"
-import { useEffect } from "react"
 import ReactMarkdown from "react-markdown"
 import { getFormattedDate } from "src/lib/date"
 import styled, { createGlobalStyle } from "styled-components"
@@ -68,21 +66,18 @@ const TalkPage = ({
   }
   content: string
 }) => {
-  useEffect(() => {
-    Prism.highlightAll()
-  }, [])
   const { locale } = useRouter()
   return (
     <>
       <BlogPostStyles />
-      <PrismjsStyles />
+      <HightlightStyles />
       <SEO
         metadata={{
           title: frontmatter.title,
           description: frontmatter.description,
           slug: `${locale === "es" ? "es/" : ""}talk/${slug}`,
           image: {
-            path: `/api/og-image?title=${frontmatter.title}`,
+            path: `/api/og-image?slug=${slug}`,
             alt: frontmatter.imageAlt,
           },
           date: frontmatter.publishedAt,
@@ -120,9 +115,6 @@ const TalkPage = ({
               {frontmatter.description}
             </Text>
           </Box>
-          {/* <HeroImage
-            src={`/api/og-image/?title=${frontmatter.title}&publishedAt=${frontmatter.publishedAt}&slug=${slug}`}
-          /> */}
           <iframe
             width="100%"
             height="580px"

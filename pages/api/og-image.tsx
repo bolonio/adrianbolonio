@@ -1,4 +1,5 @@
 import { OGImageTemplate } from "@components/OGImageTemplate"
+import { getBlogPostBySlug } from "@lib/blog"
 import { NextApiRequest, NextApiResponse } from "next"
 import * as playwright from "playwright-aws-lambda"
 import { createElement } from "react"
@@ -31,14 +32,16 @@ const getHtmlData = ({ body, baseCSS }: { body: string; baseCSS: string }) => {
 
 const og = async (req: NextApiRequest, res: NextApiResponse) => {
   const {
-    query: { title, publishedAt, slug, locale },
+    query: { slug },
   } = req
 
+  const { frontmatter } = await getBlogPostBySlug(slug as string)
+
   const el = createElement(OGImageTemplate, {
-    title: title as string,
-    publishedAt: publishedAt as string,
+    title: frontmatter.title as string,
+    publishedAt: frontmatter.publishedAt as string,
     slug: slug as string,
-    locale: locale as string,
+    locale: frontmatter.locale as string,
   })
   const elementWithCollectedStyles = serverStyleSheet.collectStyles(el)
   const body = renderToStaticMarkup(elementWithCollectedStyles)
@@ -71,6 +74,7 @@ const og = async (req: NextApiRequest, res: NextApiResponse) => {
       height,
     },
     omitBackground: true,
+    path: `./public/images/blog/${slug}/intro.png`,
   })
 
   await browser.close()

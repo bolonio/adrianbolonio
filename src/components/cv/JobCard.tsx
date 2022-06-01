@@ -3,7 +3,6 @@ import Box from "@components/core/Box"
 import Text from "@components/core/Text"
 import { JobItemType } from "@data/cv"
 import { getFormattedDateMMMYYYY } from "@lib/date"
-import Link from "next/link"
 import { useRouter } from "next/router"
 import React from "react"
 import styled from "styled-components"
@@ -58,19 +57,17 @@ export const JobCard = ({ job }: JobCardProps) => {
           {job.title}
         </Text>
         <Box display="flex" justifyContent="space-between">
-          <Link href={job.companyUrl} passHref>
-            <Anchorlink target="_blank" underlined>
-              <Text
-                fontSize="1.5rem"
-                fontWeight={700}
-                letterSpacing="-.03em"
-                lineHeight="1.5rem"
-                style={{ margin: 0 }}
-              >
-                {job.company}
-              </Text>
-            </Anchorlink>
-          </Link>
+          <Anchorlink href={job.companyUrl} target="_blank" underlined>
+            <Text
+              fontSize="1.5rem"
+              fontWeight={700}
+              letterSpacing="-.03em"
+              lineHeight="1.5rem"
+              style={{ margin: 0 }}
+            >
+              {job.company}
+            </Text>
+          </Anchorlink>
           <Text
             fontSize="1.25rem"
             fontWeight={700}

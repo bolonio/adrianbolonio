@@ -1,10 +1,9 @@
-import { contacts } from "@data/contact"
-import { ThemeContext } from "@providers/ThemeProvider"
 import { Anchorlink } from "@components/core/Anchorlink"
 import Box from "@components/core/Box"
 import Text from "@components/core/Text"
+import { contacts } from "@data/contact"
+import { ThemeContext } from "@providers/ThemeProvider"
 import Image from "next/image"
-import Link from "next/link"
 import React, { useContext } from "react"
 import { useIntl } from "react-intl"
 import styled from "styled-components"
@@ -43,19 +42,17 @@ export const Contact = () => {
             }
             alt={`${contact.name} logo`}
           />
-          <Link href={contact.url} passHref>
-            <Anchorlink target="_blank" underlined>
-              <Text
-                fontSize="1.5rem"
-                fontWeight={700}
-                letterSpacing="-.03em"
-                lineHeight="1.5rem"
-                style={{ margin: 0 }}
-              >
-                {intl.formatMessage({ id: contact.name })}
-              </Text>
-            </Anchorlink>
-          </Link>
+          <Anchorlink href={contact.url} target="_blank" underlined>
+            <Text
+              fontSize="1.5rem"
+              fontWeight={700}
+              letterSpacing="-.03em"
+              lineHeight="1.5rem"
+              style={{ margin: 0 }}
+            >
+              {intl.formatMessage({ id: contact.name })}
+            </Text>
+          </Anchorlink>
         </Box>
       ))}
     </Box>

@@ -2,7 +2,6 @@ import { Anchorlink } from "@components/core/Anchorlink"
 import Box from "@components/core/Box"
 import Text from "@components/core/Text"
 import { getFormattedDateMMMYYYY } from "@lib/date"
-import Link from "next/link"
 import { useRouter } from "next/router"
 import React from "react"
 import styled from "styled-components"
@@ -77,19 +76,17 @@ export const TalkCard = ({ talk }: TalkCardProps) => {
         justifyContent="space-between"
       >
         <TalkTitle>
-          <Link href={talk.link} passHref>
-            <Anchorlink target="_blank">
-              <Text
-                fontSize="2rem"
-                fontWeight={800}
-                letterSpacing="-.03em"
-                lineHeight="2rem"
-                style={{ margin: 0 }}
-              >
-                {talk.conference}
-              </Text>
-            </Anchorlink>
-          </Link>
+          <Anchorlink href={talk.link} target="_blank">
+            <Text
+              fontSize="2rem"
+              fontWeight={800}
+              letterSpacing="-.03em"
+              lineHeight="2rem"
+              style={{ margin: 0 }}
+            >
+              {talk.conference}
+            </Text>
+          </Anchorlink>
         </TalkTitle>
         <Text
           fontSize="1.25rem"
@@ -104,13 +101,11 @@ export const TalkCard = ({ talk }: TalkCardProps) => {
           {talk.location}
         </Text>
         {talk.video && (
-          <Link href={talk.video} passHref>
-            <Anchorlink target="_blank">
-              <Text fontWeight="300" fontSize="1.25rem" lineHeight="1.25">
-                Watch video
-              </Text>
-            </Anchorlink>
-          </Link>
+          <Anchorlink href={talk.video} target="_blank">
+            <Text fontWeight="300" fontSize="1.25rem" lineHeight="1.25">
+              Watch video
+            </Text>
+          </Anchorlink>
         )}
       </Box>
     </PostContainer>

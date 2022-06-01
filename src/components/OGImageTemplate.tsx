@@ -1,9 +1,9 @@
+import Box from "@components/core/Box"
+import Text from "@components/core/Text"
 import GitHubLogo from "@images/github_dark.svg"
 import LogoDark from "@images/logo.svg"
 import TwitterLogo from "@images/twitter_dark.svg"
 import { getFormattedDate } from "@lib/date"
-import Box from "@components/core/Box"
-import Text from "@components/core/Text"
 import styled from "styled-components"
 
 const host =
@@ -69,55 +69,61 @@ export const OGImageTemplate = ({
     >
       <Box
         display="flex"
-        alignItems="center"
+        alignItems="flex-start"
         justifyContent="flex-start"
+        flexDirection="column"
         width="100%"
-        height="3rem"
         background="#e5e7eb"
-        paddingLeft="0.75rem"
-        paddingRight="0.75rem"
+        paddingY="0.75rem"
+        paddingX="0.75rem"
         borderTopLeftRadius="0.5rem"
         borderTopRightRadius="0.5rem"
-        gridGap="4px"
+        gridGap="16px"
       >
         <Box
-          background="#f87171"
-          borderRadius="50%"
-          width="0.75rem"
-          height="0.75rem"
-        />
-        <Box
-          background="#facc15"
-          borderRadius="50%"
-          width="0.75rem"
-          height="0.75rem"
-        />
-        <Box
-          background="#4ade80"
-          borderRadius="50%"
-          width="0.75rem"
-          height="0.75rem"
-        />
-      </Box>
-      <Box
-        display="flex"
-        alignItems="center"
-        justifyContent="flex-start"
-        width="100%"
-        height="3rem"
-        background="#e5e7eb"
-        paddingLeft="0.75rem"
-        paddingRight="0.75rem"
-        gridGap="4px"
-      >
-        <Box
-          background="#f3f4f6"
-          borderRadius="12px"
-          paddingY="0.25rem"
-          paddingX="0.75rem"
-          width="100%"
+          display="flex"
+          alignItems="center"
+          justifyContent="flex-start"
+          gridGap="4px"
         >
-          {`www.adrianbolonio.com/${locale === "es" ? "es/" : ""}blog/${slug}`}
+          <Box
+            background="#f87171"
+            borderRadius="50%"
+            width="0.75rem"
+            height="0.75rem"
+          />
+          <Box
+            background="#facc15"
+            borderRadius="50%"
+            width="0.75rem"
+            height="0.75rem"
+          />
+          <Box
+            background="#4ade80"
+            borderRadius="50%"
+            width="0.75rem"
+            height="0.75rem"
+          />
+        </Box>
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="flex-start"
+          width="100%"
+          background="#e5e7eb"
+          gridGap="4px"
+        >
+          <Box
+            background="#f3f4f6"
+            borderRadius="12px"
+            paddingY="0.25rem"
+            paddingX="0.75rem"
+            width="100%"
+          >
+            {`www.adrianbolonio.com/${
+              locale === "es" ? "es/" : ""
+            }blog/${slug}`}
+          </Box>
         </Box>
       </Box>
       <Box
@@ -128,6 +134,7 @@ export const OGImageTemplate = ({
         display="flex"
         flexDirection="column"
         justifyContent="space-between"
+        marginTop="-1px"
       >
         <BGImage
           width="100%"

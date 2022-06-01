@@ -1,13 +1,13 @@
+import { Anchorlink } from "@components/core/Anchorlink"
+import Box from "@components/core/Box"
 import { LayoutContent } from "@components/layouts/Layout"
 import { contacts } from "@data/contact"
 import { footerMenu } from "@data/navigation"
 import LogoDark from "@images/logo.svg"
 import LogoLight from "@images/logo_white.svg"
 import { ThemeContext } from "@providers/ThemeProvider"
-import { Anchorlink } from "@components/core/Anchorlink"
-import Box from "@components/core/Box"
 import Image from "next/image"
-import { default as Link, default as NextLink } from "next/link"
+import { default as Link } from "next/link"
 import React, { FunctionComponent, useContext } from "react"
 import { FormattedMessage, useIntl } from "react-intl"
 import styled from "styled-components"
@@ -113,28 +113,28 @@ export const Footer: FunctionComponent = () => {
           >
             {contacts.map((contact) =>
               contact.inFooter ? (
-                <NextLink key={contact.name} href={contact.url} passHref>
-                  <FooterIconLink
-                    target="_blank"
-                    rel="noopener"
-                    inverted={true}
-                    aria-label={intl.formatMessage(
-                      { id: "go_to_profile" },
-                      { contact: contact.name }
-                    )}
-                  >
-                    <FooterIcon
-                      width="30px"
-                      height="30px"
-                      src={
-                        themeContext.theme === "light"
-                          ? contact.iconLight
-                          : contact.iconDark
-                      }
-                      alt="Twitter logo"
-                    />
-                  </FooterIconLink>
-                </NextLink>
+                <FooterIconLink
+                  key={contact.name}
+                  href={contact.url}
+                  target="_blank"
+                  rel="noopener"
+                  inverted={true}
+                  aria-label={intl.formatMessage(
+                    { id: "go_to_profile" },
+                    { contact: contact.name }
+                  )}
+                >
+                  <FooterIcon
+                    width="30px"
+                    height="30px"
+                    src={
+                      themeContext.theme === "light"
+                        ? contact.iconLight
+                        : contact.iconDark
+                    }
+                    alt="Twitter logo"
+                  />
+                </FooterIconLink>
               ) : null
             )}
           </Box>

@@ -76,7 +76,7 @@ export const TalkCard = ({ talk }: TalkCardProps) => {
         justifyContent="space-between"
       >
         <TalkTitle>
-          <Anchorlink href={talk.link} target="_blank">
+          <Anchorlink href={talk.link} target="_blank" underlined>
             <Text
               fontSize="2rem"
               fontWeight={800}
@@ -101,7 +101,7 @@ export const TalkCard = ({ talk }: TalkCardProps) => {
           {talk.location}
         </Text>
         {talk.video && (
-          <Anchorlink href={talk.video} target="_blank">
+          <Anchorlink href={talk.video} target="_blank" underlined>
             <Text fontWeight="300" fontSize="1.25rem" lineHeight="1.25">
               Watch video
             </Text>

@@ -17,7 +17,7 @@
   "job_experience": "Experiencia laboral",
   "education": "Educación",
   "contact": "Contacto",
-  "404_title": "Esta página no existe",
+  "404_title": "Página no encontrada",
   "404_message": "Ups, parece que esta página no existe. ¿Por qué no le echas un vistazo a mis últimos posts mientras lo arreglo?",
   "go_to_profile": "Ir a mi perfil de {contact}",
   "see_posts_with_tag": "Ver todos los posts con el tag {tag}",

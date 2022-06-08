@@ -4,11 +4,20 @@ export const talks = [
     talks: [
       {
         title: "Testing Web Accessibility",
+        conference: "WeAreDevelopers",
+        date: "06/15/2022",
+        location: "Berlin, Germany",
+        link: "https://www.wearedevelopers.com/world-congress/",
+        video: "",
+        image: "wearedevelopers.png",
+      },
+      {
+        title: "Testing Web Accessibility",
         conference: "JSConf Budapest",
-        date: "06/23/2022",
+        date: "06/02/2022",
         location: "Budapest, Hungary",
         link: "https://jsconfbp.com/",
-        video: "",
+        video: "https://youtu.be/z4JnSGupxUs?t=13683",
         image: "jsconfbudapest.png",
       },
       {

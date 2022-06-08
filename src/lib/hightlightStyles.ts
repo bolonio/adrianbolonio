@@ -113,7 +113,8 @@ export const HightlightStyles = createGlobalStyle`
 
   
 
-  code.language-ts::before {
+  code.language-ts::before,
+  code.language-tsx::before {
     background: url(/images/code/ts.png);
     background-position: center;
     background-size: contain;
@@ -125,7 +126,8 @@ export const HightlightStyles = createGlobalStyle`
     top: -15px;
   }
 
-  code.language-js::before {
+  code.language-js::before,
+  code.language-jsx::before {
     background: url(/images/code/javascript.png);
     background-position: center;
     background-size: contain;
@@ -139,6 +141,18 @@ export const HightlightStyles = createGlobalStyle`
 
   code.language-bash::before {
     background: url(/images/code/terminal.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    content: '';
+    border-radius: 0;
+    top: -15px;
+  }
+
+  code.language-json::before {
+    background: url(/images/code/json.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

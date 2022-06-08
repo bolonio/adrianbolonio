@@ -2,7 +2,7 @@ import { Anchorlink } from "@components/core/Anchorlink"
 import Box from "@components/core/Box"
 import Text from "@components/core/Text"
 import { EducationItemType } from "@data/cv"
-import { getFormattedDateMMMYYYY } from "@lib/date"
+import { getFormattedDateYYYY } from "@lib/date"
 import { useRouter } from "next/router"
 import React from "react"
 import styled from "styled-components"
@@ -76,8 +76,8 @@ export const EducationCard = ({ education }: EducationCardProps) => {
             lineHeight="1.5rem"
             style={{ margin: 0 }}
           >
-            {getFormattedDateMMMYYYY(education.startDate, dateLocale)} -{" "}
-            {getFormattedDateMMMYYYY(education.endDate, dateLocale)}
+            {getFormattedDateYYYY(education.startDate)} -{" "}
+            {getFormattedDateYYYY(education.endDate)}
           </Text>
         </Box>
       </Box>

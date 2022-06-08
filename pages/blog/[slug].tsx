@@ -45,6 +45,14 @@ const BlogPostStyles = createGlobalStyle`
       margin: 0;
       margin-bottom: 12px;
     }
+
+    blockquote {
+      margin: 0;
+      margin-left: 16px;
+      padding-left: 16px;
+      border-left: 6px ${(props) => props.theme.secondary} solid;
+
+    }
   } 
 `
 
@@ -57,6 +65,7 @@ const StyledReactMarkdown = styled(ReactMarkdown)`
 const HeroImage = styled.img`
   width: 100%;
   border-radius: 8px;
+  margin-bottom: 16px;
 `
 
 const RelatedPostsContainer = styled(Box)`
@@ -197,7 +206,17 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { content, frontmatter } = await getBlogPostBySlug(
     context?.params?.slug as string
   )
-  const relatedPosts = await getBlogPostsByTag(frontmatter.tags[0], 2)
+
+  let relatedPosts = await getBlogPostsByTag(
+    frontmatter.tags[0],
+    context.locale,
+    3
+  )
+  // Remove the post itself from the relatedPosts
+  relatedPosts = relatedPosts.filter(
+    (post) => post.slug != context?.params?.slug
+  )
+
   return {
     props: {
       relatedPosts,

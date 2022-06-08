@@ -1,12 +1,9 @@
 import fs from "fs"
 import matter from "gray-matter"
 
-export const getBlogPosts = async (limit?: number) => {
-  let files = fs.readdirSync("blog")
-  if (limit) {
-    files = files.slice(0, limit)
-  }
-  return files.map((fileName) => {
+const getAllBlogPosts = async (locale: string = "en") => {
+  const files = fs.readdirSync("blog")
+  let blogPosts = files.map((fileName) => {
     const slug = fileName.replace(".md", "")
     const readFile = fs.readFileSync(`blog/${fileName}`, "utf-8")
     const { data: frontmatter } = matter(readFile)
@@ -15,31 +12,40 @@ export const getBlogPosts = async (limit?: number) => {
       frontmatter,
     }
   })
+  // Sort the blog posts by date
+  blogPosts.sort((prev, post) =>
+    new Date(prev.frontmatter.publishedAt) <
+    new Date(post.frontmatter.publishedAt)
+      ? 1
+      : -1
+  )
+  // Filter by locale
+  blogPosts = blogPosts.filter(
+    ({ frontmatter }) => frontmatter.locale === locale
+  )
+  return blogPosts
 }
 
-export const getBlogPostsByTag = async (tag: string, limit?: number) => {
-  let files = fs.readdirSync("blog")
-  if (limit) {
-    files = files.slice(0, limit)
-  }
-  const blogPostsWithTag: {
-    slug: string
-    frontmatter: {
-      [key: string]: any
-    }
-  }[] = []
-  files.forEach((fileName) => {
-    const slug = fileName.replace(".md", "")
-    const readFile = fs.readFileSync(`blog/${fileName}`, "utf-8")
-    const { data: frontmatter } = matter(readFile)
-    if (frontmatter.tags.includes(tag)) {
-      blogPostsWithTag.push({
-        slug,
-        frontmatter,
-      })
-    }
-  })
-  return blogPostsWithTag
+export const getBlogPosts = async (locale: string = "en", limit?: number) => {
+  let blogPosts = await getAllBlogPosts(locale)
+  // Filter by limit
+  blogPosts = limit ? blogPosts.slice(0, limit) : blogPosts
+  return blogPosts
+}
+
+export const getBlogPostsByTag = async (
+  tag: string,
+  locale: string = "en",
+  limit?: number
+) => {
+  let blogPosts = await getAllBlogPosts(locale)
+  // Filter by tag
+  blogPosts = blogPosts.filter(({ frontmatter }) =>
+    frontmatter.tags.includes(tag)
+  )
+  // Filter by limit
+  blogPosts = limit ? blogPosts.slice(0, limit) : blogPosts
+  return blogPosts
 }
 
 export const getBlogPostBySlug = async (slug: string) => {

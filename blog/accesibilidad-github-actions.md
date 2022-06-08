@@ -11,8 +11,6 @@ tags:
   - React
 ---
 
-You can [read this article in English](/en/blog/accessibility-github-actions)
-
 ## GitHub Actions
 
 Las **[GitHub Actions](https://docs.github.com/es/actions)** permiten automatizar, personalizar y ejecutar flujos de trabajo de desarrollo de software directamente en tu repositorio de GitHub.

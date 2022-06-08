@@ -1,10 +1,8 @@
 import { BlogPostCard } from "@components/BlogPostCard"
-import { useRouter } from "next/router"
 import styled from "styled-components"
 
 type BlogPostContainerProps = {
   direction?: "horizontal" | "vertical"
-  limit?: number
   posts: {
     slug: string
     frontmatter: {
@@ -33,17 +31,11 @@ const PostsContainer = styled.div<PropsWithDirection>`
 
 export const BlogPostContainer = ({
   direction = "horizontal",
-  limit,
   posts,
 }: BlogPostContainerProps) => {
-  const { locale } = useRouter()
-  const filteredPosts = posts
-    .filter(({ frontmatter }) => frontmatter.locale === locale)
-    .slice(0, limit)
-
   return (
     <PostsContainer direction={direction}>
-      {filteredPosts.map(({ slug, frontmatter }) => (
+      {posts.map(({ slug, frontmatter }) => (
         <BlogPostCard
           key={slug}
           slug={slug}

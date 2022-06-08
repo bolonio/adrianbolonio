@@ -1,10 +1,10 @@
 import { BlogPostContainer } from "@components/BlogPostContainer"
+import { PageHeading } from "@components/core/Headings"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { languages } from "@data/languages"
 import introImage from "@images/blog.jpg"
 import { getBlogPostsByTag, getTags } from "@lib/blog"
-import { PageHeading } from "@components/core/Headings"
 import type { GetStaticProps } from "next"
 import Image from "next/image"
 import { useRouter } from "next/router"
@@ -79,7 +79,10 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const posts = await getBlogPostsByTag(context?.params?.tag as string)
+  const posts = await getBlogPostsByTag(
+    context?.params?.tag as string,
+    context.locale
+  )
   return {
     props: {
       posts,

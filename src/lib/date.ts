@@ -13,10 +13,6 @@ const MONTHS = [
   "December",
 ]
 
-/**
- * Returns a date formatted with the format DD mm YYYY
- * @param date
- */
 export const getFormattedDate = (
   date: string,
   locale: string | undefined = "en"

@@ -17,7 +17,7 @@
   "job_experience": "Job Experience",
   "education": "Education",
   "contact": "Contact",
-  "404_title": "This page doesn't exist",
+  "404_title": "Page not found",
   "404_message": "Ups, it looks like this pages doesn't exist. Why don't you give a look at my latests posts in the meantime?",
   "go_to_profile": "Go to my {contact} profile",
   "see_posts_with_tag": "See all posts with the tag {tag}",

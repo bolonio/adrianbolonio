@@ -8,6 +8,7 @@ import { getTalkBySlug } from "@lib/talks"
 import fs from "fs"
 import type { GetStaticProps } from "next"
 import { useRouter } from "next/router"
+import { useIntl } from "react-intl"
 import ReactMarkdown from "react-markdown"
 import { getFormattedDate } from "src/lib/date"
 import styled, { createGlobalStyle } from "styled-components"
@@ -67,6 +68,7 @@ const TalkPage = ({
   content: string
 }) => {
   const { locale } = useRouter()
+  const intl = useIntl()
   return (
     <>
       <BlogPostStyles />
@@ -77,10 +79,16 @@ const TalkPage = ({
           description: frontmatter.description,
           slug: `${locale === "es" ? "es/" : ""}talk/${slug}`,
           image: {
-            path: `/api/og-image?slug=${slug}`,
-            alt: frontmatter.imageAlt,
+            path: `/images/blog/${slug}/${frontmatter.image}`,
+            alt: intl.formatMessage(
+              { id: "og_image_alt" },
+              {
+                title: frontmatter.title,
+                date: getFormattedDate(frontmatter.publishedAt, locale),
+              }
+            ),
           },
-          date: frontmatter.publishedAt,
+          date: getFormattedDate(frontmatter.publishedAt, locale),
         }}
       />
       <section>
@@ -118,10 +126,11 @@ const TalkPage = ({
           <iframe
             width="100%"
             height="580px"
+            src="https://www.youtube.com/embed/z4JnSGupxUs?start=13683"
+            title="YouTube video player"
             frameBorder="0"
-            src="https://speakerdeck.com/player/f56c72c6776e43df9f1a239a3a08b034"
-            title="Testing Web Accessibility"
-            allowFullScreen={true}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           ></iframe>
           <StyledReactMarkdown className="post-container">
             {content}

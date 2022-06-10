@@ -26,16 +26,20 @@ const Home = ({
       <SEO />
       <Image src={introImage} alt="" />
       <PageLayoutContent>
-        <PageHeading level={1}>
-          {intl.formatMessage({ id: "title_home" })}
-        </PageHeading>
-        <Text as="p" fontSize="1.5rem" lineHeight="2rem" fontWeight={300}>
-          <FormattedMessage id="bio" />
-        </Text>
+        <Box marginBottom="48px">
+          <PageHeading level={1}>
+            {intl.formatMessage({ id: "title_home" })}
+          </PageHeading>
+          <Text as="p" fontSize="1.5rem" lineHeight="2rem" fontWeight={300}>
+            <FormattedMessage id="bio" />
+          </Text>
+        </Box>
         <Box
           display="flex"
           alignItems="baseline"
+          flexDirection={["column", "row", "row"]}
           justifyContent="space-between"
+          marginBottom={["16px", 0, 0]}
         >
           <PageHeading level={2}>
             {intl.formatMessage({ id: "latest_post" })}

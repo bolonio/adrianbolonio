@@ -4,7 +4,9 @@ import { PageHeading } from "@components/core/Headings"
 import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
+import introImage from "@images/about.jpg"
 import { getBlogPosts } from "@lib/blog"
+import Image from "next/image"
 import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
 import styled from "styled-components"
@@ -27,7 +29,7 @@ const Home = ({
   return (
     <section>
       <SEO />
-      {/* <Image src={introImage} alt="" /> */}
+      <Image src={introImage} alt="" />
       <PageLayoutContent>
         <PageHeading level={1}>
           {intl.formatMessage({ id: "404_title" })}
@@ -62,7 +64,7 @@ const Home = ({
 }
 
 export async function getStaticProps({ locale }: { locale: string }) {
-  const posts = await getBlogPosts(locale)
+  const posts = await getBlogPosts(locale, 3)
   return {
     props: {
       posts,

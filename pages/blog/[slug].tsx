@@ -11,6 +11,7 @@ import { HightlightStyles } from "@lib/hightlightStyles"
 import fs from "fs"
 import type { GetStaticProps } from "next"
 import { useRouter } from "next/router"
+import { useIntl } from "react-intl"
 import ReactMarkdown from "react-markdown"
 import rehypeHighlight from "rehype-highlight"
 import { getFormattedDate } from "src/lib/date"
@@ -91,6 +92,7 @@ const BlogPost = ({
   content: string
 }) => {
   const { locale } = useRouter()
+  const intl = useIntl()
   return (
     <>
       <BlogPostStyles />
@@ -102,9 +104,15 @@ const BlogPost = ({
           slug: `${locale === "es" ? "es/" : ""}blog/${slug}`,
           image: {
             path: `/images/blog/${slug}/${frontmatter.image}`,
-            alt: frontmatter.imageAlt,
+            alt: intl.formatMessage(
+              { id: "og_image_alt" },
+              {
+                title: frontmatter.title,
+                date: getFormattedDate(frontmatter.publishedAt, locale),
+              }
+            ),
           },
-          date: frontmatter.publishedAt,
+          date: getFormattedDate(frontmatter.publishedAt, locale),
         }}
       />
       <section>
@@ -112,15 +120,19 @@ const BlogPost = ({
           <Box display="flex" flexDirection="column">
             <Text
               as="h1"
-              fontSize={["3rem", "3rem", "5rem"]}
+              fontSize={["2.75rem", "4rem", "5rem"]}
               fontWeight={800}
               letterSpacing="-.03em"
-              lineHeight={["3rem", "3rem", "4.5rem"]}
+              lineHeight={["2.75rem", "4rem", "4.5rem"]}
               style={{ margin: 0, marginBottom: "12px" }}
             >
               {frontmatter.title}
             </Text>
-            <Box display="flex" gridGap="16px">
+            <Box
+              display="flex"
+              gridGap={["8px", "16px", "16px"]}
+              flexDirection={["column", "row", "row"]}
+            >
               <Text
                 fontSize="1.5rem"
                 fontWeight={700}
@@ -151,7 +163,16 @@ const BlogPost = ({
               {frontmatter.description}
             </Text>
           </Box>
-          <HeroImage src={`/images/blog/${slug}/${frontmatter.image}`} />
+          <HeroImage
+            src={`/images/blog/${slug}/${frontmatter.image}`}
+            alt={intl.formatMessage(
+              { id: "og_image_alt" },
+              {
+                title: frontmatter.title,
+                date: getFormattedDate(frontmatter.publishedAt, locale),
+              }
+            )}
+          />
           <StyledReactMarkdown
             className="post-container"
             rehypePlugins={[rehypeHighlight]}
@@ -169,7 +190,9 @@ const BlogPost = ({
         {relatedPosts.length > 0 && (
           <RelatedPostsContainer display="flex">
             <PageLayoutContent>
-              <PageHeading level={2}>Related Posts</PageHeading>
+              <PageHeading fontSize={["3rem", "4rem", "5rem"]} level={2}>
+                Related Posts
+              </PageHeading>
               <BlogPostContainer posts={relatedPosts} />
             </PageLayoutContent>
           </RelatedPostsContainer>

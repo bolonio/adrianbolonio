@@ -18,7 +18,7 @@ Hay que mencionar que los atributos ARIA **no afectan al contenido o al diseño 
 
 Estos atributos son muy importantes, pero tienen ciertas **reglas** que hay que seguir si queremos que nuestro sitio web sea accesible.
 
-# Regla #1: No uses ARIA, usa un elemento o atributo HTML nativo.
+## Regla #1: No uses ARIA, usa un elemento o atributo HTML nativo.
 
 Sí, la primera regla es **no usar ARIA**, siempre y cuando exista un **elemento o atributo HTML nativo** con la semántica y el comportamiento que necesitas.
 En lugar de reutilizar un elemento y agregar un rol, estado o propiedad de ARIA para hacerlo accesible, deberás usar los elementos y atributos nativos que ofrece HTML.
@@ -37,7 +37,7 @@ Los botones HTML son clicables (con teclado y ratón), pueden tener foco, y los 
 <button>Click me</button>
 ```
 
-# Regla #2: No cambies la semántica nativa, a menos que realmente lo necesites hacer.
+## Regla #2: No cambies la semántica nativa, a menos que realmente lo necesites hacer.
 
 La mayoría de los elementos o atributos HTML tienen una **semántica nativa definida**. No debemos cambiar esa semántica nativa, a menos que realmente sea esencial, por ejemplo, un elemento personalizado, como un título que actúe como pestaña.
 
@@ -55,13 +55,13 @@ Los títulos no deberían tener el atributo `role="tab"`. Para eso deberemos usa
 </div>
 ```
 
-# Regla #3: Todos los controles interactivos de ARIA deben poder utilizarse con el teclado.
+## Regla #3: Todos los controles interactivos de ARIA deben poder utilizarse con el teclado.
 
 Cuando testeamos los controles interactivos en nuestro sitio web, por ejemplo un botón o un campo en un formulario, solemos hacerlo usando el ratón para clicar sobre el botón o para acceder al campo en el formulario, pero olvidamos testear que todos esos controles interactivos se puedan también utilizar **usando el teclado**.
 Tenemos que recordar que entre los usuarios de nuestro sitio web se encuentran usuarios con discapacidad visual, y que habitualmente esos usuarios navegarán por nuestro sitio web usando el teclado.
 Si alguno de los controles interactivos no es accesible mediante teclado, esos usuarios no podrán clicar en el botón, o introducir datos en el formulario.
 
-# Regla #4: No uses role="presentation" o aria-hidden="true" en elementos que requieran foco.
+## Regla #4: No uses role="presentation" o aria-hidden="true" en elementos que requieran foco.
 
 Si en nuestro sitio web tenemos algún elemento que requieran foco, por ejemplo, botones o campos de un formulario, no deberemos usar los atributos `role="presentation` o `aria-hidden="true"`.
 
@@ -78,7 +78,7 @@ Deberemos usar esos atributos para elementos como un gráfico decorativo o icono
 <img src="./icon.png" alt="Icono de una papelera" aria-hidden="true" />
 ```
 
-# Regla #5: Todos los elementos interactivos deben tener un nombre accesible.
+## Regla #5: Todos los elementos interactivos deben tener un nombre accesible.
 
 Cualquier elemento interactivo de nuestro sitio web, por ejemplo, un botón o un campo en un formulario, solo tendrá un **nombre accesible** si su propiedad de nombre accesible de API de accesibilidad (o equivalente) tiene un valor.
 

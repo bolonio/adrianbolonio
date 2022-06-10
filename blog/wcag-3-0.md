@@ -10,7 +10,7 @@ tags:
   - WCAG
 ---
 
-# Nombre y Estructura
+## Nombre y Estructura
 
 El primer cambio que podemos observar es en el nombre. La versión actual, WCAG 2.X, se denomina "Web Content Accessibility Guidelines",
 pero con la llegada de W3CG el nombre cambiará a **"W3C Accessiblity Guidelines"**. El motivo principal es romper con la limitación de analizar solo el contenido, _content_ en inglés, para poner el centro en las guías de accesibilidad. Además se mantendrá WCAG como acrónimo y seguirá siendo garantía de accesibilidad.

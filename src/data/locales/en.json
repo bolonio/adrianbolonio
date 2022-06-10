@@ -24,5 +24,6 @@
   "change_language": "Change language to {languageName}",
   "flag_alt": "The flag of {languageFlag}",
   "change_theme": "Change to {theme} theme",
-  "open_menu": "Open menu"
+  "open_menu": "Open menu",
+  "og_image_alt": "The mockup of a browser with the title of the article ({title}) and the date of the article ({date}). As well there is the url of my website (www.adrianbolonio.com) and my Twitter and GitHub username (@bolomio)"
 }

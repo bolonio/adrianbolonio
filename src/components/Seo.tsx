@@ -19,6 +19,11 @@ type SEOProps = {
 }
 
 export const SEO = ({ metadata }: SEOProps) => {
+  const host =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : "https://www.adrianbolonio.com"
+
   const seoMetaData: SeoMetaData = {
     title: metadata?.title
       ? `${metadata.title} | ${defaultMetadata.title}`
@@ -41,25 +46,22 @@ export const SEO = ({ metadata }: SEOProps) => {
 
       <meta
         name="apple-mobile-web-app-title"
-        content={`https://adrianbolonio.com/${seoMetaData.slug}`}
+        content={`${host}/${seoMetaData.slug}`}
       />
       <meta name="application-name" content={seoMetaData.title} />
       <meta name="theme-color" content="#24292f" />
 
-      <link
-        rel="canonical"
-        href={`https://adrianbolonio.com/${seoMetaData.slug}`}
-      />
-      <link
-        rel="og:url"
-        href={`https://adrianbolonio.com/${seoMetaData.slug}`}
-      />
+      <link rel="canonical" href={`${host}/${seoMetaData.slug}`} />
+      <link rel="og:url" href={`${host}/${seoMetaData.slug}`} />
 
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={seoMetaData.title} />
       <meta property="og:description" content={seoMetaData.description} />
       <meta property="og:title" content={seoMetaData.title} />
-      <meta property="og:image" content={seoMetaData.image?.path} />
+      <meta
+        property="og:image"
+        content={`${host}/${seoMetaData.image?.path}`}
+      />
       <meta property="og:image:alt" content={seoMetaData.image?.alt} />
       <meta property="DC.title" content={seoMetaData.title} />
 

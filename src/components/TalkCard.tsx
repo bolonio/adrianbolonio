@@ -24,7 +24,7 @@ const TalkTitle = styled.h2`
   margin: 0;
 `
 
-const PostContainer = styled.div`
+const TalkContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -34,11 +34,11 @@ const PostContainer = styled.div`
   }
 `
 
-interface PostImageProps {
+interface TalkImageProps {
   image: string
 }
 
-const PostImage = styled.div<PostImageProps>`
+const TalkImage = styled.div<TalkImageProps>`
   border-radius: 8px;
   width: 250px;
   height: 150px;
@@ -50,21 +50,21 @@ const PostImage = styled.div<PostImageProps>`
   }
   @media screen and (max-width: 639px) {
     width: 100%;
-    height: 250px;
+    height: 200px;
   }
 `
 
 export const TalkCard = ({ talk }: TalkCardProps) => {
   const { locale } = useRouter()
   return (
-    <PostContainer>
+    <TalkContainer>
       <Box
         display="flex"
         marginRight={[0, 3, 3]}
         marginBottom={[3, 0, 0]}
         width={["100%", "auto", "auto"]}
       >
-        <PostImage
+        <TalkImage
           aria-hidden={true}
           image={talk.image ? talk.image : "placeholder.jpg"}
         />
@@ -108,6 +108,6 @@ export const TalkCard = ({ talk }: TalkCardProps) => {
           </Anchorlink>
         )}
       </Box>
-    </PostContainer>
+    </TalkContainer>
   )
 }

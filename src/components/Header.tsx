@@ -7,7 +7,6 @@ import Link from "next/link"
 import React, { PropsWithChildren, useContext, useState } from "react"
 import { FormattedMessage, useIntl } from "react-intl"
 import styled from "styled-components"
-import Box from "./core/Box"
 import { LanguageSelector } from "./LanguageSelector"
 import { ThemeSwitcher } from "./ThemeSwitcher"
 
@@ -130,6 +129,8 @@ export const Header = ({ alternate }: HeaderProps) => {
             <LanguageSelector alternate={alternate} />
           </HeaderMenu>
           <HeaderBurgerMenu>
+            <ThemeSwitcher />
+            <LanguageSelector alternate={alternate} />
             <BurgerMenuButton
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label={intl.formatMessage(
@@ -165,15 +166,16 @@ export const Header = ({ alternate }: HeaderProps) => {
               <BurgerMenuContainer>
                 {headerMenu.map((menuItem) => (
                   <Link key={menuItem.slug} href={`${menuItem.slug}`} passHref>
-                    <HeaderMenuLink>
+                    <HeaderMenuLink
+                      onClick={() => {
+                        console.debug("aaaaa")
+                        setMenuOpen(false)
+                      }}
+                    >
                       <FormattedMessage id={`nav_${menuItem.title}`} />
                     </HeaderMenuLink>
                   </Link>
                 ))}
-                <Box display="flex" gridGap="24px">
-                  <ThemeSwitcher />
-                  <LanguageSelector alternate={alternate} />
-                </Box>
               </BurgerMenuContainer>
             )}
           </HeaderBurgerMenu>

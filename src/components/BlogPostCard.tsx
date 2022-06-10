@@ -60,7 +60,6 @@ export const BlogPostCard = ({
 }: BlogPostCardProps) => {
   const { locale } = useRouter()
   const intl = useIntl()
-
   return (
     <PostContainer direction={direction}>
       <Box
@@ -70,8 +69,13 @@ export const BlogPostCard = ({
         marginBottom={[3, 3, 0]}
       >
         <PostImage
-          alt={frontmatter.imageAlt}
-          // src={`/api/og-image/?slug=${slug}`}
+          alt={intl.formatMessage(
+            { id: "og_image_alt" },
+            {
+              title: frontmatter.title,
+              date: getFormattedDate(frontmatter.publishedAt, locale),
+            }
+          )}
           src={`/images/blog/${slug}/${frontmatter.image}`}
           direction={direction}
         />
@@ -90,7 +94,12 @@ export const BlogPostCard = ({
             </Text>
           </Anchorlink>
         </PostTitle>
-        <Box display="flex" gridGap="16px" marginBottom={2}>
+        <Box
+          display="flex"
+          gridGap={["8px", "16px", "16px"]}
+          flexDirection={["column", "row", "row"]}
+          marginBottom={2}
+        >
           <Text
             fontSize="1.25rem"
             fontWeight={600}

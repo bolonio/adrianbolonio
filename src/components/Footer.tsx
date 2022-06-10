@@ -132,7 +132,7 @@ export const Footer: FunctionComponent = () => {
                         ? contact.iconLight
                         : contact.iconDark
                     }
-                    alt="Twitter logo"
+                    alt={`${contact.name} Logo`}
                   />
                 </FooterIconLink>
               ) : null

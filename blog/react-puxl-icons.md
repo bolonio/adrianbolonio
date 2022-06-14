@@ -224,5 +224,3 @@ You can find the **react-puxl-icons** package in [npm](https://www.npmjs.com/pac
 
 This is an open source project, so if you have any suggestion on how this project could be improved, please read the [contributing guidelines](https://github.com/bolonio/react-puxl-icons/blob/master/CONTRIBUTING.md).
 I'd love all and any contributions. You can submit issues and enhancement requests through the [issues page on GitHub](https://github.com/bolonio/react-puxl-icons/issues).
-
-Puedes [leer este artículo en español](/es/react-puxl-icons-es)

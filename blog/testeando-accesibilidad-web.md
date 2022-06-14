@@ -4,6 +4,7 @@ description: La accesibilidad web no se trata solo de navegación por teclado, c
 locale: es
 image: intro.png
 imageAlt: Imagen decorativa con dos capturas de pantalla y el titulo del articulo, "Testeando Accesibilidad Web"
+alternate: /blog/testing-web-accessibility-part-1
 publishedAt: "2020-10-13"
 tags:
   - Accesibilidad

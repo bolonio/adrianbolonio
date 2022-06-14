@@ -5,6 +5,7 @@ locale: es
 image: intro.png
 imageAlt: una imagen decorativa con la frase "Como testear la accesibilidad de tus componentes con Storybook"
 publishedAt: "2021-02-13"
+alternate: /blog/accessibility-with-storybook
 tags:
   - Accesibilidad
   - Storybook

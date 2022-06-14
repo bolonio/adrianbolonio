@@ -168,7 +168,6 @@ export const Header = ({ alternate }: HeaderProps) => {
                   <Link key={menuItem.slug} href={`${menuItem.slug}`} passHref>
                     <HeaderMenuLink
                       onClick={() => {
-                        console.debug("aaaaa")
                         setMenuOpen(false)
                       }}
                     >

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "chrome-aws-lambda": "^10.1.0",
+    "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "next": "12.1.6",
     "next-api-og-image": "^4.0.1",

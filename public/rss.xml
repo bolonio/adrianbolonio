@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Articles by Adrián Bolonio</title>
+        <link>https://adrianbolonio.com</link>
+        <description>I'm working as an Accessibility Software Engineering at GitHub.</description>
+        <lastBuildDate>Sat, 25 Jun 2022 14:18:28 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Writing accessibility e2e tests with cypress and axe]]></title>
+            <link>https://adrianbolonio.com/en/blog/accessibility-tests-with-cypress</link>
+            <guid>https://adrianbolonio.com/en/blog/accessibility-tests-with-cypress</guid>
+            <pubDate>Sat, 09 Jul 2022 22:00:00 GMT</pubDate>
+            <description><![CDATA[Our role as frontend and web developers is to create clear interfaces to make people understand and care about data, independently of their disabilities or impairments, so the only way to be sure that the websites we develop are fully accessible is to test our code.]]></description>
+            <content:encoded><![CDATA[
+TBD
+
+```bash
+$ yarn add nm
+```
+
+```yaml
+name: example
+on: [push]
+jobs: ...
+```
+
+asdfasdf
+
+```ts
+import React from "react"
+import App from "./App"
+import { render } from "@testing-library/react"
+import { axe, toHaveNoViolations } from "jest-axe"
+// comment jere
+expect.extend(toHaveNoViolations)
+
+it("should not have any accessibility violations", async () => {
+  const { container } = render(<App />)
+  const results = await axe(container)
+  expect(results).toHaveNoViolations()
+})
+```
+
+sadfasdf
+
+```js
+import React from "react"
+import App from "./App"
+import { render } from "@testing-library/react"
+import { axe, toHaveNoViolations } from "jest-axe"
+// comment jere
+expect.extend(toHaveNoViolations)
+
+it("should not have any accessibility violations", async () => {
+  const { container } = render(<App />)
+  const results = await axe(container)
+  expect(results).toHaveNoViolations()
+})
+```
+
+```html
+<code class="hljs language-ts"
+  ><span class="hljs-keyword">import</span>
+  <span class="hljs-title class_">React</span>
+  <span class="hljs-keyword">from</span>
+  <span class="hljs-string">"react"</span>
+  <span class="hljs-keyword">import</span>
+  <span class="hljs-title class_">App</span>
+  <span class="hljs-keyword">from</span>
+  <span class="hljs-string">"./App"</span>
+  <span class="hljs-keyword">import</span> { render }
+  <span class="hljs-keyword">from</span>
+  <span class="hljs-string">"@testing-library/react"</span>
+  <span class="hljs-keyword">import</span> { axe, toHaveNoViolations }
+  <span class="hljs-keyword">from</span>
+  <span class="hljs-string">"jest-axe"</span>
+  <span class="hljs-comment">// comment jere</span>
+  expect.<span class="hljs-title function_">extend</span>(toHaveNoViolations)
+
+  <span class="hljs-title function_">it</span>(<span class="hljs-string"
+    >"should not have any accessibility violations"</span
+  >, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> { container } =
+  <span class="hljs-title function_">render</span>(<span class="xml"
+    ><span class="hljs-tag"
+      >&lt;<span class="hljs-name">App</span> /&gt;</span
+    ></span
+  >) <span class="hljs-keyword">const</span> results =
+  <span class="hljs-keyword">await</span>
+  <span class="hljs-title function_">axe</span>(container)
+  <span class="hljs-title function_">expect</span>(results).<span
+    class="hljs-title function_"
+    >toHaveNoViolations</span
+  >() })
+</code>
+```
+]]></content:encoded>
+            <author>bolonio85@gmail.com (Adrián Bolonio)</author>
+        </item>
+        <item>
+            <title><![CDATA[Writing accessibility unit tests with playwright and axe]]></title>
+            <link>https://adrianbolonio.com/en/blog/accessibility-tests-with-playwright</link>
+            <guid>https://adrianbolonio.com/en/blog/accessibility-tests-with-playwright</guid>
+            <pubDate>Thu, 30 Jun 2022 22:00:00 GMT</pubDate>
+            <description><![CDATA[Our role as frontend and web developers is to create clear interfaces to make people understand and care about data, independently of their disabilities or impairments, so the only way to be sure that the websites we develop are fully accessible is to test our code.]]></description>
+            <content:encoded><![CDATA[
+sadf
+
+```bash
+$ yarn add nm
+```
+
+sadfasdfas
+
+```yaml
+name: example
+on: [push]
+jobs: ...
+```
+
+asdfasdf
+
+```ts
+import React from "react"
+import App from "./App"
+import { render } from "@testing-library/react"
+import { axe, toHaveNoViolations } from "jest-axe"
+// comment jere
+expect.extend(toHaveNoViolations)
+
+it("should not have any accessibility violations", async () => {
+  const { container } = render(<App />)
+  const results = await axe(container)
+  expect(results).toHaveNoViolations()
+})
+```
+
+sadfasdf
+
+```js
+import React from "react"
+import App from "./App"
+import { render } from "@testing-library/react"
+import { axe, toHaveNoViolations } from "jest-axe"
+// comment jere
+expect.extend(toHaveNoViolations)
+
+it("should not have any accessibility violations", async () => {
+  const { container } = render(<App />)
+  const results = await axe(container)
+  expect(results).toHaveNoViolations()
+})
+```
+
+```html
+<code class="hljs language-ts"
+  ><span class="hljs-keyword">import</span>
+  <span class="hljs-title class_">React</span>
+  <span class="hljs-keyword">from</span>
+  <span class="hljs-string">"react"</span>
+  <span class="hljs-keyword">import</span>
+  <span class="hljs-title class_">App</span>
+  <span class="hljs-keyword">from</span>
+  <span class="hljs-string">"./App"</span>
+  <span class="hljs-keyword">import</span> { render }
+  <span class="hljs-keyword">from</span>
+  <span class="hljs-string">"@testing-library/react"</span>
+  <span class="hljs-keyword">import</span> { axe, toHaveNoViolations }
+  <span class="hljs-keyword">from</span>
+  <span class="hljs-string">"jest-axe"</span>
+  <span class="hljs-comment">// comment jere</span>
+  expect.<span class="hljs-title function_">extend</span>(toHaveNoViolations)
+
+  <span class="hljs-title function_">it</span>(<span class="hljs-string"
+    >"should not have any accessibility violations"</span
+  >, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> { container } =
+  <span class="hljs-title function_">render</span>(<span class="xml"
+    ><span class="hljs-tag"
+      >&lt;<span class="hljs-name">App</span> /&gt;</span
+    ></span
+  >) <span class="hljs-keyword">const</span> results =
+  <span class="hljs-keyword">await</span>
+  <span class="hljs-title function_">axe</span>(container)
+  <span class="hljs-title function_">expect</span>(results).<span
+    class="hljs-title function_"
+    >toHaveNoViolations</span
+  >() })
+</code>
+```
+]]></content:encoded>
+            <author>bolonio85@gmail.com (Adrián Bolonio)</author>
+        </item>
+        <item>
+            <title><![CDATA[Automating the accessibility tests of your source code with GitHub Actions]]></title>
+            <link>https://adrianbolonio.com/en/blog/accessibility-github-actions</link>
+            <guid>https://adrianbolonio.com/en/blog/accessibility-github-actions</guid>
+            <pubDate>Sun, 21 Feb 2021 23:00:00 GMT</pubDate>
+            <description><![CDATA[Automating your accessibility tests with libraries like axe, pa11y, lighthouse, or unit tests directly in your GitHub repository is really easy with GitHub Actions.]]></description>
+            <content:encoded><![CDATA[
+## GitHub Actions
+
+**[GitHub Actions](https://docs.github.com/en/actions)** allow you to automate, customize, and execute your software development workflows right in your repository with GitHub Actions.
+With GitHub Actions you could execute a series of statements and commands after a specific event has occurred, simply put, it's your own _pipeline CI / CD_ directly in your repository.
+
+### Workflows
+
+Github defines a **[workflow](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)** as a configurable automated process made up of one or more jobs.
+The workflow configuration to define events, tasks, and steps to be executed in GitHub Actions are defined using YAML files that must be located in the `.github/workflows` folder.
+
+## Using GitHub Actions to automate accessibility tests
+
+Since we have seen what GitHub Actions are, let's see how we can use them to test the accessibility of your source code hosted on GitHub.
+
+I have created a sample application in React with a small image component and some accessibility bugs. You can see the code in the **[project repository](https://github.com/bolonio/a11y-github-actions)** in my Github profile.
+
+The first thing is to define when we want the GitHub Action to run. We can configure it to run immediately after each _push_ to any of our branches (including the _main_ branch).
+
+```yaml
+name: example
+on: [push]
+jobs: ...
+```
+
+Or we can configure it to run on any _Pull Request_ to our main _main_ branch.\*\*\*\*
+
+```yaml
+name: example
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs: ...
+```
+
+In my example repository I have decided to configure all Github Actions to run on any _Pull Request_ to the _main_ branch.
+Once we have decided when to execute the GitHub Action, we have to establish which events, tasks, and steps to execute.
+
+### Unit tests
+
+In my first GitHub Action I want to run my unit tests when I create or update a _Pull Request_.
+Writing your own unit tests is the best way to find bugs and vulnerabilities in your code, and if you use [jest](https://jestjs.io/), you can create your own accessibility unit tests with **[jest-axe](https://github.com/nickcolley/jest-axe)**, a tool from the [axe](https://www.deque.com/axe/) family of tools.
+
+```bash
+$ npm install jest-axe --save-dev
+```
+
+```ts
+import React from "react"
+import App from "./App"
+import { render } from "@testing-library/react"
+import { axe, toHaveNoViolations } from "jest-axe"
+
+expect.extend(toHaveNoViolations)
+
+it("should not have any accessibility violations", async () => {
+  const { container } = render(<App />)
+  const results = await axe(container)
+  expect(results).toHaveNoViolations()
+})
+```
+
+Once the unit tests are created, I can now create my workflow in my GitHub Action.
+Luckily, GitHub offers you a bunch of templates when creating a new GitHub Action, and I've used the [Node.js workflow template](https://github.com/actions/starter-workflows/blob/main/ci/node.js.yml), to which I have deleted some comments and reduced the use of Node.js version to only use _12.x_, which I will later use in all my GitHub Actions. This is what the final version of my workflow would look like:
+
+```yaml
+name: unit-tests
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
+```
+
+Now I just have to try it. After my _Pull Request_ is created, my GitHub Action will start executing and the result will appear directly at the end of my _Pull Request_.
+You can see it in this [_Pull Request_](https://github.com/bolonio/a11y-github-actions/pull/1).
+
+![A screenshot of the GitHub Actions that are executed in a Pull Request on GitHub. It's shown how the GitHub Action for unit tests has failed due to accessibility vulnerabilities.](/images/blog/accessibility-github-actions/GitHubAction1.png)
+
+We will be able to access the details of the GitHub Action and see the results of the unit tests, to be able to solve the accessibility vulnerabilities in the code.
+
+![A screenshot of the details of a GitHub Action running on a Pull Request on GitHub](/images/blog/accessibility-github-actions/GitHubAction1.1.png)
+
+### axe
+
+**[axe](https://www.deque.com/axe/)** is a family of tools created by [Deque](https://www.deque.com/axe/), which includes a command line interface (CLI), [@axe-core/cli](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli), which runs the axe search engine for accessibility vulnerabilities, and that we can use from a terminal.
+In my next GitHub Action I want to run that CLI on every _Pull Request_.
+
+Keep in mind that @axe-core/cli is an informative tool, and that it only executes accessibility tests and displays the results on the screen.
+To make the execution of these tests cause an error in the execution we must add the option `--exit` to the axe command.
+
+This is what the final version of my workflow would look like:
+
+```yaml
+name: axe
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  axe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm start & npx wait-on http://localhost:3000
+      - name: Run axe
+        run: |
+          npm install -g @axe-core/cli
+          axe http://localhost:3000 --exit
+```
+
+As we have seen in the previous GitHub Action, when I go to the _Pull Request_ that I had created and I have updated with a new _commit_, my two GitHub Actions will be executed again.
+You can see it in this [_Pull Request_](https://github.com/bolonio/a11y-github-actions/pull/1).
+
+![A screenshot of the GitHub Actions that are executed in a Pull Request on GitHub. It's shown how the GitHub Action for axe has failed due to accessibility vulnerabilities.](/images/blog/accessibility-github-actions/GitHubAction2.png)
+
+And we can always inspect the details of each GitHub Action to find out the accessibility vulnerabilities that caused the execution to fail.
+
+![A screenshot of the details of a GitHub Action running on a Pull Request on GitHub](/images/blog/accessibility-github-actions/GitHubAction2.1.png)
+
+### axe-linter
+
+GitHub also offers a library of applications, which we can install directly in our code repository, and which allow us to execute various tasks and events similar to GitHub Actions.
+One of them is **[axe-linter](https://axe-linter.deque.com/)** and you can find it directly on [GitHub marketplace](https://github.com/marketplace/axe-linter).
+You simply have to install it in your repository for free, and it will be ready to be used. This app, like my GitHub Actions, will run on every _Pull Request_ and look for accessibility vulnerabilities.
+
+The difference that I have seen compared to my own GitHub Action is the type of vulnerabilities it finds, as axe-linter can only find those vulnerabilities in HTML code written by you, and not in the HTML generated by my React application like what does @axe-core/cli. Anyway, I think it's a super useful app for determining if your code is accessible, so I'll keep it in my sample repository so you can see how it works.
+As with the GitHub Actions, and once I update my _Pull Request_ (in this case I have added an explicit HTML error in my code), it will run alongside the other GitHub Actions.
+You can see it in this [_Pull Request_](https://github.com/bolonio/a11y-github-actions/pull/1).
+
+![A screenshot of the axe-linter application on GitHub with an accessibility vulnerability. It's shown how the GitHub Action for axe-linter has failed due to accessibility vulnerabilities.](/images/blog/accessibility-github-actions/GitHubAction3.png)
+
+As always, we can see the results of the tests, this time grouped by vulnerability.
+
+![A screenshot of the details of the axe-linter application running in a Pull Request on GitHub](/images/blog/accessibility-github-actions/GitHubAction3.1.png)
+
+### pa11y
+
+Like axe, there are other tools and applications that are very similar and equally valid for web accessibility testing.
+Another one is **[pa11y](https://github.com/pa11y/pa11y)**, a command line interface (CLI) tool that you can use from your terminal.
+In this case, unlike with axe, it is not just an informational tool and will cause an error in execution if it finds vulnerabilities in your code.
+Using my previous workflow as a base, this is what the final version would look like:
+
+```yaml
+name: pa11y
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  pa11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm start & npx wait-on http://localhost:3000
+      - name: Run pa11y
+        run: |
+          npm install -g pa11y
+          pa11y http://localhost:3000
+```
+
+As we've seen before, on every update to my _Pull Request_, all my GitHub Actions will be executed, including my axe-linter app as well.
+You can see it in this [_Pull Request_](https://github.com/bolonio/a11y-github-actions/pull/1).
+
+![A screenshot of the GitHub Actions that are executed in a Pull Request on GitHub. It's shown how the GitHub Action for pa11y has failed due to accessibility vulnerabilities.](/images/blog/accessibility-github-actions/GitHubAction4.png)
+
+And as in the previous ones, you can access the details of the test directly from the _Pull Request_.
+
+![A screenshot of the details of a GitHub Action running on a Pull Request on GitHub](/images/blog/accessibility-github-actions/GitHubAction4.1.png)
+
+## Blocking the _merge_ of a _Pull Request_ if it has accessibility vulnerabilities
+
+After creating all my GitHub Actions, and on each creation or update of any _Pull Request_, my code will be tested for accessibility vulnerabilities, but all those tests are informative at the moment, and I still have the final option to _merge_ my _Pull Request_, which we don't want to happen.
+
+To disable the button to _merge_ any _Pull Request_ that has accessibility vulnerabilities you will have to create a new branch protection rule in your repository.
+Access the **Settings** menu on the upper tab of your repository and then access **Branches** in the left menu.
+You should put an asterisk `*` in the field **_Branch name pattern_** and activate the checkbox **_Require status checks to pass before merging_**.
+You only have to save the changes by pressing the _Save Changes_ button.
+
+![A screenshot of the branch protection rules configuration on GitHub](/images/blog/accessibility-github-actions/BlockMerge.png)
+
+If you go back to your _Pull Request_, you will see that the _Merge pull request_ button is disabled and _merge_ cannot be done until the accessibility vulnerabilities are resolved and all GitHub Actions have satisfactory results. This way your application will be protected from accepting any inaccessible code.
+
+Additional note: If you are **the owner** of the repository, you can check that you can always _merge_ the _Pull Requests_. The protection will be effective for contributors.
+
+## Using GitHub Actions to automate reports with Lighthouse
+
+We've seen how to create GitHub Actions that cause errors if they find accessibility vulnerabilities in your code, but I'd like to show you a GitHub Action for generating reports.
+**[Lighthouse](https://github.com/GoogleChrome/lighthouse-ci)** is a tool created by Google, and it's included in the Google Chrome browser development tools, but it can also be run from the terminal. This tool generates reports on performance, accessibility, progressive web apps, SEO and more.
+
+Using the [lighthouse workflow template](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md#configure-lighthouse-ci) I have created a new GitHub Action to generate reports on each _Pull Request_.
+
+### Lighthouse
+
+```yaml
+name: Lighthouse
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: npm install, build
+        run: |
+          npm install
+          npm run build
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.7.x
+          lhci autorun
+```
+
+Lighthouse generates HTML reports, and you need to host them on a server. If your repository is public, you can configure it to host it on a temporary public storage.
+You will have to create a new file in the root of your project called `lighthouserc.js` with the following content.
+If you want to host the reports privately, you can read how to do it in the [official Lighthouse documentation](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/configuration.md).
+
+```js
+module.exports = {
+  ci: {
+    upload: {
+      target: "temporary-public-storage",
+    },
+  },
+}
+```
+
+Once my _Pull Request_ is updated, it will run alongside the other GitHub Actions.
+You can see it in this [_Pull Request_](https://github.com/bolonio/a11y-github-actions/pull/1).
+
+![A screenshot of the GitHub Actions that are executed in a Pull Request on GitHub. It's shown how the GitHub Action for lighthouse has not failed because it is an informational tool.](/images/blog/accessibility-github-actions/GitHubAction5.png)
+
+You will see that Lighthouse has a green _tick_, and not a red cross, as it is an informational tool and will not crash if your code has errors.
+If you inspect the execution details of the GitHub Action, and having configured the hosting of the reports publicly, a link to the generated report appears.
+
+![A screenshot of the details of a GitHub Action running on a Pull Request on GitHub](/images/blog/accessibility-github-actions/GitHubAction5.1.png)
+
+You simply need to access that report and use it to generate statistics, archive it to see the evolution of your website, or to obtain more information on possible vulnerabilities in accessibility, performance, progressive web apps, SEO and more.
+
+![A screenshot of a report generated by the GitHub Action Lighthouse](/images/blog/accessibility-github-actions/GitHubAction5.2.png)
+
+## Conclusion
+
+After all these steps, my repository is configured, so my GitHub Actions are executed when I create or update any _Pull Request_ to my _main_ branch, including the axe-linter application.
+If any of the GitHub Actions find an accessibility vulnerability, my _Pull Request_ would crash and disabled the _merge_ option, so I would have to go through my code to resolve those errors.
+This way my application will be protected from accepting any non-accessible code.
+
+You can see the code in the [project repository](https://github.com/bolonio/a11y-github-actions) in my Github profile, and the execution and details of the Github Actions in this [_Pull Request_](https://github.com/bolonio/a11y-github-actions/pull/1).
+
+I recommend you to try creating your own GitHub Actions or use the ones I created if you find them useful.
+
+If you want to continue learning about web accessibility, you can follow me on [my twitter account](https://twitter.com/bolonio), and do not hesitate to [contact me](/en/about) or tweet me if you have any questions or doubt.
+]]></content:encoded>
+            <author>bolonio85@gmail.com (Adrián Bolonio)</author>
+        </item>
+        <item>
+            <title><![CDATA[How to test the accessibility of your components with Storybook]]></title>
+            <link>https://adrianbolonio.com/en/blog/accessibility-with-storybook</link>
+            <guid>https://adrianbolonio.com/en/blog/accessibility-with-storybook</guid>
+            <pubDate>Fri, 12 Feb 2021 23:00:00 GMT</pubDate>
+            <description><![CDATA[Developing accessible web sites isn't difficult if you use the right tools to test your components for accessibility, and Storybook is one of them.]]></description>
+            <content:encoded><![CDATA[
+## Storybook
+
+**[Storybook](https://storybook.js.org/)** is an open source library that allows you to develop and document your components in an isolated environment, without having to take into account the possible dependencies that you would have if you developed those components directly in your application.
+
+You can see the code in the [project repository](https://github.com/bolonio/a11y-storybook) on my Github profile.
+
+To go faster and streamline the process, I've used **[create-react-app](https://github.com/facebook/create-react-app)**, a tool to quickly generate a new single-page application. I've been trying to work only with Typescript for quite some time, so I preferred to use that configuration when creating the application.
+
+```bash
+$ npx create-react-app a11y-storybook --template typescript
+```
+
+After having created my application, which will serve as a component library, the next step is to add Storybook to the project. For this I will use the _Storybook CLI_ to install it with a single command.
+
+```bash
+$ npx sb init
+```
+
+This command will install all the necessary dependencies, add to my package.json file the necessary scripts to run storybook, create a default configuration for storybook in the hidden `./.storybook` folder, and add some test components as examples.
+You can find those components in the `./src/stories` folder. Once everything has been installed and configured, I can run Storybook.
+
+```bash
+$ npm run storybook
+```
+
+A new instance of your predefined browser will open and you will be able to view Storybook with the test components added during installation.
+
+You can read more about this whole process in the [official Storybook documentation](https://storybook.js.org/docs/react/get-started/install)
+
+## Creating the components
+
+The test components are fine as examples, but I want to create my own components to test them, so what I have done is delete all that test content and I have created several components with accessibility errors to check if Storybook can find the accessibility vulnerabilities that I have included in them. I have created the following components and their respective stories:
+
+- `ColorContrast.tsx` A component with color contrast errors.
+- `CustomRole.tsx` A component with a _role_ that does not exist.
+- `HeadingOrder.tsx` A component with heading element order errors.
+- `NoAltImage.tsx` A component with an image without alternative text.
+- `NoTextButton.tsx` A component with a button with no text inside.
+- `TabIndex.tsx` A component with a _tabindex_ greater than zero.
+
+Let's see how we can test the accessibility of the components with Storybook.
+
+## Accessibility addon
+
+The first thing I have to do is add the [addon-a11y](https://github.com/storybookjs/storybook/tree/next/addons/a11y) to my project.
+
+```bash
+$ npm install @storybook/addon-a11y --save-dev
+```
+
+After that I add it to the _addons_ list in the file `./.storybook/main.js`
+
+```js
+module.exports = {
+  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/preset-create-react-app",
+    "@storybook/addon-a11y",
+  ],
+}
+```
+
+With these two steps we will have added the addon-a11y in our project and we will be able to see the results when we run Storybook.
+
+```bash
+$ npm run storybook
+```
+
+## Testing accessibility in Storybook
+
+The Storybook accessibility addon uses the **[Axe accessibility engine](https://www.deque.com/axe/)** developed by [Deque Systems](https://www.deque.com).
+
+When executing Storybook you will see that next to the _Controls_ and _Actions_ panel, the _Accessibility_ panel will now appear.
+If you access this panel, you will see the results of the tests organized in three tabs.
+In the first tab, _violations_, a list of accessibility vulnerabilities found in the component will be displayed.
+Each element of that list can be expanded and show more information about the vulnerability, degree of severity, ... etc, as well as a link to the documentation compiled by Deque in its [Dequeuniversity](https://dequeuniversity.com/rules/axe/4.1/color-contrast?application=axeAPI) so you can read more about the vulnerability, the violated rule, and how to fix it.
+
+In the second tab, _passes_, you will see a list of the rules that Axe considers to have passed the tests successfully, and in the third tab, _incomplete_, you will see a list of what Axe defines as incomplete rules.
+That is to say, they have not passed the tests successfully, but they cannot say if they have really failed. In this case, Axe provides more information for you, as a developer, to decide how to react to those rules.
+
+![A screenshot of the Storybook addon "addon-a11y" showing vulnerabilities in a React component](/images/blog/accessibility-with-storybook/a11y-addon.png)
+
+To the right of the panel you can activate a checkbox, _highlight results_, so Storybook highlights on the screen the elements that are violating the accessibility rules.
+Three different colors will be used for each of the panels: green for tests passed successfully, red for vulnerabilities, and yellow for incomplete ones.
+
+![A screenshot of the Storybook addon "addon-a11y" showing vulnerabilities in a React component, which is highlighted and dotted on the screen](button.png)
+
+## Emulating vision deficiency in Storybook
+
+The Storybook accessibility addon can not only be used to show the tests run by the Axe accessibility engine, but also includes a **vision deficiency emulator**.
+The options are: Blurred Vision, Protanopia, Protanomaly, Deuteranopia, Deuteranomaly, Tritanopia, Tritanomaly, Achromatopsia, Achromatomaly, and Mono.
+
+![A screenshot of the Storybook addon "addon-a11y" showing the vision deficiency emulator](/images/blog/accessibility-with-storybook/emulator.png)
+
+I have added an additional component, `ColorImage.tsx`, which displays an image with multiple colors to test this emulator.
+By emulating different vision deficiencies, you will be able to better understand when to use different colors and understand that it is not advisable to rely solely on colors, for example in error states in forms.
+
+![A screenshot of the Storybook addon "addon-a11y" showing the vision deficiency emulator and the color difference between a normal image and an image seen by someone with Tritanopia](/images/blog/accessibility-with-storybook/colors.png)
+
+## Conclusion
+
+As you have seen, Storybook is not only a tool to document your components in an isolated environment, it also allows you to test the accessibility of your components before using them in your application.
+
+The project and the components used in this article have been developed in React, but Storybook has support for many more frameworks like Vue, Angular, Web Components, React Native ... etc.
+You can reado more at the [official Storybook website](https://storybook.js.org/). You can see the code in the [project repository](https://github.com/bolonio/a11y-storybook) on my Github profile.
+
+If you want to continue learning about web accessibility, you can follow me on [my twitter account](https://twitter.com/bolonio), and do not hesitate to [contact me](/en/about) or tweet me if you have any questions or doubt.
+]]></content:encoded>
+            <author>bolonio85@gmail.com (Adrián Bolonio)</author>
+        </item>
+        <item>
+            <title><![CDATA[Creating a React library based on the collection of accessible PUXL SVG icons]]></title>
+            <link>https://adrianbolonio.com/en/blog/react-puxl-icons</link>
+            <guid>https://adrianbolonio.com/en/blog/react-puxl-icons</guid>
+            <pubDate>Sun, 24 May 2020 22:00:00 GMT</pubDate>
+            <description><![CDATA[I decided to create a React library based on the collection of accessible PUXL icons library, an open source collection of more than 300 SVG icons custom tailored for PUXL framework, each with its own accessible title and description.]]></description>
+            <content:encoded><![CDATA[
+Some months ago, while following some accessibility experts on Twitter and attending some online conferences,
+I found a new framework to develop more accessible website. This framework is called [PUXL Framework](https://puxl.io/).
+
+> "PUXL framework is a free and open-source and eco-friendly library to create front-end Web interfaces. It helps you build accessible and responsive sites with lightweight HTML."
+>
+> Source: PUXL Framework website
+
+I got to know the people behind the project, I joined their Slack discussions, and I finally decided to take a deeper look at the framework.
+I started digging into the [accessible PUXL icons library](https://puxl.io/puxl-icons/),
+an open source collection of more than 300 SVG icons custom tailored for PUXL framework, each with its own accessible title and description.
+
+Since I develop in React, I wanted to be able to use those SVGs as React components,
+so I decided to create a React icons library based on the collection of accessible PUXL icons library. Let me tell you about how I did it.
+
+## What do I need to create and publish a React package to npm?
+
+First of all I wanted to publish my React package to npm,
+so everyone can install it directly in their React projects without downloading the whole SVGs library and creating a new folder with them in the project.
+
+I published a React component as a package to npm in the past, [a simple and minimal React input range component](https://www.npmjs.com/package/react-component-range),
+but that was a year ago, and React and npm changed a lot, so I needed to look for more information about what were the steps to do it nowadays,
+and I found this great [guide to publish a React package to npm](https://blog.logrocket.com/the-complete-guide-to-publishing-a-react-package-to-npm/),
+where the author created a [template of a project ready to be published in npm](https://github.com/ovieokeh/npm-react-typescript-template) that reduced my developing setup a lot.
+Of course, if you want to develop a React package, you need to be familiar with React, typescript and the npm registry. After the setup was done, how did I continue?
+
+## How did I transform all SVGs into React components?
+
+As I said before, I wanted to avoid downloading all SVG files and creating a new folder with them in the project.
+I really wanted to be able to import every icon individually as I needed it as a React component.
+On top of that, I wanted to be able to pass some props to the component, or at least three attributes that I think were relevant for an SVG icon component: width, height, and fill.
+Thanks to this step, I could size the icon and color it.
+
+The structure of one of the SVG icon looks like this. Each icon comes with its own accessible title and description.
+
+```html
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    Puxl icons 1.0 - https://puxl.io/puxl-icons
+    Created by @MrKanuel, brought by The Puxl Clan with love from Basque Country
+    Puxl icons is licensed under the GPL V3 - Copyright © 2019 PUXL
+    https://github.com/puxl/puxl-icons/blob/master/LICENSE
+  -->
+  <g id="accessibility" aria-labelledby="t-accessibility d-accessibility">
+    <title id="t-accessibility">Accessibility</title>
+    <desc id="d-accessibility">
+      A human, standing with arms extended, in a circle
+    </desc>
+    <path
+      d="M16,19.1c0,0,0.4,0,0.7,1L19.1,27.4c0.2,0.5,0.801,0.8,1.301,0.6s0.812-0.8,0.604-1.3L18.6,19.6 C18.2,18.5,18,17.2,18,16v-2.7c0-0.368,0.078-1.394,1.189-1.524c2.474-0.292,4.854-0.766,5.006-0.795 c0.543-0.108,0.894-0.635,0.785-1.176c-0.107-0.542-0.646-0.893-1.176-0.785C23.755,9.029,18.865,10,16,10S8.245,9.029,8.196,9.02 C7.656,8.911,7.127,9.263,7.02,9.804c-0.108,0.542,0.243,1.068,0.784,1.176c0.144,0.029,2.533,0.503,5.007,0.795 C13.922,11.906,14,12.932,14,13.3V16c0,1.2-0.2,2.5-0.6,3.6L11,26.7c-0.2,0.5,0.1,1.1,0.6,1.3s1.1-0.1,1.3-0.6l2.4-7.301 C15.6,19.1,16,19.1,16,19.1z"
+    />
+    <circle cx="16" cy="7" r="2" />
+    <path
+      d="M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M16,31C7.8,31,1,24.3,1,16S7.8,1,16,1 s15,6.8,15,15S24.3,31,16,31z"
+    />
+  </g>
+</svg>
+```
+
+It seemed obvious to me that I couldn't make more than 300 React components simply by copying the SVG code into the .tsx files, so I needed to find a better way to automatize the process.
+My first idea was to create a script that could read the content of the SVG file and then insert it into the .tsx file,
+so I started using the "fs" library in JavaScript to manipulate the file system. I quickly failed and I started searching on the Internet for a solution,
+because I was sure I was not going to be the first one with this idea. While I was searching the Internet, I remembered that at work we do something very similar with our design system to generate our icons,
+so I took a look at the project, and there was the solution: SVGR.
+
+[SVGR](https://react-svgr.com/) is a library that transforms SVG into ready-to-use components. It was the perfect solution for my idea,
+so I started reading the documentation and experimenting with the library. It was very easy to start using it:
+I just needed to install the SVGR CLI on my machine and start using it from the terminal.
+
+After some experiments, I ended up creating a new script option in my package.json file to generate all SVG icons from a folder. It looked something like this:
+
+```json
+{
+  "scripts": {
+    "generate:icons": "svgr -d ./src ./resources/icons"
+  }
+}
+```
+
+Now I could run the script in my terminal and all my icons would be converted to React components
+
+```bash
+$ npm run generate:icons
+```
+
+When I checked the generated javascript code I saw a couple of issues. The first issue was that the title and the description were not rendered.
+The second issue was that all ids were, as well, not rendered. The last issue was that the React component was rendered in JavaScript and not in TypeScript.
+
+```js
+import * as React from "react"
+
+function SvgIconAccessibility(props) {
+  return (
+    <svg viewBox="0 0 32 32" {...props}>
+      <g aria-labelledby="t-accessibility d-accessibility">
+        <path d="M16 19.1s.4 0 .7 1l2.4 7.3c.2.5.801.8 1.301.6s.812-.8.604-1.3L18.6 19.6c-.4-1.1-.6-2.4-.6-3.6v-2.7c0-.368.078-1.394 1.189-1.524 2.474-.292 4.854-.766 5.006-.795a.998.998 0 00.785-1.176 1.005 1.005 0 00-1.176-.785c-.049.009-4.939.98-7.804.98s-7.755-.971-7.804-.98a.999.999 0 10-.392 1.96c.144.029 2.533.503 5.007.795C13.922 11.906 14 12.932 14 13.3V16c0 1.2-.2 2.5-.6 3.6L11 26.7c-.2.5.1 1.1.6 1.3s1.1-.1 1.3-.6l2.4-7.301c.3-.999.7-.999.7-.999z" />
+        <circle cx={16} cy={7} r={2} />
+        <path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm0 31C7.8 31 1 24.3 1 16S7.8 1 16 1s15 6.8 15 15-6.7 15-15 15z" />
+      </g>
+    </svg>
+  )
+}
+
+export default SvgIconAccessibility
+```
+
+So I went back to the SVGR documentation and I found the flags to fix some of the issues "out of the box", and some others that needed a bit more work.
+I found out that what I needed was a [SVGO](https://github.com/svg/svgo) config with some options to include and exclude some things in my final component.
+I wanted to keep the viewbox, the title, and the description, and wanted to keep the ids as well, but SVGR prefix them all with `prefix__` to make them unique.
+This is a great feature, but since I know that all the icons have unique ids, I wanted to delete that prefix as well. My final SVGO config looks like this:
+
+```json
+{
+  "plugins": [
+    { "removeTitle": false },
+    { "removeViewBox": false },
+    { "removeDesc": false },
+    { "cleanupIDs": false },
+    { "prefixIds": false }
+  ]
+}
+```
+
+I changed the script to add the `--typescript` flag, the `--svgo-config` flag with the SVGO config,
+the `--icon` flag to replace the "width" and "height" value by "1em" in order to make the SVG size inherits from the text size, and the final version looked like this:
+
+```json
+{
+  "scripts": {
+    "generate:icons": "svgr --icon --typescript --svgo-config ./scripts/svgoConfig.json -d ./src ./resources/icons"
+  }
+}
+```
+
+Now I could run the new script in my terminal again:
+
+```bash
+$ npm run generate:icons
+```
+
+The final version with title, description, all ids, width and height, viewbox, and rendered as a TypeScript React component was:
+
+```ts
+import * as React from "react"
+
+function SvgIconAccessibility(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 32 32" width="1em" height="1em" {...props}>
+      <g id="accessibility" aria-labelledby="t-accessibility d-accessibility">
+        <title id="t-accessibility">{"Accessibility"}</title>
+        <desc id="d-accessibility">
+          {"A human, standing with arms extended, in a circle"}
+        </desc>
+        <path d="M16 19.1s.4 0 .7 1l2.4 7.3c.2.5.801.8 1.301.6s.812-.8.604-1.3L18.6 19.6c-.4-1.1-.6-2.4-.6-3.6v-2.7c0-.368.078-1.394 1.189-1.524 2.474-.292 4.854-.766 5.006-.795a.998.998 0 00.785-1.176 1.005 1.005 0 00-1.176-.785c-.049.009-4.939.98-7.804.98s-7.755-.971-7.804-.98a.999.999 0 10-.392 1.96c.144.029 2.533.503 5.007.795C13.922 11.906 14 12.932 14 13.3V16c0 1.2-.2 2.5-.6 3.6L11 26.7c-.2.5.1 1.1.6 1.3s1.1-.1 1.3-.6l2.4-7.301c.3-.999.7-.999.7-.999z" />
+        <circle cx={16} cy={7} r={2} />
+        <path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm0 31C7.8 31 1 24.3 1 16S7.8 1 16 1s15 6.8 15 15-6.7 15-15 15z" />
+      </g>
+    </svg>
+  )
+}
+
+export default SvgIconAccessibility
+```
+
+The script could generate more than 300 React components into my ./src folder, together with an .index.tsx file with all of the exports.
+Following the [guide to publish a React package to npm](https://blog.logrocket.com/the-complete-guide-to-publishing-a-react-package-to-npm/),
+after building my package, I linked the package to a new demo app, created with create-react-app, using `yarn link` to test it, so my package was ready to be published to npm.
+I wrote a complete and meaningful documentation in the readme file and I published it.
+
+## How can I use the PUXL icons library in my React application?
+
+The package is published in the npm registry, so anyone can install it using npm or yarn
+
+```bash
+$ npm i --save react-puxl-icons
+```
+
+```bash
+$ yarn add react-puxl-icons
+```
+
+Each icon can be individually imported into a React application, like:
+
+```js
+import React from "react"
+import { IconAccessibility } from "react-puxl-icons"
+
+export const App = () => (
+  <div>
+    <IconAccessibility />
+  </div>
+)
+```
+
+The icons accept any SVG attribute as prop, as it would use in a SVG element in HTML, like:
+
+```js
+import React from "react"
+import { IconAccessibility } from "react-puxl-icons"
+
+export const App = () => (
+  <div>
+    <IconAccessibility width="3em" height="3em" fill="red" />
+    <IconAccessibility width="5em" height="5em" />
+    <IconAccessibility width="40px" height="40px" fill="green" />
+    <IconAccessibility fill="blue" />
+  </div>
+)
+```
+
+You can find the **react-puxl-icons** package in [npm](https://www.npmjs.com/package/react-puxl-icons) and you can find the source code in [GitHub](https://github.com/bolonio/react-puxl-icons).
+
+This is an open source project, so if you have any suggestion on how this project could be improved, please read the [contributing guidelines](https://github.com/bolonio/react-puxl-icons/blob/master/CONTRIBUTING.md).
+I'd love all and any contributions. You can submit issues and enhancement requests through the [issues page on GitHub](https://github.com/bolonio/react-puxl-icons/issues).
+]]></content:encoded>
+            <author>bolonio85@gmail.com (Adrián Bolonio)</author>
+        </item>
+        <item>
+            <title><![CDATA[Testing Web Accessibility - Part 3]]></title>
+            <link>https://adrianbolonio.com/en/blog/testing-web-accessibility-part-3</link>
+            <guid>https://adrianbolonio.com/en/blog/testing-web-accessibility-part-3</guid>
+            <pubDate>Thu, 09 Apr 2020 22:00:00 GMT</pubDate>
+            <description><![CDATA[Automated accessibility tests can free up your quality assurance (QA) team from manual testing every part of your application, but they can’t automatically make your site accessible. Only 20% to 50% of all accessibility issues can be detected with automated tests, so we need to consider those automated accessibility tests as one step of a larger testing process.]]></description>
+            <content:encoded><![CDATA[
+## Testing Web Accessibility (a11y)
+
+I've created a series of three blog posts to give to give you an introduction about the tools that I usually use to test accessibility during my development process:
+
+[Testing Web Accessibility - Part 1 - Testing the code](/blog/testing-web-accessibility-part-1)
+
+[Testing Web Accessibility - Part 2 - Testing the DOM](/blog/testing-web-accessibility-part-2)
+
+Testing Web Accessibility - Part 3 - Testing in the browser
+
+## Testing Web Accessibility - Part 3 - Testing in the browser
+
+As I said, we need to remember that only 20% to 50% of all accessibility issues can be detected with automated tests,
+so we need to consider those automated accessibility tests as one step of a larger testing process.
+Manual testing is as important as automated testing, so I will show you some of the manual testing tools that I often use.
+
+### axe chrome extension
+
+The company behind the development of the axe tools family, [Dequelabs](https://www.deque.com/axe/), has some browser extensions to test the accessibility of your website.
+After installing the extension, you can find it under the development tools of your browser.
+You can perform a full analysis, and as the previous axe tools I've talked about, they will show you all the violations found in the analyzed website.
+Each violation includes the description of the issue, the HTML element in where the violation was found, and a full documentation source with detailed information about the issue, and the steps to solve it.
+[You can find the axe extension here](https://www.deque.com/axe/axe-for-web/).
+
+### ARC Toolkit
+
+Another similar tool is ARC Toolkit, developed by [The Paciello Group](https://www.paciellogroup.com/).
+ARC Toolkit is a professional-level accessibility testing tool that gives you the power to quickly and efficiently evaluate screens for accessibility and uncover issues related to the WCAG 2.1 Level A and AA guidelines.
+This Chrome extension enables you to easily drill down into code level issues and gain in-depth insight into the accessibility of the screen.
+[You can find the ARC Toolkit extension here](https://www.paciellogroup.com/toolkit/).
+
+### Accessibility Insights
+
+Accessibility Insights define this tools as an extension for Chrome and Microsoft Edge Insider that helps developers find and fix accessibility issues in web apps and sites.
+One of the many features of this extension, and the one I use more, is the "tab stops" map. This tool will create a tab map while you navigate through the website using the tab key.
+You can use this map to determine if the navigation using the tab key is relevant and consistent with the content of your website.
+[You can find the Accessibility Insights extension here](https://accessibilityinsights.io/docs/en/web/overview).
+
+### WAVE - Web Accessibility Evaluation Tool
+
+WAVE is a suite of evaluation tools that help authors make their web content more accessible to individuals with disabilities.
+WAVE can identify many accessibility and Web Content Accessibility Guideline (WCAG) errors, but also facilitates human evaluation of web content.
+After installing the extension, you can find it under the extension bar in your browser.
+In my opinion this is the most complete extension of all of the ones I've talked about in this article.
+[You can find the Web Accessibility Evaluation Tool extension here](https://wave.webaim.org/extension/).
+
+### NoCoffee - Vision Simulator
+
+An interesting tool is [NoCoffee](https://accessgarage.wordpress.com/).
+NoCoffee is an extension for Chrome, which can be helpful for understanding the problems faced by people with slight to extreme vision problems, such as: low acuity, low contrast sensitivity, or colorblindness.
+This extension simulates how someone with these vision problems will see your website.
+[You can find NoCoffee extension here](https://accessgarage.wordpress.com/).
+
+### Funkify
+
+Another usefull tool is [Funkify](https://www.funkify.org).
+Funkify is an extension for Chrome that helps you experience the web and interfaces through the eyes of extreme users with different abilities and disabilities.
+It's a cool extension that simulates several kinds of disabilities, like dyslexia, motoric problems and low vision.
+[You can find Funkify extension here](https://www.funkify.org).
+
+## Conclusions
+
+Our role as frontend and web developers is to create clear interfaces to make people understand and care about data, independently of their disabilities or impairments,
+but what we, developers, often forget is to ensure that the code we write follows the Web Content Accessibility Guidelines (WCAG), and the only way to achieve that is testing, either manual or automated.
+
+> “The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
+>
+> Tim Berners-Lee, W3C Director and inventor of the World Wide Web
+
+We need to understand that the responsibility to create accessible apps doesn't belong to the developers or testers, but to the whole team, including Project Managers, and user experience (UX) and user interface (UI) designers.
+
+I would love to leave you with a sentence that represents, in my opinion, what values for accessibility we, developers, should have.
+
+> “It’s not just about disabled users being able to access your website, it’s about everyone being able to access your website.”
+>
+> Trenton Moss, Owner of Webcredible Consultancy Firm, UK
+
+![A quote that says "accessibility is not a feature"](/images/blog/testing-web-accessibility-part-3/a11y-is-not-a-feature.jpeg)
+
+You can read the rest of the series of three blog posts here:
+
+[Testing Web Accessibility - Part 1 - Testing the code](/testing-web-accessibility-part-1)
+
+[Testing Web Accessibility - Part 2 - Testing the DOM](/testing-web-accessibility-part-2)
+
+Testing Web Accessibility - Part 3 - Testing in the browser
+]]></content:encoded>
+            <author>bolonio85@gmail.com (Adrián Bolonio)</author>
+        </item>
+        <item>
+            <title><![CDATA[Testing Web Accessibility - Part 2]]></title>
+            <link>https://adrianbolonio.com/en/blog/testing-web-accessibility-part-2</link>
+            <guid>https://adrianbolonio.com/en/blog/testing-web-accessibility-part-2</guid>
+            <pubDate>Thu, 09 Apr 2020 22:00:00 GMT</pubDate>
+            <description><![CDATA[Sometimes we, as developers, inherit and old codebase, or we join a project where no one took care of web accessibility tests. In those situations, you would maybe want to test the whole DOM structure of the application.]]></description>
+            <content:encoded><![CDATA[
+## Testing Web Accessibility (a11y)
+
+I've created a series of three blog posts to give to give you an introduction about the tools that I usually use to test accessibility during my development process:
+
+[Testing Web Accessibility - Part 1 - Testing the code](/blog/testing-web-accessibility-part-1)
+
+Testing Web Accessibility - Part 2 - Testing the DOM
+
+[Testing Web Accessibility - Part 3 - Testing in the browser](/blog/testing-web-accessibility-part-3)
+
+## Testing Web Accessibility - Part 2 - Testing the DOM
+
+Sometimes we, as developers, inherit and old codebase, or we join a project where no one took care of web accessibility tests.
+In those situations, you would maybe want to test the whole DOM structure of the application.
+
+Let me show you some tools that can help you with that:
+
+### A command line interface for axe to run quick accessibility tests
+
+Another excellent tool from the axe tool family is [@axe-core/cli](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli).
+@axe-core/cli provides a command line interface for axe to run quick accessibility tests.
+
+To start using it, you need to install it globally.
+
+```bash
+$ npm install -g @axe-core/cli
+```
+
+You can now run the axe command in your terminal, followed by the URL of the page you wish to test. Here it is a quick example:
+
+```bash
+$ axe http://www.adrianbolonio.com
+```
+
+Similar to what I told you in the first part of the series with react-axe, each violation includes the description of the issue, the HTML element in where the violation was found, and a link to the [dequeuniversity](https://dequeuniversity.com/), a full documentation source with detailed information about the issue, and the steps to solve it.
+Several ocurrences of the same violation are grouped.
+
+![A slide of a presentation on how to use the tool @axe-core/cli](/images/blog/testing-web-accessibility-part-2/axe-cli.jpeg)
+
+You can use the `--rules` flag to set which rules you wish to run, or you can use `--tags` to tell axe to run all rules that have that specific tag. For example:
+
+```bash
+$ axe http://www.adrianbolonio.com --rules color-contrast,html-has-lang
+```
+
+Or, to run all wcag2a rules:
+
+```bash
+$ axe http://www.adrianbolonio.com --tags wcag2a
+```
+
+Results can be saved as JSON data, using the `--save` and `--dir` flags. By passing a filename to --save you indicate how the file should be called. If no filename is passed, a default will be used.
+
+If you are having difficulty with the color scheme, use `--no-color` to disable text styles.
+
+### Another command line interface to run accessibility tests
+
+Another similar tool is [pa11y](http://pa11y.org/), a command line interface which loads web pages and highlights any accessibility issues it finds.
+Useful for when you want to run a one-off test against a web page.
+It runs accessibility tests on your pages via the command line or Node.js, so you can automate your testing process.
+
+To start using it, you need to install it globally.
+
+```bash
+$ npm install -g pa11y
+```
+
+You can now run the pa11y command in your terminal, followed by the URL of the page you wish to test. Here it is a quick example:
+
+```bash
+$ pa11y http://www.adrianbolonio.com
+```
+
+![A slide of a presentation on how to use the tool pa11y](/images/blog/testing-web-accessibility-part-2/pa11y.jpeg)
+
+It could be quite tedious to test one url at a time, so the interesting thing of the pa11y library is its CI-centric accessibility test runner.
+The CI runs accessibility tests against multiple URLs and reports on any issues.
+This is best used during automated testing of your application and can act as a gatekeeper to stop a11y issues from making it to live.
+
+One interesting feature is that the CI can run actions before pa11y tests the page.
+Actions are additional interactions that you can make pa11y perform before the tests are run.
+They allow you to do things like click on a button, enter a value in a form, wait for a redirect, or wait for the URL fragment to change.
+
+![A slide of a presentation on how to use the tool pa11yci](/images/blog/testing-web-accessibility-part-2/pa11yci.jpeg)
+
+### Lighthouse, an open-source, automated tool for improving the quality of web pages
+
+[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is a tool developed by Google, and it's included in the Chrome DevTools, but you can as well execute it from the terminal.
+Google define it as an open-source, automated tool for improving the quality of web pages.
+You can run it against any web page, public or requiring authentication.
+It has audits for performance, accessibility, progressive web apps, SEO and more.
+
+To start using it, you need to install it globally.
+
+```bash
+$ npm install -g lighthouse
+```
+
+You can now run the lighthouse command in your terminal, followed by the URL of the page you wish to test.
+Adding the `--view` flags will immediately open the generated html report.
+Here it is a quick example:
+
+```bash
+$ lighthouse http://www.adrianbolonio.com --view
+```
+
+![A slide of a presentation on how to use the tool lighthouse](/images/blog/testing-web-accessibility-part-2/lighthouse.jpeg)
+
+You can use the `--output-path` flag to specify an output path to save the results into a json or a CSV file, that can be use for reporting purposes.
+
+```bash
+$ lighthouse http://adrianbolonio.com/ --output-path result.json
+```
+
+In the next post I will show you some of the manual testing tools to test web accessibility from the browser.
+
+You can read the rest of the series of three blog posts here:
+
+[Testing Web Accessibility - Part 1 - Testing the code](/testing-web-accessibility-part-1)
+
+Testing Web Accessibility - Part 2 - Testing the DOM
+
+[Testing Web Accessibility - Part 3 - Testing in the browser](/testing-web-accessibility-part-3)
+]]></content:encoded>
+            <author>bolonio85@gmail.com (Adrián Bolonio)</author>
+        </item>
+        <item>
+            <title><![CDATA[Testing Web Accessibility - Part 1]]></title>
+            <link>https://adrianbolonio.com/en/blog/testing-web-accessibility-part-1</link>
+            <guid>https://adrianbolonio.com/en/blog/testing-web-accessibility-part-1</guid>
+            <pubDate>Thu, 09 Apr 2020 22:00:00 GMT</pubDate>
+            <description><![CDATA[Our role as frontend and web developers is to create clear interfaces to make people understand and care about data, independently of their disabilities or impairments, so the only way to be sure that the websites we develop are fully accessible is to test our code.]]></description>
+            <content:encoded><![CDATA[
+When we develop a new web application, we often put a lot of work on the design, on making it beautiful and usable.
+In other words, we want our web app to be effective, efficient, and satisfying for the user.
+But a lot of times we don’t think about the user experience for everyone, people with or without disabilities, including people with age-related impairments.
+
+## Accessibility (a11y)
+
+> “Accessibility is about providing access to information for everyone, regardless of age or ability, so that each individual can realize their full potential.“
+>
+> Source: [The International Association of Accessibility Professionals (IAAP)](https://www.accessibilityassociation.org/content.asp?contentid=1)
+
+Why is it so obvious in real world that the three situations below are completely wrong?.
+
+![three wrongly built accessible ramps](/images/blog/testing-web-accessibility-part-1/wrong-a11y.jpeg)
+
+Probably because those three ramps were built by non-disabled people, or maybe because they didn't put themselves in their shoes?
+We can even think that these situations were not properly tested from the end user perspective, nor during the design phase, nor the building phase.
+But it's very clear to me that someone using a wheelchair will always have problems using these three "accessible" ramps.
+
+## Web Accessibility (a11y)
+
+> Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them.
+> More specifically, people can: perceive, understand, navigate, interact with the Web, and contribute to the Web
+>
+> Source: [The World Wide Web Consortium (W3C)](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
+
+Let's see how we can translate this reality to the online world, because for some of us, not visually impaired people, it's not so obvious to identify a non-accessible website.
+Let me show you an example. If you are in an e-commerce, an online shop for example, and you call the support team because you may want to find your latest purchases,
+but you don't know how to find them, a typical answer from them could be "you need to click on the button in the top right corner".
+Or maybe you want to change your password, or your email address, so they could say "you need to click on the button with the engine icon".
+The problem here is that for visually impaired people such as blind people, there's no such thing as top right corner or button with the engine icon.
+So we need to have these situations in mind when we develop a new website.
+
+Based on the numbers from the [World Health Organization (WHO)](https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment), it is estimated that globally, at least 2.2 billion people have a vision impairment or blindness, of whom at least 1 billion have a vision impairment that could have been prevented or has yet to be addressed.
+This 1 billion people includes those with moderate or severe distance vision impairment or blindness due to unaddressed refractive error, as well as near vision impairment caused by unaddressed presbyopia.
+
+## Testing Web Accessibility (a11y)
+
+Automated accessibility tests can free up your quality assurance (QA) team from manual testing every part of your application, but they can’t automatically make your site accessible.
+We cannot forget that only 20% to 50% of all accessibility issues can be detected with automated tests, so we need to consider those automated accessibility tests just as one step of a larger testing process.
+
+I've created a series of three blog posts to give to give you an introduction about the tools that I usually use to test accessibility during my development process:
+
+Testing Web Accessibility - Part 1 - Testing the code
+
+[Testing Web Accessibility - Part 2 - Testing the DOM](/testing-web-accessibility-part-2)
+
+[Testing Web Accessibility - Part 3 - Testing in the browser](/testing-web-accessibility-part-3)
+
+## Testing Web Accessibility - Part 1 - Testing the code
+
+I've created a React application with three small components: a button, a fake button (a link with the role button), and an image.
+In the main application I've introduced a bunch of accessibility errors, so let's see how can I find them using some testing tools.
+
+You can find the code of the application this [GitHub repository](https://github.com/bolonio/testing-web-a11y)
+
+### Testing your application from the browser console log
+
+The first tool I would like to show you is [react-axe](https://github.com/dequelabs/react-axe). This tools is part of a bigger family of tools developed by a company called [Dequelabs](https://www.deque.com/axe/).
+
+To start using this tool, you need to install it as a dev dependency in your React project.
+
+```bash
+$ npm install --save-dev react-axe
+```
+
+Then you need to call the exported function passing in the React and ReactDOM objects as well as a timing delay in milliseconds that will be observed between each component change and the time the analysis starts.
+You need to be sure that this is only done in a development environment and not in production.
+
+```js
+if (process.env.NODE_ENV !== "production") {
+  var axe = require("react-axe")
+  axe(React, ReactDOM, 1000)
+}
+```
+
+This tool will run accessibility tests over your React application using the axe-core testing library, and you will be able to see the results in the developer tools console of your browser.
+A severity level is also assigned for each violation. The possible levels are: Minor, Moderate, Serious, Critical.
+
+![A slide of a presentation on how to use the tool react-axe](/images/blog/testing-web-accessibility-part-1/react-axe.jpeg)
+
+Each violation includes the description of the issue, the HTML element in where the violation was found, and a link to the [dequeuniversity](https://dequeuniversity.com/), a full documentation source with detailed information about the issue, and the steps to solve it.
+Several occurrences of the same violation are grouped.
+
+### Using a Linter, a tool that analyzes source code to flag potential errors, bugs, and vulnerabilities
+
+If you're using eslinter in your application, you can include the [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) with the accessibility rules.
+You just need to add jsx-a11y to the plugins section of your .eslintrc configuration file. You can omit the "eslint-plugin-" prefix. Then configure the rules you want to use under the rules section.
+
+```json
+{
+    "plugins": ["jsx-a11y"],
+    "extends": ["plugin:jsx-a11y/recommended"],
+    "rules": {
+        ...
+    }
+}
+```
+
+It would be enough including `"extends": ["plugin:jsx-a11y/recommended"]`, but you can configure the rules you want to use under the rules section in the .eslintrc.json file
+
+The linter will analyze your source code to find potential accessibility errors, bugs, and vulnerabilities displaying them directly in the code editor and in the terminal.
+
+![A slide of a presentation on how to use the tool eslint-plugin-jsx-a11y](/images/blog/testing-web-accessibility-part-1/eslint-plugin-jsx-a11y.jpeg)
+
+### Writing your own unit test with jest
+
+We tend to forget that writing unit tests is part of the development process, and not a post process.
+Writing your own automated unit tests is the best way to find errors, bugs, and vulnerabilities in your code.
+If you're using [jest](https://jestjs.io/), a JavaScript Testing Framework, you can create your own accessibility unit tests with another tool from the axe tools family, [jest-axe](https://github.com/nickcolley/jest-axe).
+
+To start using it, you need to install it as a dev dependency in your React project.
+
+```bash
+$ npm install --save-dev jest-axe
+```
+
+You can now write automated accessibility unit tests using jest and ReactDOMServer to render the html of your application to check for errors, bugs, and vulnerabilities.
+Here it is an example of a very simple one:
+
+```js
+import { axe, toHaveNoViolations } from "jest-axe"
+import React from "react"
+import ReactDOMServer from "react-dom/server"
+import App from "./App"
+
+expect.extend(toHaveNoViolations)
+
+it("should demonstrate this matcher`s usage with react", async () => {
+  const html = ReactDOMServer.renderToString(<App />)
+  const results = await axe(html)
+  expect(results).toHaveNoViolations()
+})
+```
+
+The results will be displayed in the terminal when running the test.
+
+![A slide of a presentation on how to use the tool jest-axe](/images/blog/testing-web-accessibility-part-1/jest-axe.jpeg)
+
+You can include these kind of automated accessibility unit tests in your build pipeline, so any code with accessibility issues won't be released to production.
+As well you can use the results of these automated tests to build reports for your accessibility and product team.
+
+In the next post I will show you some tools to test the whole DOM structure of your application.
+
+You can read the rest of the series of three blog posts here:
+
+Testing Web Accessibility - Part 1 - Testing the code
+
+[Testing Web Accessibility - Part 2 - Testing the DOM](/blog/testing-web-accessibility-part-2)
+
+[Testing Web Accessibility - Part 3 - Testing in the browser](/blog/testing-web-accessibility-part-3)
+]]></content:encoded>
+            <author>bolonio85@gmail.com (Adrián Bolonio)</author>
+        </item>
+    </channel>
+</rss>

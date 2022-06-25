@@ -1,8 +1,8 @@
+import Box from "@components/core/Box"
 import { Footer } from "@components/Footer"
 import { Header } from "@components/Header"
 import { SkipToContent } from "@components/SkipToContent"
-import Box from "@components/core/Box"
-import React, { PropsWithChildren } from "react"
+import { PropsWithChildren } from "react"
 import styled from "styled-components"
 
 type LayoutProps = PropsWithChildren<{
@@ -28,10 +28,6 @@ export const LayoutContent = styled.div`
 export const PageLayoutContent = styled(LayoutContent)`
   // background-color: tomato;
   padding: 32px 16px;
-
-  @media screen and (max-width: 1180px) {
-    padding: 8px;
-  }
 `
 
 export const Layout = ({ children, alternate }: LayoutProps) => {

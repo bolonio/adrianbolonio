@@ -25,5 +25,10 @@
   "flag_alt": "La bandera de {languageFlag}",
   "change_theme": "Cambiar tema a {theme}",
   "open_menu": "Abrir menu",
-  "og_image_alt": "Un mockup de un navegador con el título del post ({title}) y la fecha del post ({date}). También aparece la url de mi página web (www.adrianbolonio.com) y mi usuario de Twitter y GitHub (@bolonio)"
+  "og_image_alt": "Un mockup de un navegador con el título del post ({title}) y la fecha del post ({date}). También aparece la url de mi página web (www.adrianbolonio.com) y mi usuario de Twitter y GitHub (@bolonio)",
+  "home_page_image_alt": "Yo dando una charla. La foto está tomada desde el fondo de la sala, el públic sale en primer plano y el escenario en segundo plano. En la foto aparece mi nommbre Adrián Bolonio",
+  "blog_page_image_alt": "Yo sentando en un escritorio escribiendo en un portatil. La foto empieza en mi cuello y acaba en el escritorio.",
+  "talk_page_image_alt": "Yo dando una charla. La foto está tomada desde el fondo de la sala, el públic sale en primer plano y el escenario en segundo plano.",
+  "about_page_image_alt": "Yo dando una charla. La foto está tomada desde el fondo de la sala, el públic sale en primer plano y el escenario en segundo plano.",
+  "404_page_image_alt": ""
 }

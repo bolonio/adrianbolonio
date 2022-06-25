@@ -3,21 +3,14 @@ import { PageHeading } from "@components/core/Headings"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import introImage from "@images/blog.jpg"
-import { getBlogPosts } from "@lib/blog"
+import { BlogPost, getBlogPosts } from "@lib/blog"
 import Image from "next/image"
 import { useRouter } from "next/router"
+import { useIntl } from "react-intl"
 
-const Blog = ({
-  posts,
-}: {
-  posts: {
-    slug: string
-    frontmatter: {
-      [key: string]: any
-    }
-  }[]
-}) => {
+const Blog = ({ posts }: { posts: BlogPost[] }) => {
   const { locale } = useRouter()
+  const intl = useIntl()
   return (
     <section>
       <SEO
@@ -26,7 +19,10 @@ const Blog = ({
           slug: `${locale === "es" ? "es/" : ""}blog`,
         }}
       />
-      <Image src={introImage} alt="" hidden />
+      <Image
+        src={introImage}
+        alt={intl.formatMessage({ id: "blog_page_image_alt" })}
+      />
       <PageLayoutContent>
         <PageHeading level={1}>Blog</PageHeading>
         <BlogPostContainer posts={posts} />

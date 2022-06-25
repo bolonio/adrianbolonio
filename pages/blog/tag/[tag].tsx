@@ -4,24 +4,13 @@ import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { languages } from "@data/languages"
 import introImage from "@images/blog.jpg"
-import { getBlogPostsByTag, getTags } from "@lib/blog"
+import { BlogPost, getBlogPostsByTag, getTags } from "@lib/blog"
 import type { GetStaticProps } from "next"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import { useIntl } from "react-intl"
 
-const Tag = ({
-  posts,
-  tag,
-}: {
-  posts: {
-    slug: string
-    frontmatter: {
-      [key: string]: any
-    }
-  }[]
-  tag: string
-}) => {
+const Tag = ({ posts, tag }: { posts: BlogPost[]; tag: string }) => {
   const { locale } = useRouter()
   const intl = useIntl()
   return (
@@ -32,7 +21,10 @@ const Tag = ({
           slug: `${locale === "es" ? "es/" : ""}blog/tag/${tag}`,
         }}
       />
-      <Image src={introImage} alt="" hidden />
+      <Image
+        src={introImage}
+        alt={intl.formatMessage({ id: "blog_page_image_alt" })}
+      />
       <PageLayoutContent>
         <PageHeading level={1}>
           {`${intl.formatMessage({ id: "title_tag" })}: ${tag}`}

@@ -7,20 +7,11 @@ import { JobCard } from "@components/cv/JobCard"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { cv, EducationItemType, JobItemType } from "@data/cv"
-import { getBlogPosts } from "@lib/blog"
+import { BlogPost, getBlogPosts } from "@lib/blog"
 import { useRouter } from "next/router"
 import { FormattedMessage, useIntl } from "react-intl"
 
-const Home = ({
-  posts,
-}: {
-  posts: {
-    slug: string
-    frontmatter: {
-      [key: string]: any
-    }
-  }[]
-}) => {
+const Home = ({ posts }: { posts: BlogPost[] }) => {
   const intl = useIntl()
   const { locale } = useRouter()
   return (
@@ -31,7 +22,6 @@ const Home = ({
           slug: `${locale === "es" ? "es/" : ""}cv`,
         }}
       />
-      {/* <Image src={introImage} alt="" /> */}
       <PageLayoutContent>
         <Box
           display="flex"

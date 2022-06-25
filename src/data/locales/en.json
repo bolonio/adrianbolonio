@@ -25,5 +25,10 @@
   "flag_alt": "The flag of {languageFlag}",
   "change_theme": "Change to {theme} theme",
   "open_menu": "Open menu",
-  "og_image_alt": "The mockup of a browser with the title of the article ({title}) and the date of the article ({date}). As well there is the url of my website (www.adrianbolonio.com) and my Twitter and GitHub username (@bolomio)"
+  "og_image_alt": "The mockup of a browser with the title of the article ({title}) and the date of the article ({date}). As well there is the url of my website (www.adrianbolonio.com) and my Twitter and GitHub username (@bolomio)",
+  "home_page_image_alt": "Me giving a talk. The picture is taken from the back of the room, so the audience appears in foreground and the stage in background. In the picture my name Adrián Bolonio is written",
+  "blog_page_image_alt": "Me sitting at a desk writing in a laptop. The picture start from the neck and finish at the desk",
+  "talk_page_image_alt": "Me giving a talk. The picture is taken from the back of the room, so the audience appears in foreground and the stage in background.",
+  "about_page_image_alt": "Me giving a talk. The picture is taken from the back of the room, so the audience appears in foreground and the stage in background.",
+  "404_page_image_alt": ""
 }

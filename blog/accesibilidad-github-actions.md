@@ -59,7 +59,7 @@ Escribir tus propios tests unitarios es la mejor manera de encontrar errores y v
 $ npm install jest-axe --save-dev
 ```
 
-```tsx
+```ts
 import React from "react"
 import App from "./App"
 import { render } from "@testing-library/react"

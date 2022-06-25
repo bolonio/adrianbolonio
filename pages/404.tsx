@@ -5,31 +5,26 @@ import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import introImage from "@images/about.jpg"
-import { getBlogPosts } from "@lib/blog"
+import { BlogPost, getBlogPosts } from "@lib/blog"
 import Image from "next/image"
 import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
 import styled from "styled-components"
 
 const RelatedPostsContainer = styled(Box)`
+  padding: 32px 0;
   background-color: ${(props) => props.theme.alternative};
 `
 
-const Home = ({
-  posts,
-}: {
-  posts: {
-    slug: string
-    frontmatter: {
-      [key: string]: any
-    }
-  }[]
-}) => {
+const Home = ({ posts }: { posts: BlogPost[] }) => {
   const intl = useIntl()
   return (
     <section>
       <SEO />
-      <Image src={introImage} alt="" />
+      <Image
+        src={introImage}
+        alt={intl.formatMessage({ id: "404_page_image_alt" })}
+      />
       <PageLayoutContent>
         <PageHeading level={1}>
           {intl.formatMessage({ id: "404_title" })}

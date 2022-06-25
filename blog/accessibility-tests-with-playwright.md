@@ -1,11 +1,11 @@
 ---
 title: Writing accessibility unit tests with playwright and axe
-description: Automatizar tus test de accesibilidad con librerías como axe, pa11y, lighthouse, o test unitarios directamente en tu repositorio de GitHub es realmente fácil con GitHub Actions.
+description: Our role as frontend and web developers is to create clear interfaces to make people understand and care about data, independently of their disabilities or impairments, so the only way to be sure that the websites we develop are fully accessible is to test our code.
 locale: en
 image: intro.png
 imageAlt: una imagen decorativa con la frase "Automatizando los test de accesibilidad de tu código fuente con GitHub Actions"
 alternate: /blog/accessibility-github-actions
-publishedAt: "2022-02-01"
+publishedAt: "2022-07-01"
 tags:
   - Accessibility
   - React

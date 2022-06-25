@@ -5,7 +5,7 @@ import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { TalkCard } from "@components/TalkCard"
 import { talks } from "@data/talks"
-import introImage from "@images/talks.jpg"
+import introImage from "@images/talks.png"
 import type { NextPage } from "next"
 import Image from "next/image"
 import { useRouter } from "next/router"
@@ -23,7 +23,10 @@ const Home: NextPage = () => {
           slug: `${locale === "es" ? "es/" : ""}talks`,
         }}
       />
-      <Image src={introImage} alt="" />
+      <Image
+        src={introImage}
+        alt={intl.formatMessage({ id: "talk_page_image_alt" })}
+      />
       <PageLayoutContent>
         <PageHeading level={1}>
           {intl.formatMessage({ id: "title_talks" })}

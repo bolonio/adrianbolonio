@@ -1,14 +1,10 @@
 import { BlogPostCard } from "@components/BlogPostCard"
+import { BlogPost } from "@lib/blog"
 import styled from "styled-components"
 
 type BlogPostContainerProps = {
   direction?: "horizontal" | "vertical"
-  posts: {
-    slug: string
-    frontmatter: {
-      [key: string]: any
-    }
-  }[]
+  posts: BlogPost[]
 }
 
 type PropsWithDirection = {

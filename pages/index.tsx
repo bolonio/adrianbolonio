@@ -5,26 +5,21 @@ import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import introImage from "@images/intro.jpg"
-import { getBlogPosts } from "@lib/blog"
+import { BlogPost, getBlogPosts } from "@lib/blog"
+import { generateRSSFeed } from "@lib/rss"
 import Image from "next/image"
 import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
 
-const Home = ({
-  posts,
-}: {
-  posts: {
-    slug: string
-    frontmatter: {
-      [key: string]: any
-    }
-  }[]
-}) => {
+const Home = ({ posts }: { posts: BlogPost[] }) => {
   const intl = useIntl()
   return (
     <section>
       <SEO />
-      <Image src={introImage} alt="" />
+      <Image
+        src={introImage}
+        alt={intl.formatMessage({ id: "home_page_image_alt" })}
+      />
       <PageLayoutContent>
         <Box marginBottom="48px">
           <PageHeading level={1}>
@@ -60,6 +55,8 @@ const Home = ({
 
 export async function getStaticProps({ locale }: { locale: string }) {
   const posts = await getBlogPosts(locale, 3)
+  const rssPosts = await getBlogPosts(locale)
+  generateRSSFeed(rssPosts, locale)
   return {
     props: {
       posts,

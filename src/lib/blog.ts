@@ -1,15 +1,24 @@
 import fs from "fs"
 import matter from "gray-matter"
 
+export type BlogPost = {
+  slug: string
+  frontmatter: {
+    [key: string]: any
+  }
+  content: string
+}
+
 const getAllBlogPosts = async (locale: string = "en") => {
   const files = fs.readdirSync("blog")
   let blogPosts = files.map((fileName) => {
     const slug = fileName.replace(".md", "")
     const readFile = fs.readFileSync(`blog/${fileName}`, "utf-8")
-    const { data: frontmatter } = matter(readFile)
+    const { data: frontmatter, content } = matter(readFile)
     return {
       slug,
       frontmatter,
+      content,
     }
   })
   // Sort the blog posts by date

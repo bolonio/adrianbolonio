@@ -18,7 +18,10 @@ const About = () => {
           slug: `${locale === "es" ? "es/" : ""}about`,
         }}
       />
-      <Image src={introImage} alt="" />
+      <Image
+        src={introImage}
+        alt={intl.formatMessage({ id: "about_page_image_alt" })}
+      />
       <PageLayoutContent>
         <PageHeading level={1}>
           {intl.formatMessage({ id: "title_about" })}

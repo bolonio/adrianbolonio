@@ -17,7 +17,7 @@ export const talks = [
         date: "06/02/2022",
         location: "Budapest, Hungary",
         link: "https://jsconfbp.com/",
-        video: "https://youtu.be/z4JnSGupxUs?t=13683",
+        video: "https://www.youtube.com/watch?v=eZnTIPQ4UuA",
         image: "jsconfbudapest.png",
       },
       {

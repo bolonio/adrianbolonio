@@ -98,7 +98,7 @@ $ npm run generate:icons
 When I checked the generated javascript code I saw a couple of issues. The first issue was that the title and the description were not rendered.
 The second issue was that all ids were, as well, not rendered. The last issue was that the React component was rendered in JavaScript and not in TypeScript.
 
-```jsx
+```js
 import * as React from "react"
 
 function SvgIconAccessibility(props) {

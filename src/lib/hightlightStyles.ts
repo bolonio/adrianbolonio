@@ -164,7 +164,7 @@ export const HightlightStyles = createGlobalStyle`
   }
 
   code.language-yaml::before {
-    background: url(/images/code/html.png);
+    background: url(/images/code/yaml.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

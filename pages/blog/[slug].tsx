@@ -6,7 +6,7 @@ import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { languages } from "@data/languages"
-import { getBlogPostBySlug, getBlogPostsByTag } from "@lib/blog"
+import { BlogPost, getBlogPostBySlug, getBlogPostsByTag } from "@lib/blog"
 import { HightlightStyles } from "@lib/hightlightStyles"
 import fs from "fs"
 import type { GetStaticProps } from "next"
@@ -70,6 +70,7 @@ const HeroImage = styled.img`
 `
 
 const RelatedPostsContainer = styled(Box)`
+  padding: 32px 0;
   background-color: ${(props) => props.theme.alternative};
 `
 
@@ -79,12 +80,7 @@ const BlogPost = ({
   frontmatter,
   content,
 }: {
-  relatedPosts: {
-    slug: string
-    frontmatter: {
-      [key: string]: any
-    }
-  }[]
+  relatedPosts: BlogPost[]
   slug: string
   frontmatter: {
     [key: string]: any

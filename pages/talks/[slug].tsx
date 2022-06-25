@@ -111,7 +111,7 @@ const TalkPage = ({
                 letterSpacing="-.03em"
                 lineHeight="1.5rem"
               >
-                {getFormattedDate(frontmatter.publishedAt, locale)}
+                {frontmatter.subtitle}
               </Text>
             </Box>
             <Text
@@ -126,7 +126,7 @@ const TalkPage = ({
           <iframe
             width="100%"
             height="580px"
-            src="https://www.youtube.com/embed/z4JnSGupxUs?start=13683"
+            src={frontmatter.video}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

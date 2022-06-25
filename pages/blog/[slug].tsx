@@ -74,7 +74,7 @@ const RelatedPostsContainer = styled(Box)`
   background-color: ${(props) => props.theme.alternative};
 `
 
-const BlogPost = ({
+const BlogPostPage = ({
   relatedPosts,
   slug,
   frontmatter,
@@ -248,4 +248,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 }
 
-export default BlogPost
+export default BlogPostPage

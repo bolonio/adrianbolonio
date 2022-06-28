@@ -1,20 +1,20 @@
-import { defaultMetadata } from "@data/defaultMetadata"
 import { BlogPost } from "@lib/blog"
 import { Feed } from "feed"
 import fs from "fs"
 import { getFormattedDate } from "src/lib/date"
+import { defaultMetadataEN } from "../data/defaultMetadata"
 
 export const generateRSSFeed = (articles: BlogPost[], locale: string) => {
   const baseUrl = "https://adrianbolonio.com"
   const author = {
-    name: defaultMetadata.author,
+    name: defaultMetadataEN.author,
     email: "bolonio85@gmail.com",
     link: "https://twitter.com/bolonio",
   }
 
   const feed = new Feed({
     title: "Articles by Adrián Bolonio",
-    description: defaultMetadata.description,
+    description: defaultMetadataEN.description,
     id: baseUrl,
     link: baseUrl,
     language: locale,

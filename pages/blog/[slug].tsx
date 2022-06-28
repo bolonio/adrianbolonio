@@ -7,10 +7,15 @@ import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { languages } from "@data/languages"
 import { BlogPost, getBlogPostBySlug, getBlogPostsByTag } from "@lib/blog"
-import { HightlightStyles } from "@lib/hightlightStyles"
+import {
+  HightlightStylesDark,
+  HightlightStylesLight,
+} from "@lib/hightlightStyles"
+import { ThemeContext } from "@providers/ThemeProvider"
 import fs from "fs"
 import type { GetStaticProps } from "next"
 import { useRouter } from "next/router"
+import { useContext } from "react"
 import { useIntl } from "react-intl"
 import ReactMarkdown from "react-markdown"
 import rehypeHighlight from "rehype-highlight"
@@ -88,18 +93,19 @@ const BlogPostPage = ({
   content: string
 }) => {
   const { locale } = useRouter()
+  const { theme } = useContext(ThemeContext)
   const intl = useIntl()
   return (
     <>
       <BlogPostStyles />
-      <HightlightStyles />
+      {theme === "light" ? <HightlightStylesDark /> : <HightlightStylesLight />}
       <SEO
         metadata={{
           title: frontmatter.title,
           description: frontmatter.description,
           slug: `${locale === "es" ? "es/" : ""}blog/${slug}`,
           image: {
-            path: `/images/blog/${slug}/${frontmatter.image}`,
+            path: `images/blog/${slug}/${frontmatter.image}`,
             alt: intl.formatMessage(
               { id: "og_image_alt" },
               {

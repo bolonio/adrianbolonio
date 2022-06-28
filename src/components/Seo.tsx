@@ -1,6 +1,6 @@
 import Head from "next/head"
-import React from "react"
-import { defaultMetadata } from "../data/defaultMetadata"
+import { useRouter } from "next/router"
+import { defaultMetadataEN, defaultMetadataES } from "../data/defaultMetadata"
 
 export type SeoMetaData = {
   title?: string
@@ -19,6 +19,9 @@ type SEOProps = {
 }
 
 export const SEO = ({ metadata }: SEOProps) => {
+  const { locale } = useRouter()
+  const defaultMetadata =
+    locale === "en" ? defaultMetadataEN : defaultMetadataES
   const host =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"

@@ -3,11 +3,16 @@ import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
 import { languages } from "@data/languages"
-import { HightlightStyles } from "@lib/hightlightStyles"
+import {
+  HightlightStylesDark,
+  HightlightStylesLight,
+} from "@lib/hightlightStyles"
 import { getTalkBySlug } from "@lib/talks"
+import { ThemeContext } from "@providers/ThemeProvider"
 import fs from "fs"
 import type { GetStaticProps } from "next"
 import { useRouter } from "next/router"
+import { useContext } from "react"
 import { useIntl } from "react-intl"
 import ReactMarkdown from "react-markdown"
 import { getFormattedDate } from "src/lib/date"
@@ -68,11 +73,12 @@ const TalkPage = ({
   content: string
 }) => {
   const { locale } = useRouter()
+  const { theme } = useContext(ThemeContext)
   const intl = useIntl()
   return (
     <>
       <BlogPostStyles />
-      <HightlightStyles />
+      {theme === "light" ? <HightlightStylesDark /> : <HightlightStylesLight />}
       <SEO
         metadata={{
           title: frontmatter.title,

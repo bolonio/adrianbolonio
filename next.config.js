@@ -26,21 +26,21 @@ const nextConfig = {
         destination: "/blog/accessibility-storybook",
         permanent: true,
       },
-      /* {
+      {
         source: "/testing-web-accessibility-part-1",
-        destination: "/blog/testing-web-accessibility",
+        destination: "/blog/testing-web-accessibility-part-1",
         permanent: true,
       },
       {
         source: "/testing-web-accessibility-part-2",
-        destination: "/blog/testing-web-accessibility",
+        destination: "/blog/testing-web-accessibility-part-2",
         permanent: true,
       },
       {
         source: "/testing-web-accessibility-part-3",
-        destination: "/blog/testing-web-accessibility",
+        destination: "/blog/testing-web-accessibility-part-3",
         permanent: true,
-      }, */
+      },
       {
         source: "/las-5-reglas-de-aria",
         destination: "/blog/las-5-reglas-de-aria",

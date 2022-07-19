@@ -33,7 +33,7 @@ $ yarn dev
 
 ## Contributing
 
-If you have any suggestion for how this project could be improved, please read the [contributing guidelines](https://github.com/bolonio/adrianbolonio/blob/master/CONTRIBUTING.md).
+If you have any suggestion for how this project could be improved, please read the [contributing guidelines](https://github.com/bolonio/adrianbolonio/blob/main/CONTRIBUTING.md).
 
 ## Author
 

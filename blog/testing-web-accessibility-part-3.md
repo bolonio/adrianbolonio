@@ -1,6 +1,6 @@
 ---
 title: Testing Web Accessibility - Part 3
-description: Automated accessibility tests can free up your quality assurance (QA) team from manual testing every part of your application, but they can’t automatically make your site accessible. Only 20% to 50% of all accessibility issues can be detected with automated tests, so we need to consider those automated accessibility tests as one step of a larger testing process.
+description: Only 20% to 50% of all accessibility issues can be detected with automated tests, so we need to consider those automated accessibility tests as one step of a larger testing process.
 locale: en
 image: intro.png
 imageAlt: a summary with links of the testing tools to test accessibility during the development

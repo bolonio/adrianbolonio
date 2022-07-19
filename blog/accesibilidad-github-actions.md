@@ -41,9 +41,9 @@ o podemos configurarla para que se ejecute en cualquier _Pull Request_ a nuestra
 name: example
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs: ...
 ```
 
@@ -81,9 +81,9 @@ Por suerte, GitHub te ofrece un montón de plantillas al crear una nueva GitHub 
 name: unit-tests
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -121,9 +121,9 @@ Así quedaría la versión final de mi flujo de trabajo:
 name: axe
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   axe:
     runs-on: ubuntu-latest
@@ -178,9 +178,9 @@ Usando como base mi anterior flujo de trabajo, así quedaría la versión final:
 name: pa11y
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   pa11y:
     runs-on: ubuntu-latest
@@ -237,9 +237,9 @@ Usando la [plantilla de flujo de trabajo de Lighthouse](https://github.com/Googl
 name: Lighthouse
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   lhci:
     name: Lighthouse

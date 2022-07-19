@@ -41,9 +41,9 @@ Or we can configure it to run on any _Pull Request_ to our main _main_ branch.\*
 name: example
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs: ...
 ```
 
@@ -81,9 +81,9 @@ Luckily, GitHub offers you a bunch of templates when creating a new GitHub Actio
 name: unit-tests
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -121,9 +121,9 @@ This is what the final version of my workflow would look like:
 name: axe
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   axe:
     runs-on: ubuntu-latest
@@ -178,9 +178,9 @@ Using my previous workflow as a base, this is what the final version would look 
 name: pa11y
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   pa11y:
     runs-on: ubuntu-latest
@@ -236,9 +236,9 @@ Using the [lighthouse workflow template](https://github.com/GoogleChrome/lightho
 name: Lighthouse
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   lhci:
     name: Lighthouse

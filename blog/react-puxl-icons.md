@@ -7,7 +7,7 @@ imageAlt: a decorative image with the PUXL logo and a screenshot with several ic
 publishedAt: "2020-05-25"
 alternate: /blog/react-puxl-iconos
 tags:
-  - Accesibilidad
+  - Accessibility
   - React
 ---
 

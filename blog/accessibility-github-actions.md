@@ -8,7 +8,7 @@ alternate: /blog/accesibilidad-github-actions
 publishedAt: "2021-02-22"
 tags:
   - Accessibility
-  - React
+  - Testing
 ---
 
 ## GitHub Actions

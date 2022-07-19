@@ -4,6 +4,15 @@ export const talks = [
     talks: [
       {
         title: "Testing Web Accessibility",
+        conference: "ArmadaJS",
+        date: "10/07/2022",
+        location: "Novi Sad, Serbia",
+        link: "https://armada-js.com/",
+        video: "",
+        image: "armadajs.png",
+      },
+      {
+        title: "Testing Web Accessibility",
         conference: "WeAreDevelopers",
         date: "06/15/2022",
         location: "Berlin, Germany",

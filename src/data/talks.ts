@@ -28,6 +28,15 @@ export const talks: TalksType[] = [
       },
       {
         title: "Testing Web Accessibility",
+        conference: "Modern Web Podcast",
+        date: "07/30/2022",
+        location: "Podcast",
+        link: "https://twitter.com/moderndotweb",
+        video: "",
+        image: "modernweb.jpg",
+      },
+      {
+        title: "Testing Web Accessibility",
         conference: "WeAreDevelopers",
         date: "06/15/2022",
         location: "Berlin, Germany",

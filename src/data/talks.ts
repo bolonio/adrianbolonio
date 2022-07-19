@@ -1,4 +1,19 @@
-export const talks = [
+export type TalkType = {
+  title: string
+  conference: string
+  date: string
+  location: string
+  link: string
+  video: string
+  image: string
+}
+
+export type TalksType = {
+  year: string
+  talks: TalkType[]
+}
+
+export const talks: TalksType[] = [
   {
     year: "2022",
     talks: [

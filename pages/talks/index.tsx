@@ -1,9 +1,8 @@
-import Box from "@components/core/Box"
 import { PageHeading } from "@components/core/Headings"
 import Text from "@components/core/Text"
 import { PageLayoutContent } from "@components/layouts/Layout"
 import { SEO } from "@components/Seo"
-import { TalkCard } from "@components/TalkCard"
+import { TalksContainer } from "@components/TalksContainer"
 import { talks } from "@data/talks"
 import introImage from "@images/talks.png"
 import type { NextPage } from "next"
@@ -47,28 +46,7 @@ const Home: NextPage = () => {
           />
         </Text>
         {talks.map((year) => (
-          <Box
-            display="flex"
-            flexWrap="wrap"
-            gridGap="32px"
-            flexDirection="column"
-            marginBottom="32px"
-            key={year.year}
-          >
-            <Text
-              as="h2"
-              fontSize="4rem"
-              fontWeight={800}
-              letterSpacing="-.03em"
-              lineHeight="76px"
-              style={{ margin: 0 }}
-            >
-              {year.year}
-            </Text>
-            {year.talks.map((talk, i: number) => (
-              <TalkCard key={i} talk={talk} />
-            ))}
-          </Box>
+          <TalksContainer key={year.year} talks={year.talks} year={year.year} />
         ))}
       </PageLayoutContent>
     </section>

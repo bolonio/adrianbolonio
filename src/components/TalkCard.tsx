@@ -1,20 +1,10 @@
 import { Anchorlink } from "@components/core/Anchorlink"
 import Box from "@components/core/Box"
 import Text from "@components/core/Text"
+import { TalkType } from "@data/talks"
 import { getFormattedDateMMMYYYY } from "@lib/date"
 import { useRouter } from "next/router"
-import React from "react"
 import styled from "styled-components"
-
-export interface TalkType {
-  title: string
-  conference: string
-  date: string
-  location: string
-  link: string
-  video: string
-  image: string
-}
 
 type TalkCardProps = {
   talk: TalkType

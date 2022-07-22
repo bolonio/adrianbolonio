@@ -4,6 +4,7 @@ import Text from "@components/core/Text"
 import { TalkType } from "@data/talks"
 import { getFormattedDateMMMYYYY } from "@lib/date"
 import { useRouter } from "next/router"
+import { FormattedMessage } from "react-intl"
 import styled from "styled-components"
 
 type TalkCardProps = {
@@ -93,7 +94,7 @@ export const TalkCard = ({ talk }: TalkCardProps) => {
         {talk.video && (
           <Anchorlink href={talk.video} target="_blank" underlined>
             <Text fontWeight="300" fontSize="1.25rem" lineHeight="1.25">
-              Watch video
+              <FormattedMessage id="watch_video" />
             </Text>
           </Anchorlink>
         )}

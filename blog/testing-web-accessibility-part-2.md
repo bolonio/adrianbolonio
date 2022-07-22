@@ -21,7 +21,7 @@ Testing Web Accessibility - Part 2 - Testing the DOM
 
 [Testing Web Accessibility - Part 3 - Testing in the browser](/blog/testing-web-accessibility-part-3)
 
-## Testing Web Accessibility - Part 2 - Testing the DOM
+## Testing the DOM
 
 Sometimes we, as developers, inherit and old codebase, or we join a project where no one took care of web accessibility tests.
 In those situations, you would maybe want to test the whole DOM structure of the application.

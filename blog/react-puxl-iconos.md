@@ -11,6 +11,8 @@ tags:
   - React
 ---
 
+## ¿Qué es PUXL?
+
 Hace unos meses, mientras seguía a algunos expertos en Accesibilidad Web en Twitter y atendía alguna conferencia online, encontré un nuevo framework para desarrollar sitios web más accesibles. Este framework se llama [PUXL Framework](https://puxl.io/).
 
 > "PUXL framework is a free and open-source and eco-friendly library to create front-end Web interfaces. It helps you build accessible and responsive sites with lightweight HTML."

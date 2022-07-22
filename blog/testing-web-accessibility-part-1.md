@@ -11,11 +11,7 @@ tags:
   - Testing
 ---
 
-When we develop a new web application, we often put a lot of work on the design, on making it beautiful and usable.
-In other words, we want our web app to be effective, efficient, and satisfying for the user.
-But a lot of times we don’t think about the user experience for everyone, people with or without disabilities, including people with age-related impairments.
-
-## Accessibility (a11y)
+## What is Accessibility (a11y)?
 
 > “Accessibility is about providing access to information for everyone, regardless of age or ability, so that each individual can realize their full potential.“
 >
@@ -29,7 +25,11 @@ Probably because those three ramps were built by non-disabled people, or maybe b
 We can even think that these situations were not properly tested from the end user perspective, nor during the design phase, nor the building phase.
 But it's very clear to me that someone using a wheelchair will always have problems using these three "accessible" ramps.
 
-## Web Accessibility (a11y)
+## What is Web Accessibility (a11y)?
+
+When we develop a new web application, we often put a lot of work on the design, on making it beautiful and usable.
+In other words, we want our web app to be effective, efficient, and satisfying for the user.
+But a lot of times we don’t think about the user experience for everyone, people with or without disabilities, including people with age-related impairments.
 
 > Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them.
 > More specifically, people can: perceive, understand, navigate, interact with the Web, and contribute to the Web
@@ -59,7 +59,7 @@ Testing Web Accessibility - Part 1 - Testing the code
 
 [Testing Web Accessibility - Part 3 - Testing in the browser](/testing-web-accessibility-part-3)
 
-## Testing Web Accessibility - Part 1 - Testing the code
+## Testing the code
 
 I've created a React application with three small components: a button, a fake button (a link with the role button), and an image.
 In the main application I've introduced a bunch of accessibility errors, so let's see how can I find them using some testing tools.

@@ -21,7 +21,7 @@ I've created a series of three blog posts to give to give you an introduction ab
 
 Testing Web Accessibility - Part 3 - Testing in the browser
 
-## Testing Web Accessibility - Part 3 - Testing in the browser
+## Testing in the browser
 
 As I said, we need to remember that only 20% to 50% of all accessibility issues can be detected with automated tests,
 so we need to consider those automated accessibility tests as one step of a larger testing process.

@@ -10,6 +10,8 @@ tags:
   - aria
 ---
 
+## ¿Qué es ARIA?
+
 Cuando desarrollamos un nuevo sitio web, no podemos dejar de lado la accesibilidad del sitio, y si hablamos de accesibilidad web, hablamos de ARIA.
 
 [**Accessible Rich Internet Applications (ARIA)**](https://www.w3.org/WAI/standards-guidelines/aria/) es un conjunto de atributos que define formas de hacer que el contenido web y las aplicaciones web (especialmente aquellas desarrolladas con JavaScript) sean más accesibles para personas con discapacidades.

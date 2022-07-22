@@ -11,6 +11,8 @@ tags:
   - React
 ---
 
+## What is PUXL?
+
 Some months ago, while following some accessibility experts on Twitter and attending some online conferences,
 I found a new framework to develop more accessible website. This framework is called [PUXL Framework](https://puxl.io/).
 

@@ -165,7 +165,7 @@ const BlogPostPage = ({
               {frontmatter.description}
             </Text>
           </Box>
-          <HeroImage
+          {/* <HeroImage
             src={`/images/blog/${slug}/${frontmatter.image}`}
             alt={intl.formatMessage(
               { id: "og_image_alt" },
@@ -174,7 +174,7 @@ const BlogPostPage = ({
                 date: getFormattedDate(frontmatter.publishedAt, locale),
               }
             )}
-          />
+          /> */}
           <StyledReactMarkdown
             className="post-container"
             rehypePlugins={[rehypeHighlight]}

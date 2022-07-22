@@ -3,7 +3,6 @@ import Box from "@components/core/Box"
 import Text from "@components/core/Text"
 import { getFormattedDate } from "@lib/date"
 import { useRouter } from "next/router"
-import React from "react"
 import { useIntl } from "react-intl"
 import styled from "styled-components"
 
@@ -62,7 +61,7 @@ export const BlogPostCard = ({
   const intl = useIntl()
   return (
     <PostContainer direction={direction}>
-      <Box
+      {/* <Box
         position="relative"
         display="flex"
         marginRight={[0, 3, 3]}
@@ -79,7 +78,7 @@ export const BlogPostCard = ({
           src={`/images/blog/${slug}/${frontmatter.image}`}
           direction={direction}
         />
-      </Box>
+      </Box> */}
       <Box display="flex" flexDirection="column">
         <PostTitle>
           <Anchorlink href={`/blog/${slug}`} underlined>

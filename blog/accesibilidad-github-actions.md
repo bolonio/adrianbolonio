@@ -7,7 +7,7 @@ imageAlt: Una imagen decorativa con la frase "Automatizando los test de accesibi
 alternate: /blog/accessibility-github-actions
 publishedAt: "2021-02-22"
 tags:
-  - Accessibilidad
+  - Accesibilidad
   - Testing
 ---
 

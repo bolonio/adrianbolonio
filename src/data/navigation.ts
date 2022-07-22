@@ -30,6 +30,6 @@ export const footerMenu = [
   },
   {
     title: `RSS`,
-    slug: `/rss`,
+    slug: `/rss.xml`,
   },
 ]

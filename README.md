@@ -6,7 +6,7 @@ Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software En
 
 When I’m not at the office I enjoy a good read, working my way through any delicious recipe, and indulging my love for travelling to new places.
 
-I write post about frontend and web accessibility in my [blog](http://adrianbolonio.com/en/blog), and as well I regularly give talks at conferences about accessibility. You can find my [speaker experience in my website](http://adrianbolonio.com/en/talks).
+I write posts about frontend and web accessibility in my [blog](http://adrianbolonio.com/en/blog), and as well I regularly give talks at conferences about accessibility. You can find my [speaker experience in my website](http://adrianbolonio.com/en/talks).
 
 ### You can find me in:
 

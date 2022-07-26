@@ -18,12 +18,12 @@ const nextConfig = {
       },
       {
         source: "/accesibilidad-con-storybook",
-        destination: "/blog/accesibilidad-storybook",
+        destination: "/blog/accesibilidad-con-storybook",
         permanent: true,
       },
       {
         source: "/accessibility-with-storybook",
-        destination: "/blog/accessibility-storybook",
+        destination: "/blog/accessibility-with-storybook",
         permanent: true,
       },
       {

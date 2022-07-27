@@ -73,7 +73,10 @@ export const SEO = ({ metadata }: SEOProps) => {
       <meta name="twitter:creator" content="@bolonio" />
       <meta name="twitter:title" content={seoMetaData.title} />
       <meta name="twitter:description" content={seoMetaData.description} />
-      <meta name="twitter:image" content={seoMetaData.image?.path} />
+      <meta
+        name="twitter:image"
+        content={`${host}/${seoMetaData.image?.path}`}
+      />
 
       <meta property="article:published_time" content={seoMetaData.date} />
     </Head>

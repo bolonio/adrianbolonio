@@ -169,7 +169,7 @@ export const OGImageTemplate = ({
               lineHeight="1.5rem"
               style={{ margin: 0 }}
             >
-              {getFormattedDate(publishedAt, "en")}
+              {getFormattedDate(publishedAt, locale)}
             </ColoredText>
           )}
         </Box>

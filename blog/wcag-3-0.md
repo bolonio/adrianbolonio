@@ -1,9 +1,8 @@
 ---
-title: ¿Qué cambios trae el primer borrador de las WCAG 3.0
+title: ¿Qué cambios trae el primer borrador de las WCAG 3.0?
 description: El pasado 21 de enero de 2021 se publicó el primer borrador de las W3C Accessibility Guidelines (WCAG) 3.0, y viene cargadito de cambios con respecto a la versión actual.
 locale: es
 image: intro.png
-imageAlt: una imagen decorativa con la frase "¿Qué cambios trae el primer borrador de las WCAG 3.0?"
 publishedAt: "2021-01-27"
 tags:
   - Accesibilidad

@@ -50,7 +50,8 @@ export const talks: TalksType[] = [
         date: "07/30/2022",
         location: "Podcast",
         link: "https://twitter.com/moderndotweb",
-        video: "",
+        video:
+          "https://modernweb.podbean.com/e/s09e15-modern-web-podcast-accessibility-in-testing-with-adrian-bolonia/",
         image: "modernweb.jpg",
       },
       {

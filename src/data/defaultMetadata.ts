@@ -3,7 +3,7 @@ import { SeoMetaData } from "../components/Seo"
 export const defaultMetadataEN: SeoMetaData = {
   title: "Adrián Bolonio - Accessibility Software Engineering",
   description:
-    "Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineering at GitHub as part of a talented, diverse, and motivated team that will work on making GitHub and the Internet a better and more accessible place for everyone.",
+    "Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineer at GitHub as part of a talented, diverse, and motivated team that will work on making GitHub and the Internet a better and more accessible place for everyone.",
   author: "Adrián Bolonio",
   image: {
     path: "images/intro.jpg",
@@ -14,7 +14,7 @@ export const defaultMetadataEN: SeoMetaData = {
 export const defaultMetadataES: SeoMetaData = {
   title: "Adrián Bolonio - Accessibility Software Engineering",
   description:
-    "Hola, me llamo Adrián Bolonio. Trabajo como Accessibility Software Engineering en GitHub como parte de un equipo motivado, diverso y con un gran talento donde trabajaremos en hacer GitHub e Internet un lugar mejor y más accesible para todos.",
+    "Hola, me llamo Adrián Bolonio. Trabajo como Accessibility Software Engineer en GitHub como parte de un equipo motivado, diverso y con un gran talento donde trabajaremos en hacer GitHub e Internet un lugar mejor y más accesible para todos.",
   author: "Adrián Bolonio",
   image: {
     path: "images/intro.jpg",

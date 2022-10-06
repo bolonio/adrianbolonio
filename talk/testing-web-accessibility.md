@@ -1,11 +1,12 @@
 ---
 title: Testing Web Accessibility
-description: When we develop a new web application, we often put a lot of work on the design, on making it beautiful and usable. In other words, we want our web app to be effective, efficient, and satisfying for the user. But a lot of times we don’t think about the user experience for people with disabilities, including people with age-related impairments.
+subtitle: How to find accessibility vulnerabilities in your website
+description: 
 locale: en
 image: intro.png
-imageAlt: a decorative image with the quote "Automating the accessibility tests of your source code with GitHub Actions"
-alternate: /talk/testeando-accesibilidad-web
-publishedAt: "2021-02-22"
+publishedAt: "2022-10-07"
 ---
 
-WIP
+Web Accessibility is not just keyboard navigation, color contrast, or screen readers. Accessibility is a perfect indicator of the quality of a website. When a website is accessible, it usually means that it's inclusive, usable, offers a great user experience for everyone, and is also fast.
+
+Our role as developers is to create clear interfaces for people to understand and care about data, regardless of their disabilities, but we often forget to make sure that the code we write complies with the "Web Content Accessibility Guidelines" (WCAG), and the only way to achieve this is through tests, either manual or automated.

@@ -5,10 +5,11 @@ import { SEO } from "@components/Seo"
 import { languages } from "@data/languages"
 import {
   HightlightStylesDark,
-  HightlightStylesLight,
+  HightlightStylesLight
 } from "@lib/hightlightStyles"
 import { getTalkBySlug } from "@lib/talks"
 import { ThemeContext } from "@providers/ThemeProvider"
+import PDF from "@talks/testing-web-accessibility.pdf"
 import fs from "fs"
 import type { GetStaticProps } from "next"
 import { useRouter } from "next/router"
@@ -110,37 +111,51 @@ const TalkPage = ({
             >
               {frontmatter.title}
             </Text>
-            <Box display="flex" gridGap="16px">
+            {frontmatter.subtitle && (
+              <Box display="flex" gridGap="16px">
+                <Text
+                  fontSize="1.5rem"
+                  fontWeight={700}
+                  letterSpacing="-.03em"
+                  lineHeight="1.5rem"
+                >
+                  {frontmatter.subtitle}
+                </Text>
+              </Box>
+            )}
+            {frontmatter.description && (
               <Text
-                fontSize="1.5rem"
-                fontWeight={700}
-                letterSpacing="-.03em"
+                as="p"
+                fontSize="1.25rem"
                 lineHeight="1.5rem"
+                fontWeight={300}
               >
-                {frontmatter.subtitle}
+                {frontmatter.description}
               </Text>
-            </Box>
-            <Text
-              as="p"
-              fontSize="1.25rem"
-              lineHeight="1.5rem"
-              fontWeight={300}
-            >
-              {frontmatter.description}
-            </Text>
+            )}
           </Box>
-          <iframe
-            width="100%"
-            height="580px"
-            src={frontmatter.video}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          {frontmatter.video && (
+            <iframe
+              width="100%"
+              height="580px"
+              src={frontmatter.video}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          )}
           <StyledReactMarkdown className="post-container">
             {content}
           </StyledReactMarkdown>
+          <embed
+            style={{
+              width: "100%",
+              height: "680px",
+            }}
+            type="application/pdf"
+            src={PDF}
+          />
         </PageLayoutContent>
       </section>
     </>

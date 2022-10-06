@@ -18,6 +18,33 @@ export const talks: TalksType[] = [
     year: "2022",
     talks: [
       {
+        title: "State of a11y",
+        conference: "State of the Web - State of a11y",
+        date: "12/13/2022",
+        location: "[Online]",
+        link: "https://www.thisdotmedia.com/state-of-the-web/",
+        video: "",
+        image: "statea11y.jpg",
+      },
+      {
+        title: "Testing Web Accessibility",
+        conference: "Spajk",
+        date: "12/08/2022",
+        location: "Stockholm, Sweden",
+        link: "https://spajkbyelevate.com/",
+        video: "",
+        image: "spajk.png",
+      },
+      {
+        title: "Testing Web Accessibility",
+        conference: "Javascript Night",
+        date: "10/13/2022",
+        location: "Vienna, Austria",
+        link: "https://www.linkedin.com/events/javascriptnight6972867257668415489",
+        video: "",
+        image: "dotbite.png",
+      },
+      {
         title: "Testing Web Accessibility",
         conference: "ArmadaJS",
         date: "10/07/2022",

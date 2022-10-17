@@ -37,6 +37,15 @@ export const talks: TalksType[] = [
       },
       {
         title: "Testing Web Accessibility",
+        conference: "KidsABILITY Initiative",
+        date: "10/15/2022",
+        location: "[Online]",
+        link: "https://kidsabilityinitiative.org/",
+        video: "https://youtu.be/xQvYB7L-Yfg?t=4177",
+        image: "kidsabilityinitiative.jpeg",
+      },
+      {
+        title: "Testing Web Accessibility",
         conference: "Javascript Night",
         date: "10/13/2022",
         location: "Vienna, Austria",

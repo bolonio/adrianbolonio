@@ -114,7 +114,7 @@ export const talks: TalksType[] = [
         date: "05/13/2022",
         location: "Córdoba, Spain",
         link: "https://salmorejo.tech/2022/",
-        video: "",
+        video: "https://www.youtube.com/watch?v=a5ofaCtU7y8",
         image: "salmorejo.jpg",
       },
       {

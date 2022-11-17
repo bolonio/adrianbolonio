@@ -59,14 +59,14 @@ export const cv = {
         },
         city: "Vienna",
       },
-      startDate: "08/01/2018",
+      startDate: "08/01/2021",
       endDate: "present",
     },
     {
       company: "willhaben internet service GmbH & Co KG",
       companyUrl: "https://www.willhaben.at/",
       companyLogo: "willhaben.webp",
-      title: "Engineering Team Lead",
+      title: "Engineering Manager",
       description:
         "Responsible for leading a cross-functional engineering team (frontend, backend, SRE, QA, Android, iOS), establishing and communicating goals for the team and team members, managing product technical roadmaps and dependencies to minimise technical debt, as well as planning tasks and resource allocation (recruiting, salaries, holidays, home office). Recognizing the need for further development and planning further training measures, conducting and moderating regular meetings with the employees (1:1, team meetings, feedback discussions) as well as ensuring the flow of information (inside and outside the department), and recognizing and responding to conflicts within the team.",
       location: {

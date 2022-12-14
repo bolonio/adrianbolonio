@@ -1,6 +1,6 @@
 # adrianbolonio.com
 
-<img src="https://pbs.twimg.com/profile_banners/22399077/1615901743/1500x500" alt="A banner with my logo and the url of my website: www.adrianbolonio.com" />
+<img src="https://media.licdn.com/dms/image/C4E16AQEgY4iAzWeHEQ/profile-displaybackgroundimage-shrink_350_1400/0/1632231695500?e=1676505600&v=beta&t=XjIXUGUDG3fjmuk-c7gNlXuHiY1RLGL7zlJa3zt3eMc" alt="A banner with my logo and the url of my website: www.adrianbolonio.com" />
 
 Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineering working on making the Internet a better and more accessible place for everyone.
 

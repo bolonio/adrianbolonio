@@ -36,6 +36,15 @@ export const talks: TalksType[] = [
         image: "spajk.png",
       },
       {
+        title: "Accesibilidad y los sistemas de diseño",
+        conference: "Design Systems Community Santiago",
+        date: "12/06/2022",
+        location: "[Online]",
+        link: "https://designsystems.community/chapters/santiago/",
+        video: "https://www.youtube.com/watch?v=YnlGtTbZZX0",
+        image: "scl.png",
+      },
+      {
         title: "Testing Web Accessibility",
         conference: "KidsABILITY Initiative",
         date: "10/15/2022",

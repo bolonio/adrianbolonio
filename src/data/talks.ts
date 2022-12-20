@@ -23,7 +23,7 @@ export const talks: TalksType[] = [
         date: "12/13/2022",
         location: "[Online]",
         link: "https://www.thisdotmedia.com/state-of-the-web/",
-        video: "",
+        video: "https://www.youtube.com/watch?v=6hY-5KJRHwo",
         image: "statea11y.jpg",
       },
       {
@@ -86,7 +86,7 @@ export const talks: TalksType[] = [
         date: "09/15/2022",
         location: "[Online]",
         link: "https://www.octogatosconf.com/",
-        video: "",
+        video: "https://youtu.be/NRZJ_uV0h70?t=8647",
         image: "octogatosconf.png",
       },
       {

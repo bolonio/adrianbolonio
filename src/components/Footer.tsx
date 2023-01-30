@@ -71,6 +71,7 @@ const FooterIconLink = styled(Anchorlink)`
 export const Footer: FunctionComponent = () => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
+
   return (
     <FooterContainer>
       <LayoutContent>
@@ -92,7 +93,7 @@ export const Footer: FunctionComponent = () => {
                   ? `${LogoLight.src}`
                   : `${LogoDark.src}`
               }
-              alt="Adrian Bolonio Logo"
+              alt="Adrian Bolonio"
             />
             <FooterMenu>
               {footerMenu.map((menuItem) => (
@@ -132,7 +133,7 @@ export const Footer: FunctionComponent = () => {
                         ? contact.iconLight
                         : contact.iconDark
                     }
-                    alt={`${contact.name} Logo`}
+                    alt={`${contact.name}`}
                   />
                 </FooterIconLink>
               ) : null

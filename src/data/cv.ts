@@ -46,6 +46,23 @@ interface Country {
 export const cv = {
   jobs: [
     {
+      company: "Miro",
+      companyUrl: "http://www.miro.com/",
+      companyLogo: "miro.png",
+      title: "Senior Accessibility Software Engineer",
+      description:
+        "Responsible for actively participating in the analysis of accessibility issues & goals, do research and determine solutions’ requirements, as well as making architectural decisions and recommendations for converting successful prototypes into mature and accessible products. To accomplish this, I collaborate closely with people with disabilities throughout the product development lifecycle and look to innovate by exploring ways to interact with and communicate complex spatial information through various modalities such as audio. I collaborate with teams across Miro to improve our product, architecture and engineering practices, specially within Core Product, with the mission of making the Miro whiteboard accessible to everyone.",
+      location: {
+        country: {
+          id: "at",
+          name: "Austria",
+        },
+        city: "Vienna",
+      },
+      startDate: "01/16/2023",
+      endDate: "present",
+    },
+    {
       company: "GitHub",
       companyUrl: "http://www.github.com/",
       companyLogo: "github.png",
@@ -60,7 +77,7 @@ export const cv = {
         city: "Vienna",
       },
       startDate: "08/01/2021",
-      endDate: "present",
+      endDate: "11/18/2022",
     },
     {
       company: "willhaben internet service GmbH & Co KG",

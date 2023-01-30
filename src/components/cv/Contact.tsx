@@ -40,7 +40,7 @@ export const Contact = () => {
                 ? contact.iconDark
                 : contact.iconLight
             }
-            alt={`${contact.name} logo`}
+            alt={`${contact.name}`}
           />
           <Anchorlink href={contact.url} target="_blank" underlined>
             <Text
@@ -50,7 +50,7 @@ export const Contact = () => {
               lineHeight="1.5rem"
               style={{ margin: 0 }}
             >
-              {intl.formatMessage({ id: contact.name })}
+              {contact.name}
             </Text>
           </Anchorlink>
         </Box>

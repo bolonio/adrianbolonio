@@ -21,10 +21,10 @@ const Home = ({ posts }: { posts: BlogPost[] }) => {
   return (
     <section>
       <SEO />
-      <Image
+      {/* <Image
         src={introImage}
         alt={intl.formatMessage({ id: "404_page_image_alt" })}
-      />
+      /> */}
       <PageLayoutContent>
         <PageHeading level={1}>
           {intl.formatMessage({ id: "404_title" })}

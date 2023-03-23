@@ -15,6 +15,38 @@ export type TalksType = {
 
 export const talks: TalksType[] = [
   {
+    year: "2023",
+    talks: [
+      {
+        title: "Testeando Accesibilidad Web",
+        conference: "JSDay Canarias",
+        date: "05/07/2023",
+        location: "Tenerife, Spain",
+        link: "https://jsdaycanarias.com/",
+        video: "",
+        image: "canariasjs.jpg",
+      },
+      {
+        title: "Testeando Accesibilidad Web",
+        conference: "Commit Conf",
+        date: "04/21/2023",
+        location: "Madrid, Spain",
+        link: "https://2023.commit-conf.com/",
+        video: "",
+        image: "commitconf.jpg",
+      },
+      {
+        title: "TBD",
+        conference: "MiduFest",
+        date: "03/21/2023",
+        location: "[Online]",
+        link: "https://midufest.com/",
+        video: "",
+        image: "midufest.png",
+      },
+    ],
+  },
+  {
     year: "2022",
     talks: [
       {

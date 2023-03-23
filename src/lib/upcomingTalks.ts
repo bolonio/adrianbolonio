@@ -14,5 +14,5 @@ export const getUpcomingTalks = (talks: TalksType[]) => {
       })
     }
   })
-  return upcomingTalks
+  return upcomingTalks.reverse()
 }

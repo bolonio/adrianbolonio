@@ -32,7 +32,7 @@ export const talks: TalksType[] = [
         date: "04/21/2023",
         location: "Madrid, Spain",
         link: "https://2023.commit-conf.com/",
-        video: "",
+        video: "https://www.youtube.com/watch?v=qJcdSUThUCk",
         image: "commitconf.jpg",
       },
       {

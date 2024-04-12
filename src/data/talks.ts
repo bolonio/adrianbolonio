@@ -19,6 +19,24 @@ export const talks: TalksType[] = [
     talks: [
       {
         title: "Testeando Accesibilidad Web",
+        conference: "InfoBip Shift Conference",
+        date: "09/01/2023",
+        location: "Zadar, Croatia",
+        link: "https://jsdaycanarias.com/",
+        video: "https://www.youtube.com/watch?v=7VKducQ_tHg",
+        image: "shift2023.jpg",
+      },
+      {
+        title: "Tips de Accesibilidad Web",
+        conference: "Programando se entienden las máquinas",
+        date: "06/01/2023",
+        location: "Podcast [Online]",
+        link: "https://jsdaycanarias.com/",
+        video: "https://www.youtube.com/watch?v=pBpVsA46Gk4",
+        image: "ucopodcast.webp",
+      },
+      {
+        title: "Testeando Accesibilidad Web",
         conference: "JSDay Canarias",
         date: "05/07/2023",
         location: "Tenerife, Spain",
@@ -173,7 +191,7 @@ export const talks: TalksType[] = [
         date: "04/21/2022",
         location: "Verona, Italy",
         link: "https://2022.jsday.it/",
-        video: "",
+        video: "https://www.youtube.com/watch?v=YW3nPjwGziA",
         image: "jsconfit.jpg",
       },
       {

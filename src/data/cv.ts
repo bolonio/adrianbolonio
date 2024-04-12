@@ -49,9 +49,9 @@ export const cv = {
       company: "Miro",
       companyUrl: "http://www.miro.com/",
       companyLogo: "miro.png",
-      title: "Senior Accessibility Software Engineer",
+      title: "Senior Software Engineer - Accessibility",
       description:
-        "Responsible for actively participating in the analysis of accessibility issues & goals, do research and determine solutions’ requirements, as well as making architectural decisions and recommendations for converting successful prototypes into mature and accessible products. To accomplish this, I collaborate closely with people with disabilities throughout the product development lifecycle and look to innovate by exploring ways to interact with and communicate complex spatial information through various modalities such as audio. I collaborate with teams across Miro to improve our product, architecture and engineering practices, specially within Core Product, with the mission of making the Miro whiteboard accessible to everyone.",
+        "Responsible for actively participating in the analysis of accessibility issues & goals, do research and determine solutions’ requirements, as well as making architectural decisions and recommendations for converting successful prototypes into mature and accessible products. To accomplish this, I collaborate closely with people with disabilities throughout the product development lifecycle and look to innovate by exploring ways to interact with and communicate complex spatial information through various modalities such as audio. I collaborate with teams across Miro to improve our product, architecture and engineering practices, specially within Core Product, with the mission of making the Miro whiteboard accessible to everyone. Technologies: HTML, CSS, LESS, JavaScript, TypeScript, React, Next.js, Styled Components, Canvas",
       location: {
         country: {
           id: "at",
@@ -66,9 +66,9 @@ export const cv = {
       company: "GitHub",
       companyUrl: "http://www.github.com/",
       companyLogo: "github.png",
-      title: "Accessibility Software Engineer",
+      title: "Software Engineer - Accessibility",
       description:
-        "Responsible for building better process and tooling to ensure all code shipped at GitHub meets the accessibility standards and helping address accessibility bugs and improve the process to reduce the turnaround time by directly engaging with teams to guide their accessibility fixes and improve our OSS guidance for building UI with Primer and by collaborating with the Design Systems team to build and implement accessibility as a core requirement for the Primer component libraries as well as coordinating with engineering and product leadership to define and prioritize projects that help meet business objectives and work with support to triage and debug technical support requests, documenting every built system.",
+        "Responsible for building better process and tooling to ensure all code shipped at GitHub meets the accessibility standards and helping address accessibility bugs and improve the process to reduce the turnaround time by directly engaging with teams to guide their accessibility fixes and improve our OSS guidance for building UI with Primer and by collaborating with the Design Systems team to build and implement accessibility as a core requirement for the Primer component libraries as well as coordinating with engineering and product leadership to define and prioritize projects that help meet business objectives and work with support to triage and debug technical support requests, documenting every built system. Technologies: HTML, CSS, LESS, JavaScript, TypeScript, React, Next.js, Styled Components, Node, Ruby, RubyOnRails",
       location: {
         country: {
           id: "at",
@@ -100,9 +100,9 @@ export const cv = {
       company: "willhaben internet service GmbH & Co KG",
       companyUrl: "https://www.willhaben.at/",
       companyLogo: "willhaben.webp",
-      title: "Senior Frontend Developer",
+      title: "Senior Frontend Engineer",
       description:
-        "Responsible for implementing responsible web design principles ensuring the technical feasibility of UI/UX designs maintaining consistency in design and layout. Building reusable code and libraries for future use, and developing new user interfaces. Working closely with the design team and project managers to ensured projects are delivered on time.  Technologies: HTML, CSS, LESS, JS, TS, ReactJS, Redux, NextJS, Webpack, Babel, Styled Components, NodeJS, REST...",
+        "Responsible for implementing responsible web design principles ensuring the technical feasibility of UI/UX designs maintaining consistency in design and layout. Building reusable code and libraries for future use, and developing new user interfaces. Working closely with the design team and project managers to ensured projects are delivered on time. Technologies: HTML, CSS, LESS, JavaScript, TypeScript, React, Next.js, Styled Components, Node.",
       location: {
         country: {
           id: "at",
@@ -151,7 +151,7 @@ export const cv = {
       company: "yelster digital gmbh",
       companyUrl: "https://www.yelsterdigital.com/",
       companyLogo: "yelsterdigital.webp",
-      title: "Frontend Developer",
+      title: "Frontend Engineer",
       description:
         "Responsible for developing new and modifying existing frontend components and prototypes. Contributing to the successful delivery of projects by delivering high quality software according to agreed timelines. Ensuring all required documentation is delivered regularly using appropriate standards, methods and tools. Assisting in technical and functional application design.  Technologies: HTML, CSS, LESS, Javascript, jQuery, Angular, Angular2, NodeJS, Sequelize, PostgreSQL, MySQL, REST, jSON, CasperJS.",
       location: {
@@ -185,7 +185,7 @@ export const cv = {
       company: "kompany",
       companyUrl: "https://www.kompany.com/",
       companyLogo: "kompany.webp",
-      title: "Frontend Developer",
+      title: "Frontend Engineer",
       description:
         "Responsible for the analysis, specification, high level design, coding, configuration, testing and documentation of new applications, interfaces and reports in accordance with kompany development standards and processes. Working with colleagues, third parties and internal stake-holders, I was also responsible for supporting and maintaining applications, interfaces and reports that have been developed by the team and other parties (internal and external).  Technologies: HTML, CSS, Javascript, jQuery, XML, jSON, PHP, MySQL, Wordpress.",
       location: {
@@ -202,7 +202,7 @@ export const cv = {
       company: "CEROSYUNOS INGENIERIA INFORMATICA SL",
       companyUrl: "https://www.cerosyunos.es/",
       companyLogo: "cerosyunos.png",
-      title: "Software Developer",
+      title: "Frontend Engineer",
       description:
         "Responsible for providing user requirements analysis, design and programming support for enhancement of web application using the latest GIS technologies, such as GeoRSS Feed Technology with GeoNames Database, and Google Maps API 3/0/ Applying GIS technology to smart phones and smart devices with iOS (Objective-C)  Technologies: HTML, CSS, Javascript, jQuery, PHP, MySQL, GeoNames, Google Maps API 3/0, GeoRSS.",
       location: {

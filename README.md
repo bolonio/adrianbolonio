@@ -1,18 +1,14 @@
-# adrianbolonio.com
+## adrianbolonio.com
 
-<img src="https://media.licdn.com/dms/image/C4E16AQEgY4iAzWeHEQ/profile-displaybackgroundimage-shrink_350_1400/0/1632231695500?e=1676505600&v=beta&t=XjIXUGUDG3fjmuk-c7gNlXuHiY1RLGL7zlJa3zt3eMc" alt="A banner with my logo and the url of my website: www.adrianbolonio.com" />
+![A banner with my logo and the url of my website: www.adrianbolonio.com](https://github.com/bolonio/bolonio/assets/1288407/c49ca275-9ff5-4e4e-9966-e62046ea950e)
 
-Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineering working on making the Internet a better and more accessible place for everyone.
+Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineer working on making the Internet a better and more accessible place for everyone.
 
 When I’m not at the office I enjoy a good read, working my way through any delicious recipe, and indulging my love for travelling to new places.
 
-I write posts about frontend and web accessibility in my [blog](http://adrianbolonio.com/en/blog), and as well I regularly give talks at conferences about accessibility. You can find my [speaker experience in my website](http://adrianbolonio.com/en/talks).
+I write posts about frontend and web accessibility in [my blog](http://adrianbolonio.com/en/blog), and as well I regularly give talks at conferences about accessibility. You can find [my speaker experience in my website](http://adrianbolonio.com/en/talks).
 
-### You can find me in:
-
-- Web: [adrianbolonio.com](http://adrianbolonio.com/)
-- Twitter: [@bolonio](https://twitter.com/bolonio)
-- LinkedIn: [bolonio](https://linkedin.com/in/adrianbolonio)
+You can find me in [my LinkedIn profile](https://linkedin.com/in/adrianbolonio), in [my Twitter profile](https://twitter.com/bolonio), or you can [send me an email](mailto:adrian.bolonio@gmail.com).
 
 ## Running it locally
 

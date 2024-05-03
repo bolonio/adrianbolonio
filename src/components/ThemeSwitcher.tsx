@@ -22,8 +22,8 @@ export const ThemeSwitcher = () => {
     >
       <Image
         src={isThemeDark ? "/images/theme_light.svg" : "/images/theme_dark.svg"}
-        width="24"
-        height="24"
+        width="30"
+        height="30"
         alt="Adrián Bolonio Logo"
       />
     </button>

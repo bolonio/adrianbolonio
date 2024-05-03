@@ -1,142 +1,50 @@
-import { LayoutContent } from "@components/layouts/Layout"
-import { headerMenu } from "@data/navigation"
-import LogoDark from "@images/logo.svg"
-import LogoLight from "@images/logo_white.svg"
-import { ThemeContext } from "@providers/ThemeProvider"
-import Link from "next/link"
-import React, { PropsWithChildren, useContext, useState } from "react"
-import { FormattedMessage, useIntl } from "react-intl"
-import styled from "styled-components"
-import { LanguageSelector } from "./LanguageSelector"
-import { ThemeSwitcher } from "./ThemeSwitcher"
+"use client"
 
-type HeaderProps = PropsWithChildren<{
-  alternate?: string
-}>
+import React, { useState } from "react"
+import LocaleSwitcher from "@/components/LocaleSwitcher"
+import { ThemeSwitcher } from "@/components/ThemeSwitcher"
+import { LayoutWrapper } from "@/components/LayoutWrapper"
+import Image from "next/image"
+import styles from "./Header.module.css"
+import { headerMenu } from "@/data/navigation"
+import { useTheme } from "next-themes"
+import { useTranslations } from "next-intl"
+import { Link } from "@/navigation"
 
-const HeaderContainer = styled.header``
-
-const NavContainer = styled.nav`
-  display: flex;
-  padding: 16px 0;
-  justify-content: space-between;
-  align-items: center;
-`
-
-const HeaderMenu = styled.div`
-  display: flex;
-  gap: 24px;
-  @media screen and (max-width: 700px) {
-    width: 100%;
-    justify-content: space-between;
-    display: none;
-  }
-`
-
-const HeaderBurgerMenu = styled.div`
-  gap: 24px;
-  display: none;
-  @media screen and (max-width: 700px) {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-  }
-`
-
-const HeaderMenuLink = styled.a`
-  font-weight: 700;
-  font-size: 1.5rem;
-  text-decoration: none;
-  letter-spacing: -0.03em;
-  box-shadow: none;
-  color: ${(props) => props.theme.secondary};
-
-  @media screen and (max-width: 700px) {
-    font-size: 2rem;
-  }
-
-  :focus {
-    outline: 3px dashed ${(props) => props.theme.secondary};
-    outline-offset: 0.25rem;
-  }
-`
-
-const LogoImage = styled.img`
-  margin: 0;
-  width: 100px;
-`
-
-const LogoImageLink = styled.a`
-  display: flex;
-`
-
-const BurgerMenuContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 24px;
-  position: absolute;
-  z-index: 9999;
-  background: ${(props) => props.theme.primary};
-  left: 0;
-  width: 100%;
-  top: 80px;
-  height: 100%;
-  padding-top: 32px;
-`
-
-const BurgerMenuButton = styled.button`
-  border: 0;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-
-  :focus {
-    outline: 3px dashed ${(props) => props.theme.secondary};
-    outline-offset: 0.25rem;
-  }
-`
-
-export const Header = ({ alternate }: HeaderProps) => {
-  const { theme } = useContext(ThemeContext)
+export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const intl = useIntl()
+  const { theme } = useTheme()
+  const t = useTranslations("Navigation")
 
   return (
-    <HeaderContainer>
-      <LayoutContent>
-        <NavContainer>
-          <Link href="/" passHref>
-            <LogoImageLink aria-label={intl.formatMessage({ id: "nav_Home" })}>
-              <LogoImage
-                src={theme === "light" ? `${LogoDark.src}` : `${LogoLight.src}`}
-                alt="Adrian Bolonio Logo"
-              />
-            </LogoImageLink>
-          </Link>
-          <HeaderMenu>
-            {headerMenu.map((menuItem) => (
-              <Link key={menuItem.slug} href={`${menuItem.slug}`} passHref>
-                <HeaderMenuLink>
-                  <FormattedMessage id={`nav_${menuItem.title}`} />
-                </HeaderMenuLink>
-              </Link>
-            ))}
+    <header>
+      <LayoutWrapper>
+        <nav className={styles.navcontainer}>
+          <Image
+            src={
+              theme === "light" ? "/images/logo.svg" : "/images/logo_white.svg"
+            }
+            width="100"
+            height="50"
+            alt="Adrián Bolonio Logo"
+          />
+          <div className={styles.headermenu}>
+            <div className={styles.headermainmenu}>
+              {headerMenu.map((menuItem) => (
+                <Link
+                  className={styles.headermenulink}
+                  key={menuItem.slug}
+                  href={`${menuItem.slug}`}
+                >
+                  {t(menuItem.id)}
+                </Link>
+              ))}
+            </div>
             <ThemeSwitcher />
-            <LanguageSelector alternate={alternate} />
-          </HeaderMenu>
-          <HeaderBurgerMenu>
-            <ThemeSwitcher />
-            <LanguageSelector alternate={alternate} />
-            <BurgerMenuButton
+            <LocaleSwitcher />
+            <button
+              className={styles.burgermenubutton}
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label={intl.formatMessage(
-                { id: "open_menu" },
-                { theme: theme === "light" ? "dark" : "light" }
-              )}
             >
               {menuOpen ? (
                 <svg
@@ -161,25 +69,23 @@ export const Header = ({ alternate }: HeaderProps) => {
                   </g>
                 </svg>
               )}
-            </BurgerMenuButton>
+            </button>
             {menuOpen && (
-              <BurgerMenuContainer>
+              <div className={styles.burgermenucontainer}>
                 {headerMenu.map((menuItem) => (
-                  <Link key={menuItem.slug} href={`${menuItem.slug}`} passHref>
-                    <HeaderMenuLink
-                      onClick={() => {
-                        setMenuOpen(false)
-                      }}
-                    >
-                      <FormattedMessage id={`nav_${menuItem.title}`} />
-                    </HeaderMenuLink>
+                  <Link
+                    className={styles.headermenulink}
+                    key={menuItem.slug}
+                    href={`${menuItem.slug}`}
+                  >
+                    {t(menuItem.id)}
                   </Link>
                 ))}
-              </BurgerMenuContainer>
+              </div>
             )}
-          </HeaderBurgerMenu>
-        </NavContainer>
-      </LayoutContent>
-    </HeaderContainer>
+          </div>
+        </nav>
+      </LayoutWrapper>
+    </header>
   )
 }

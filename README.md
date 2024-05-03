@@ -4,28 +4,11 @@
 
 Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineer working on making the Internet a better and more accessible place for everyone.
 
-When I’m not at the office I enjoy a good read, working my way through any delicious recipe, and indulging my love for travelling to new places.
+When I’m not at the office I enjoy a good read, working my way through any delicious recipe, or indulging my love for travelling to new places.
 
-I write posts about frontend and web accessibility in [my blog](http://adrianbolonio.com/en/blog), and as well I regularly give talks at conferences about accessibility. You can find [my speaker experience in my website](http://adrianbolonio.com/en/talks).
+I write posts about frontend and web accessibility in [my blog](http://adrianbolonio.com/en/blog), and give talks about accessibility at conferences. You can find [my speaker experience](http://adrianbolonio.com/en/talks) in my website.
 
-You can find me in [my LinkedIn profile](https://linkedin.com/in/adrianbolonio), in [my Twitter profile](https://twitter.com/bolonio), or you can [send me an email](mailto:adrian.bolonio@gmail.com).
-
-## Running it locally
-
-1.  **Fork and clone** the repo on GitHub.
-2.  **Configure and install** the dependencies.
-
-```
-$ yarn
-```
-
-3.  **Run** the project.
-
-```
-$ yarn dev
-```
-
-4. You can **open** `http://localhost:3000/` in your browser
+You can find me in [my website](http://adrianbolonio.com/), [my LinkedIn profile](https://linkedin.com/in/adrianbolonio), [my Twitter profile](https://twitter.com/bolonio), or you can [send me an email](mailto:adrian.bolonio@gmail.com).
 
 ## Contributing
 
@@ -33,4 +16,4 @@ If you have any suggestion for how this project could be improved, please read t
 
 ## Author
 
-http://adrianbolonio.com/ is my personal website and is created by [Adrián Bolonio](https://twitter.com/bolonio).
+http://adrianbolonio.com/ is my personal website and is created by me, [Adrián Bolonio](https://twitter.com/bolonio).

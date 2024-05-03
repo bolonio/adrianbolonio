@@ -27,6 +27,13 @@ body {
   transition: 0.2s ease;
 }
 
+p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+  margin: 1em 0;
+}
+
 a {
   color: var(--primary);
 

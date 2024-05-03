@@ -10,20 +10,19 @@ import { headerMenu } from "@/data/navigation"
 import { useTheme } from "next-themes"
 import { useTranslations } from "next-intl"
 import { Link } from "@/navigation"
+import { useIsThemeDark } from "@/hooks/useIsThemeDark"
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const { theme } = useTheme()
   const t = useTranslations("Navigation")
+  const isThemeDark = useIsThemeDark()
 
   return (
     <header>
       <LayoutWrapper>
         <nav className={styles.navcontainer}>
           <Image
-            src={
-              theme === "light" ? "/images/logo.svg" : "/images/logo_white.svg"
-            }
+            src={isThemeDark ? "/images/logo_white.svg" : "/images/logo.svg"}
             width="100"
             height="50"
             alt="Adrián Bolonio Logo"
@@ -51,7 +50,7 @@ export const Header = () => {
                   height="28"
                   viewBox="0 0 512 512"
                   width="28"
-                  fill={theme === "light" ? "#24292f" : "#ffffff"}
+                  fill={isThemeDark ? "#ffffff" : "#24292f"}
                 >
                   <path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z" />
                 </svg>
@@ -60,7 +59,7 @@ export const Header = () => {
                   height="28"
                   viewBox="0 0 512 512"
                   width="28"
-                  fill={theme === "light" ? "#24292f" : "#ffffff"}
+                  fill={isThemeDark ? "#ffffff" : "#24292f"}
                 >
                   <g>
                     <path d="M417.4,224H94.6C77.7,224,64,238.3,64,256c0,17.7,13.7,32,30.6,32h322.8c16.9,0,30.6-14.3,30.6-32   C448,238.3,434.3,224,417.4,224z" />

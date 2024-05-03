@@ -2,7 +2,6 @@
 
 import { useLocale, useTranslations } from "next-intl"
 import Image from "next/image"
-import { useParams } from "next/navigation"
 import { useTransition } from "react"
 import { useRouter, usePathname } from "@/navigation"
 import styles from "./LocaleSwitcher.module.css"
@@ -14,7 +13,6 @@ export default function LocaleSwitcher() {
   const router = useRouter()
   const locale = useLocale()
   const pathname = usePathname()
-  const params = useParams()
   const newLanguage = getNextLanguage(locale)
 
   const changeLanguage = () => {

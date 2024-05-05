@@ -1,6 +1,8 @@
 import { LayoutWrapper } from "@/components/LayoutWrapper"
 import { useTranslations } from "next-intl"
 import pageStyles from "../pages.module.css"
+import { talks } from "@/data/talks"
+import { TalksContainer } from "@/components/TalksContainer"
 
 export default function About() {
   const t = useTranslations("Talks")
@@ -17,6 +19,9 @@ export default function About() {
             ),
           })}
         </p>
+        {talks.map((year) => (
+          <TalksContainer key={year.year} talks={year.talks} year={year.year} />
+        ))}
       </LayoutWrapper>
     </section>
   )

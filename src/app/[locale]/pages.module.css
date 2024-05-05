@@ -1,0 +1,10 @@
+.pageTitle {
+  font-size: 4.5rem;
+  letter-spacing: -0.1rem;
+  line-height: 76px;
+  font-weight: 800;
+}
+
+.section {
+  padding: 32px 16px;
+}

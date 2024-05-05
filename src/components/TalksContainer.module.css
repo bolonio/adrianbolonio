@@ -1,0 +1,15 @@
+.talkscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.talksyear {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 76px;
+  margin: 0;
+}

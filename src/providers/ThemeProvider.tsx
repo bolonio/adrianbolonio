@@ -1,34 +1,28 @@
-import { darkTheme, lightTheme } from "@theme/theme"
-import React, { createContext, ReactNode, useEffect, useState } from "react"
-import { ThemeProvider as StyledThemeProvider } from "styled-components"
+"use client"
 
-export const ThemeContext = createContext({
-  theme: "light",
-  toggleTheme: () => {},
-})
+import { ThemeProvider } from "next-themes"
+import { useState, useEffect } from "react"
 
-const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState("light")
+type Props = {
+  children: string | React.JSX.Element | React.JSX.Element[]
+}
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
-    setTheme(newTheme)
-    localStorage.setItem("theme", newTheme)
-  }
+const Provider = ({ children }: Props) => {
+  const [mounted, setMounted] = useState<boolean>(false)
 
   useEffect(() => {
-    // TODO: Check user preference first
-    const localTheme = window.localStorage.getItem("theme")
-    localTheme && setTheme(localTheme)
+    setMounted(true)
   }, [])
 
+  if (!mounted) {
+    return <>{children}</>
+  }
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <StyledThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
-        {children}
-      </StyledThemeProvider>
-    </ThemeContext.Provider>
+    <ThemeProvider enableSystem={true} attribute="class">
+      {children}
+    </ThemeProvider>
   )
 }
 
-export default ThemeProvider
+export default Provider

@@ -1,35 +1,29 @@
 export const headerMenu = [
   {
-    title: `Home`,
+    id: `home`,
     slug: `/`,
   },
   {
-    title: `Blog`,
+    id: `blog`,
     slug: `/blog`,
   },
   {
-    title: `Talks`,
+    id: `talks`,
     slug: `/talks`,
   },
   {
-    title: `About`,
+    id: `about`,
     slug: `/about`,
   },
-]
+] as const
 
 export const footerMenu = [
-  /*
   {
-    title: `Privacy Policy`,
-    slug: `/privacy`,
-  },
-  */
-  {
-    title: `CV`,
+    id: `cv`,
     slug: `/cv`,
   },
   {
-    title: `RSS`,
+    id: `rss`,
     slug: `/rss.xml`,
   },
-]
+] as const

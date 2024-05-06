@@ -1,0 +1,16 @@
+.cvsection {
+  margin-bottom: 32px;
+}
+
+.cvtitle {
+  font-size: 3.5rem;
+  letter-spacing: -0.1rem;
+  line-height: 4rem;
+  font-weight: 800;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.bio {
+  margin: 0;
+}

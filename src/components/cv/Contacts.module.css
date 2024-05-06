@@ -1,0 +1,29 @@
+.contactscontainer {
+  display: flex;
+  gap: 32px;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.contactcontainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contactlink {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  box-shadow: none;
+  color: #24292f;
+  color: var(--primary);
+  display: flex;
+
+  &:focus {
+    outline: 3px dashed var(--primary);
+    outline-offset: 0.25rem;
+  }
+}

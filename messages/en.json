@@ -16,7 +16,9 @@
     "title": "Blog"
   },
   "CV": {
-    "title": "CV"
+    "title": "CV",
+    "job_experience": "Job experience",
+    "education": "Education"
   },
   "Themes": {
     "change_theme": "Change to {theme} theme"
@@ -37,7 +39,9 @@
     "rss": "RSS"
   },
   "Contact": {
+    "title": "Contact",
     "go_to_profile": "Go to my {contact} profile",
+    "contact_me": "Contact me via {contact}",
     "logo_alt": "The {contact} logo"
   }
 }

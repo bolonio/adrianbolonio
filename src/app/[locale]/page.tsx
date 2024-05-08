@@ -39,13 +39,19 @@ export default function Index() {
           </Link>
         </div>
         <div>BLOG POSTS</div>
-        <div className={pageStyles.pagetitlecontainer}>
-          <h2 className={pageStyles.pagetitle}>{ttalks("upcoming_talks")}</h2>
-          <Link className={pageStyles.pagetitleall} href="/blog">
-            {ttalks("all_talks")}
-          </Link>
-        </div>
-        <TalksContainer talks={upcomingTalks} />
+        {upcomingTalks.length > 0 && (
+          <>
+            <div className={pageStyles.pagetitlecontainer}>
+              <h2 className={pageStyles.pagetitle}>
+                {ttalks("upcoming_talks")}
+              </h2>
+              <Link className={pageStyles.pagetitleall} href="/blog">
+                {ttalks("all_talks")}
+              </Link>
+            </div>
+            <TalksContainer talks={upcomingTalks} />
+          </>
+        )}
       </LayoutWrapper>
     </section>
   )

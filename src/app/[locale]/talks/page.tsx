@@ -17,7 +17,7 @@ export default function About() {
   return (
     <section className={pageStyles.section}>
       <LayoutWrapper>
-        <h1 className={pageStyles.pageTitle}>{t("title")}</h1>
+        <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
         <div className={pageStyles.introimagecontainer}>
           <Image
             className={pageStyles.introimage}

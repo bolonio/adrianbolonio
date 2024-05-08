@@ -19,10 +19,14 @@
   "Talks": {
     "title": "Talks",
     "speaker_invitation": "If you’d like to invite me to speak at your conference, feel free to send me an <email>email</email>, but please include the dates and location of the conference, the type of conference (topic of the conference, target audience, number of attendees, number of tracks, ...), the type of the talk (keynote, workshop, panel, lightning talk), and the accessibility details of the venue. Please be aware that I expect you to cover at least the transport and acommodation costs. Thanks.",
-    "watch_video": "What video"
+    "watch_video": "What video",
+    "upcoming_talks": "Upcoming talks",
+    "all_talks": "All talks"
   },
   "Blog": {
-    "title": "Blog"
+    "title": "Blog",
+    "latest_posts": "Latest posts",
+    "all_posts": "All posts"
   },
   "CV": {
     "title": "CV",

@@ -19,10 +19,14 @@
   "Talks": {
     "title": "Charlas",
     "speaker_invitation": "Si quieres invitarme a hablar en tu conferencia, no dudes en enviarme un <email>email</email>, pero por favor incluye las fechas y el lugar de la conferencia, el tipo de conferencia (tema de la conferencia, tipo de audiencia, número de asistentes, número de tracks, ...), el tipo de charla (keynote, taller, panel, charla relámpago), y los detalles de accesibilidad del lugar. Por favor entiende que espero que cubras al menos los gastos de transporte y alojamiento. Gracias.",
-    "watch_video": "Ver video"
+    "watch_video": "Ver video",
+    "upcoming_talks": "Próximas charlas",
+    "all_talks": "Todas las charlas"
   },
   "Blog": {
-    "title": "Blog"
+    "title": "Blog",
+    "latest_posts": "Últimos posts",
+    "all_posts": "Todos los posts"
   },
   "CV": {
     "title": "CV",

@@ -22,7 +22,7 @@ export default function About() {
     <section className={pageStyles.section}>
       <LayoutWrapper>
         <div className={styles.cvsection}>
-          <h1 className={pageStyles.pageTitle}>Adrián Bolonio</h1>
+          <h1 className={pageStyles.pagetitle}>Adrián Bolonio</h1>
           <p className={styles.bio}>{tAbout("bio")}</p>
         </div>
         <div className={styles.cvsection}>

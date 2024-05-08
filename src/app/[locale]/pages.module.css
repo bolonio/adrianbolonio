@@ -1,9 +1,21 @@
-.pageTitle {
+.pagetitlecontainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.pagetitle {
   font-size: 4.5rem;
   letter-spacing: -0.1rem;
   line-height: 76px;
   font-weight: 800;
   margin-bottom: 32px;
+}
+
+.pagetitleall {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .section {

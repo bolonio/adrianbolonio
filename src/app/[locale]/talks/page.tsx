@@ -22,7 +22,7 @@ export default function About() {
           <Image
             className={pageStyles.introimage}
             fill={true}
-            src="/images/talks.jpg"
+            src="/images/talks.png"
             alt=""
           />
         </div>

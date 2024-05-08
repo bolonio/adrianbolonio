@@ -53,8 +53,9 @@ export const Footer = () => {
                   contactItem.inFooter ? (
                     <Link
                       className={styles.footermenulink}
+                      target="_blank"
                       key={contactItem.url}
-                      href={`${contactItem.url}`}
+                      href={contactItem.url}
                       aria-label={tcontact("go_to_profile", {
                         contact: contactItem.name,
                       })}

@@ -7,16 +7,11 @@ import { EducationItemType, JobItemType, cv } from "@/data/cv"
 import { Contacts } from "@/components/cv/Contacts"
 import { Job } from "@/components/cv/Job"
 import { Education } from "@/components/cv/Education"
-
-type MetaDataProp = {
-  params: { locale: string }
-}
+import { MetaDataProp, getMetadata } from "@/lib/seo"
 
 export async function generateMetadata({ params: { locale } }: MetaDataProp) {
   const t = await getTranslations({ locale, namespace: "CV" })
-  return {
-    title: t("title"),
-  }
+  return getMetadata({ title: t("title"), slug: "cv" }, locale)
 }
 
 export default function About() {

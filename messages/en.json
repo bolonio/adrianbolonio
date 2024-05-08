@@ -2,6 +2,15 @@
   "Index": {
     "title": "Hello"
   },
+  "SEO": {
+    "title": "Adrián Bolonio - Accessibility Software Engineering",
+    "description": "Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineer working on making the Internet a better and more accessible place for everyone.",
+    "author": "Adrián Bolonio",
+    "image": {
+      "path": "images/intro.jpg",
+      "alt": "Me giving a talk. The picture is taken from the back of the room, so the audience appears in foreground and the stage in background. In the picture my name Adrián Bolonio is written"
+    }
+  },
   "About": {
     "title": "About me",
     "bio": "Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineer working on making the Internet a better and more accessible place for everyone. When I’m not at the office I enjoy a good read, working my way through any delicious recipe, and indulging my love for travelling to new places.",

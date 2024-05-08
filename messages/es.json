@@ -2,6 +2,15 @@
   "Index": {
     "title": "Hola"
   },
+  "SEO": {
+    "title": "Adrián Bolonio - Accessibility Software Engineering",
+    "description": "Hola, me llamo Adrián Bolonio. Trabajo como Accessibility Software Engineer intentando hacer de Internet un lugar mejor y más accesible para todos.",
+    "author": "Adrián Bolonio",
+    "image": {
+      "path": "images/intro.jpg",
+      "alt": "Yo dando una charla. La foto está tomada desde el fondo de la sala, el públic sale en primer plano y el escenario en segundo plano. En la foto aparece mi nommbre Adrián Bolonio"
+    }
+  },
   "About": {
     "title": "Sobre mi",
     "bio": "Hola, me llamo Adrián Bolonio. Trabajo como Accessibility Software Engineer intentando hacer de Internet un lugar mejor y más accesible para todos. Cuando no estoy en la oficina me gusta disfrutar de una buena lectura, dedicarle tiempo a cocinar alguna deliciosa receta, o practicar mi afición por visitar nuevos lugares por el mundo.",

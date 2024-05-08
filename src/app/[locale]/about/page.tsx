@@ -25,7 +25,6 @@ export default function About() {
           />
         </div>
         <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
-
         <p>{t("bio")}</p>
         <p>
           {t.rich("contact_me", {

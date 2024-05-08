@@ -17,7 +17,6 @@ export default function About() {
   return (
     <section className={pageStyles.section}>
       <LayoutWrapper>
-        <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
         <div className={pageStyles.introimagecontainer}>
           <Image
             className={pageStyles.introimage}
@@ -26,6 +25,7 @@ export default function About() {
             alt=""
           />
         </div>
+        <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
         <p>
           {t.rich("speaker_invitation", {
             email: (chunks) => (

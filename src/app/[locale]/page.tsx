@@ -22,7 +22,6 @@ export default function Index() {
   return (
     <section className={pageStyles.section}>
       <LayoutWrapper>
-        <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
         <div className={pageStyles.introimagecontainer}>
           <Image
             className={pageStyles.introimage}
@@ -31,6 +30,7 @@ export default function Index() {
             alt=""
           />
         </div>
+        <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
         <p>{tabout("bio")}</p>
         <div className={pageStyles.pagetitlecontainer}>
           <h2 className={pageStyles.pagetitle}>{tblog("latest_posts")}</h2>

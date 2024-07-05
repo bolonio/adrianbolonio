@@ -55,6 +55,7 @@
     "title": "Contacto",
     "go_to_profile": "Ir a mi perfil de {contact}",
     "contact_me": "Contáctame via {contact}",
-    "logo_alt": "Logo de {contact}"
+    "logo_alt": "Logo de {contact}",
+    "librecounter": "Ir a las Analíticas de mi sitio web compatibles con el RGPD"
   }
 }

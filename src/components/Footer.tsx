@@ -76,6 +76,23 @@ export const Footer = () => {
                     </Link>
                   ) : null
                 )}
+                <Link
+                  className={styles.footermenulink}
+                  target="_blank"
+                  href="https://librecounter.org/referer/show"
+                  aria-label={tcontact("librecounter")}
+                >
+                  <Image
+                    src="https://librecounter.org/counter.svg"
+                    width="30"
+                    height="30"
+                    referrerPolicy="unsafe-url"
+                    alt={tcontact("logo_alt", {
+                      contact: "librecounter",
+                    })}
+                    aria-hidden
+                  />
+                </Link>
               </div>
             </div>
           </div>

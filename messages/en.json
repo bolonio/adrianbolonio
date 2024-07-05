@@ -55,6 +55,7 @@
     "title": "Contact",
     "go_to_profile": "Go to my {contact} profile",
     "contact_me": "Contact me via {contact}",
-    "logo_alt": "The {contact} logo"
+    "logo_alt": "The {contact} logo",
+    "librecounter": "Go to the GDPR Compliant Analytics of my site"
   }
 }

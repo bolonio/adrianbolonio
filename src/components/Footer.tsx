@@ -83,7 +83,11 @@ export const Footer = () => {
                   aria-label={tcontact("librecounter")}
                 >
                   <Image
-                    src="https://librecounter.org/counter.svg"
+                    src={
+                      !isThemeDark
+                        ? "https://librecounter.org/img/white-brown.svg"
+                        : "https://librecounter.org/counter.svg"
+                    }
                     width="30"
                     height="30"
                     referrerPolicy="unsafe-url"

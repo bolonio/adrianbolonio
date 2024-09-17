@@ -22,7 +22,9 @@ export default function CV() {
     <section className={pageStyles.section}>
       <LayoutWrapper>
         <div className={styles.cvsection}>
-          <h1 className={pageStyles.pagetitle}>Adrián Bolonio</h1>
+          <div className={pageStyles.pagetitlecontainer}>
+            <h1 className={pageStyles.pagetitle}>Adrián Bolonio</h1>
+          </div>
           <p className={styles.bio}>{tAbout("bio")}</p>
         </div>
         <div className={styles.cvsection}>

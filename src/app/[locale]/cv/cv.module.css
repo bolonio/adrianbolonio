@@ -1,5 +1,5 @@
 .cvsection {
-  margin-bottom: 32px;
+  margin: 24px 0;
 }
 
 .cvtitle {
@@ -12,5 +12,5 @@
 }
 
 .bio {
-  margin: 0;
+  margin: 16px 0;
 }

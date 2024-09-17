@@ -1,6 +1,7 @@
 .navcontainer {
   align-items: center;
   background-color: var(--primary);
+  padding: 0 16px;
 }
 
 .footercontainer {
@@ -26,7 +27,7 @@
 /* FOOTER MENU */
 
 .footerlogo {
-  @media screen and (max-width: 700px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }

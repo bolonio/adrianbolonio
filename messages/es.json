@@ -26,12 +26,16 @@
   "Blog": {
     "title": "Blog",
     "latest_posts": "Últimos posts",
-    "all_posts": "Todos los posts"
+    "all_posts": "Todos los posts",
+    "related_posts": "Posts similares",
+    "tag": "Tag",
+    "tag_link": "Ver todos los posts con la etiqueta {tag}"
   },
   "CV": {
     "title": "CV",
     "job_experience": "Experiencia laboral",
-    "education": "Educación"
+    "education": "Educación",
+    "technologies": "Tecnologías"
   },
   "Themes": {
     "change_theme": "Cambiar tema a {theme}"

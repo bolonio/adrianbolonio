@@ -10,7 +10,7 @@
   margin-bottom: 24px;
   margin-right: 24px;
   width: auto;
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -22,7 +22,7 @@
   object-fit: cover;
   background-size: cover;
   background-position: center;
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -45,7 +45,7 @@
 .jobcompanydates {
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 768px) {
     gap: 8px;
     flex-direction: column;
   }

@@ -1,6 +1,6 @@
 import { LayoutWrapper } from "@/components/LayoutWrapper"
 import { useTranslations } from "next-intl"
-import pageStyles from "../pages.module.css"
+import pageStyles from "@/app/[locale]/pages.module.css"
 import Image from "next/image"
 import { MetaDataProp, getMetadata } from "@/lib/seo"
 import { getTranslations } from "next-intl/server"
@@ -24,7 +24,9 @@ export default function About() {
             alt=""
           />
         </div>
-        <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
+        <div className={pageStyles.pagetitlecontainer}>
+          <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
+        </div>
         <p>{t("bio")}</p>
         <p>
           {t.rich("contact_me", {

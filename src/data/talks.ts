@@ -18,6 +18,23 @@ export type TalksType = {
 
 export const talks: TalksType[] = [
   {
+    year: "2024",
+    talks: [
+      {
+        title: "Testeando Accesibilidad Web",
+        conference: "Quality Forge",
+        date: "10/10/2024",
+        location: {
+          city: "YouTube",
+          countryCode: "[Online]",
+        },
+        link: "https://qualityforge.io/",
+        video: "",
+        image: "qualityforge.jpg",
+      },
+    ],
+  },
+  {
     year: "2023",
     talks: [
       {

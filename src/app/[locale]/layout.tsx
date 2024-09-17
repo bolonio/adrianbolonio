@@ -12,7 +12,7 @@ const interLight = Inter_Tight({
   display: "swap",
 })
 
-export default function LocaleLayout({
+export default function RootLayout({
   children,
   params: { locale },
 }: {

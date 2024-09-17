@@ -1,6 +1,6 @@
 import { LayoutWrapper } from "@/components/LayoutWrapper"
 import { useTranslations } from "next-intl"
-import pageStyles from "../pages.module.css"
+import pageStyles from "@/app/[locale]/pages.module.css"
 import { talks } from "@/data/talks"
 import { TalksContainer } from "@/components/TalksContainer"
 import Image from "next/image"
@@ -12,7 +12,7 @@ export async function generateMetadata({ params: { locale } }: MetaDataProp) {
   return getMetadata({ title: t("title"), slug: "talks" }, locale)
 }
 
-export default function About() {
+export default function Talks() {
   const t = useTranslations("Talks")
   return (
     <section className={pageStyles.section}>
@@ -25,7 +25,9 @@ export default function About() {
             alt=""
           />
         </div>
-        <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
+        <div className={pageStyles.pagetitlecontainer}>
+          <h1 className={pageStyles.pagetitle}>{t("title")}</h1>
+        </div>
         <p>
           {t.rich("speaker_invitation", {
             email: (chunks) => (

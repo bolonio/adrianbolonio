@@ -1,7 +1,7 @@
 .contactscontainer {
   display: flex;
   gap: 32px;
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 16px;
   }

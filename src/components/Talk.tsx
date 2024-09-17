@@ -29,7 +29,7 @@ export const Talk = ({ talk }: TalkCardProps) => {
         ></div>
       </div>
       <div className={styles.talkdetails}>
-        <a href="#" className={styles.talktitle}>
+        <a href={talk.link} target="_blank" className={styles.talktitle}>
           {talk.conference}
         </a>
         <span className={styles.talkdate}>

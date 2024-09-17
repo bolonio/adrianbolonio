@@ -14,8 +14,7 @@ type JobProps = {
 
 export const Job = ({ job }: JobProps) => {
   const locale = useLocale()
-  const t = useTranslations("Contact")
-  const isThemeDark = useIsThemeDark()
+  const t = useTranslations("CV")
 
   return (
     <div className={styles.jobcontainer}>
@@ -45,6 +44,11 @@ export const Job = ({ job }: JobProps) => {
           </span>
         </div>
         <p className={styles.jobdescription}>{job.description}</p>
+        {job.technologies && (
+          <p className={styles.jobtechnologies}>
+            {t("technologies")}: {job.technologies.join(", ")}
+          </p>
+        )}
       </div>
     </div>
   )

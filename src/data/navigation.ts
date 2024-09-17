@@ -22,8 +22,8 @@ export const footerMenu = [
     id: `cv`,
     slug: `/cv`,
   },
-  {
+  /* {
     id: `rss`,
     slug: `/rss.xml`,
-  },
+  }, */
 ] as const

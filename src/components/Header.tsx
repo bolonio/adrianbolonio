@@ -17,7 +17,7 @@ export const Header = () => {
   const isThemeDark = useIsThemeDark()
 
   return (
-    <header>
+    <header className={styles.header}>
       <LayoutWrapper>
         <nav className={styles.navcontainer}>
           <Image
@@ -75,6 +75,9 @@ export const Header = () => {
                     className={styles.headermenulink}
                     key={menuItem.slug}
                     href={`${menuItem.slug}`}
+                    onClick={() => {
+                      setMenuOpen(false)
+                    }}
                   >
                     {t(menuItem.id)}
                   </Link>

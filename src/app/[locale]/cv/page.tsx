@@ -1,6 +1,6 @@
 import { LayoutWrapper } from "@/components/LayoutWrapper"
 import { useTranslations } from "next-intl"
-import pageStyles from "../pages.module.css"
+import pageStyles from "@/app/[locale]/pages.module.css"
 import { getTranslations } from "next-intl/server"
 import styles from "./cv.module.css"
 import { EducationItemType, JobItemType, cv } from "@/data/cv"
@@ -14,7 +14,7 @@ export async function generateMetadata({ params: { locale } }: MetaDataProp) {
   return getMetadata({ title: t("title"), slug: "cv" }, locale)
 }
 
-export default function About() {
+export default function CV() {
   const t = useTranslations("CV")
   const tContact = useTranslations("Contact")
   const tAbout = useTranslations("About")

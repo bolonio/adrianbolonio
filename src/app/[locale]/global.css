@@ -1,14 +1,16 @@
 :root {
   --primary: #24292f;
   --secondary: #ffffff;
-  --alternative: #23333d;
+  --alternative: #f1f5f9;
+  --terminalbg: #263238;
   --terminal: #ffffff;
 }
 
 [data-theme="dark"] {
   --primary: #ffffff;
   --secondary: #24292f;
-  --alternative: #f1f5f9;
+  --alternative: #23333d;
+  --terminalbg: #ffffff;
   --terminal: #263238;
 }
 

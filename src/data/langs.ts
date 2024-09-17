@@ -1,4 +1,12 @@
-export const languages = [
+export type LanguageId = "en" | "es" | undefined
+
+export type Lang = {
+  id: LanguageId
+  name: string
+  flag: string
+}
+
+export const languages: Lang[] = [
   {
     id: "en",
     name: "Inglés",

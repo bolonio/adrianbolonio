@@ -1,4 +1,4 @@
-import { languages } from "@/data/langs"
+import { LanguageId, languages } from "@/data/langs"
 
 export const getNextLanguage = (currentLanguage: string) => {
   const currentIndex = languages.findIndex(
@@ -9,6 +9,6 @@ export const getNextLanguage = (currentLanguage: string) => {
   return nextLanguage
 }
 
-export const getLanguageFlag = (languageId: string): string => {
+export const getLanguageFlag = (languageId: LanguageId): string => {
   return `/images/flags/${languageId}.svg`
 }

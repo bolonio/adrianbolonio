@@ -50,7 +50,7 @@ export const cv = {
       company: "Miro",
       companyUrl: "http://www.miro.com/",
       companyLogo: "miro.png",
-      title: "Senior Software Engineer - Accessibility",
+      title: "Senior Software Engineer",
       description:
         "Responsible for actively participating in the analysis of accessibility issues & goals, do research and determine solutions’ requirements, as well as making architectural decisions and recommendations for converting successful prototypes into mature and accessible products. I actively contribute to the design system component library with accessibility reviews, new documentation, and new behaviours and patterns definitions. I collaborate closely with people with disabilities throughout the product development lifecycle and look to innovate by exploring ways to interact with and communicate complex spatial information through various modalities such as audio. I collaborate with teams across Miro to improve our product, architecture and engineering practices, specially within Core Product, with the mission of making the Miro whiteboard accessible to everyone.",
       technologies: [
@@ -78,7 +78,7 @@ export const cv = {
       company: "GitHub",
       companyUrl: "http://www.github.com/",
       companyLogo: "github.png",
-      title: "Software Engineer - Accessibility",
+      title: "Software Engineer",
       description:
         "Responsible for building better process and tooling to ensure all code shipped at GitHub meets the accessibility standards and helping address accessibility bugs and improve the process to reduce the turnaround time by directly engaging with teams to guide their accessibility fixes and improve our OSS guidance for building UI with Primer and by collaborating with the Design Systems team to build and implement accessibility as a core requirement for the Primer component libraries as well as coordinating with engineering and product leadership to define and prioritize projects that help meet business objectives and work with support to triage and debug technical support requests, documenting every built system.",
       technologies: [

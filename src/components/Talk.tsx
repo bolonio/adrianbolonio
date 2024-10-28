@@ -36,8 +36,10 @@ export const Talk = ({ talk }: TalkCardProps) => {
           {getFormattedDateMMMYYYY(talk.date, locale)}
         </span>
         <span className={styles.talklocation}>
-          {talk.location.city},&nbsp;
-          {getCountryName(talk.location.countryCode, locale)}
+          {talk.location.city}
+          {talk.location.countryCode
+            ? `, ${getCountryName(talk.location.countryCode, locale)}`
+            : ""}
         </span>
         {talk.video && (
           <a href={talk.video} className={styles.talkvideo}>

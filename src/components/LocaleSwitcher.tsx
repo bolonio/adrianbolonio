@@ -26,6 +26,7 @@ export default function LocaleSwitcher() {
       className={styles.localewitcherbutton}
       aria-label={t("change_language", { languageName: newLanguage.name })}
       onClick={changeLanguage}
+      aria-disabled={isPending}
     >
       <Image
         src={getLanguageFlag(newLanguage.id)}

@@ -1,7 +1,6 @@
 import { LayoutWrapper } from "@/components/LayoutWrapper"
 import { useTranslations } from "next-intl"
 import pageStyles from "@/app/[locale]/pages.module.css"
-import { getTranslations } from "next-intl/server"
 import { MetaDataProp, getMetadata } from "@/lib/seo"
 import { getPostBySlug, getRelatedPosts } from "@/lib/blog"
 import { getFormattedDate } from "@/lib/date"
@@ -9,6 +8,7 @@ import styles from "./blogpost.module.css"
 import { BlogContainer } from "@/components/BlogContainer"
 import Link from "next/link"
 import { MarkdownContent } from "@/components/MarkdownContent"
+import { getTranslations } from "next-intl/server"
 
 type Params = {
   params: {
@@ -19,13 +19,20 @@ type Params = {
 export async function generateMetadata({
   params: { locale, slug },
 }: MetaDataProp) {
-  const t = await getTranslations({ locale, namespace: "Blog" })
   const post = slug ? getPostBySlug(slug) : undefined
+  const t = await getTranslations({ locale, namespace: "Blog" })
   return getMetadata(
     {
       title: post?.title,
       description: post?.description,
-      slug: "blog",
+      slug: `blog/${slug}`,
+      image: {
+        path: `images/blog/${slug}/${post?.image}`,
+        alt: t("og_image_alt", {
+          title: post?.title,
+          date: getFormattedDate(post?.date ?? "", post?.locale),
+        }),
+      },
     },
     locale
   )

@@ -18,7 +18,10 @@ export async function generateMetadata({
   params: { locale, tag },
 }: MetaDataProp) {
   const t = await getTranslations({ locale, namespace: "Blog" })
-  return getMetadata({ title: `${t("tag")}: ${tag}`, slug: "blog" }, locale)
+  return getMetadata(
+    { title: `${t("tag")}: ${tag}`, slug: `tag/${tag}` },
+    locale
+  )
 }
 
 export default function Tag({ params }: Params) {

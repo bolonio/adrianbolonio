@@ -1,7 +1,6 @@
 import { useLocale, useTranslations } from "next-intl"
 import pageStyles from "@/app/[locale]/pages.module.css"
 import { LayoutWrapper } from "@/components/LayoutWrapper"
-import { getTranslations } from "next-intl/server"
 import { MetaDataProp, getMetadata } from "@/lib/seo"
 import Image from "next/image"
 import { Link } from "@/navigation"
@@ -11,8 +10,7 @@ import { getPosts } from "@/lib/blog"
 import { BlogContainer } from "@/components/BlogContainer"
 
 export async function generateMetadata({ params: { locale } }: MetaDataProp) {
-  const t = await getTranslations({ locale, namespace: "Index" })
-  return getMetadata({ slug: "/" }, locale)
+  return getMetadata({ slug: "" }, locale)
 }
 
 export default function Index() {

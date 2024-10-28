@@ -82,9 +82,15 @@ export async function getMetadata(metadata: SeoMetaData, locale: string) {
       card: "summary_large_image",
       title: seoMetaData.title,
       description: seoMetaData.description,
-      siteId: "@bolonio",
+      site: "@bolonio",
       creator: "@bolonio",
-      images: `${host}/${seoMetaData.image?.path}`,
+      creatorId: "22399077",
+      images: [
+        {
+          url: `${host}/${seoMetaData.image?.path}`,
+          alt: seoMetaData.image?.alt,
+        },
+      ],
     },
   }
 }

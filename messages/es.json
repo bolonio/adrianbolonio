@@ -4,7 +4,7 @@
   },
   "SEO": {
     "title": "Adrián Bolonio - Accessibility Software Engineering",
-    "description": "Hola, me llamo Adrián Bolonio. Trabajo como Accessibility Software Engineer intentando hacer de Internet un lugar mejor y más accesible para todos.",
+    "description": "Hola, me llamo Adrián Bolonio. Trabajo como Senior Software Engineer intentando hacer de Internet un lugar mejor y más accesible para todos.",
     "author": "Adrián Bolonio",
     "image": {
       "path": "images/intro.jpg",
@@ -13,7 +13,7 @@
   },
   "About": {
     "title": "Sobre mi",
-    "bio": "Hola, me llamo Adrián Bolonio. Trabajo como Accessibility Software Engineer intentando hacer de Internet un lugar mejor y más accesible para todos. Cuando no estoy en la oficina me gusta disfrutar de una buena lectura, dedicarle tiempo a cocinar alguna deliciosa receta, o practicar mi afición por visitar nuevos lugares por el mundo.",
+    "bio": "Hola, me llamo Adrián Bolonio. Trabajo como Senior Software Engineer intentando hacer de Internet un lugar mejor y más accesible para todos. Cuando no estoy en la oficina me gusta disfrutar de una buena lectura, dedicarle tiempo a cocinar alguna deliciosa receta, o practicar mi afición por visitar nuevos lugares por el mundo.",
     "contact_me": "La mejor forma de contactar conmigo es via <twitter>twitter</twitter> o puedes enviarme un <email>email</email>"
   },
   "Talks": {
@@ -29,7 +29,8 @@
     "all_posts": "Todos los posts",
     "related_posts": "Posts similares",
     "tag": "Tag",
-    "tag_link": "Ver todos los posts con la etiqueta {tag}"
+    "tag_link": "Ver todos los posts con la etiqueta {tag}",
+    "og_image_alt": "Un navegador con el título del post ({title}) y la fecha del post ({date}). También aparece la url de mi página web (www.adrianbolonio.com) y mi usuario de Twitter y GitHub (@bolonio)"
   },
   "CV": {
     "title": "CV",

@@ -4,7 +4,7 @@
   },
   "SEO": {
     "title": "Adrián Bolonio - Accessibility Software Engineering",
-    "description": "Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineer working on making the Internet a better and more accessible place for everyone.",
+    "description": "Hi, my name is Adrián Bolonio. I currently work as a Senior Software Engineer working on making the Internet a better and more accessible place for everyone.",
     "author": "Adrián Bolonio",
     "image": {
       "path": "images/intro.jpg",
@@ -13,13 +13,13 @@
   },
   "About": {
     "title": "About me",
-    "bio": "Hi, my name is Adrián Bolonio. I currently work as an Accessibility Software Engineer working on making the Internet a better and more accessible place for everyone. When I’m not at the office I enjoy a good read, working my way through any delicious recipe, and indulging my love for travelling to new places.",
+    "bio": "Hi, my name is Adrián Bolonio. I currently work as a Senior Software Engineer working on making the Internet a better and more accessible place for everyone. When I’m not at the office I enjoy a good read, working my way through any delicious recipe, and indulging my love for travelling to new places.",
     "contact_me": "The best way to contact me is either via my <twitter>twitter</twitter> or you can send me an <email>email</email>."
   },
   "Talks": {
     "title": "Talks",
     "speaker_invitation": "If you’d like to invite me to speak at your conference, feel free to send me an <email>email</email>, but please include the dates and location of the conference, the type of conference (topic of the conference, target audience, number of attendees, number of tracks, ...), the type of the talk (keynote, workshop, panel, lightning talk), and the accessibility details of the venue. Please be aware that I expect you to cover at least the transport and acommodation costs. Thanks.",
-    "watch_video": "What video",
+    "watch_video": "Watch video",
     "upcoming_talks": "Upcoming talks",
     "all_talks": "All talks"
   },
@@ -29,7 +29,8 @@
     "all_posts": "All posts",
     "related_posts": "Related posts",
     "tag": "Tag",
-    "tag_link": "View all posts with the tag {tag}"
+    "tag_link": "View all posts with the tag {tag}",
+    "og_image_alt": "A browser with the title of the article ({title}) and the date of the article ({date}). As well there is the url of my website (www.adrianbolonio.com) and my Twitter and GitHub username (@bolonio)"
   },
   "CV": {
     "title": "CV",

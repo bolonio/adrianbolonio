@@ -1,9 +1,11 @@
 import { LayoutWrapper } from "@/components/LayoutWrapper"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import pageStyles from "@/app/[locale]/pages.module.css"
 import { getTranslations } from "next-intl/server"
 import styles from "./cv.module.css"
-import { EducationItemType, JobItemType, cv } from "@/data/cv"
+import { EducationItemType, JobItemType } from "@/data/cv/types"
+import { cv_en } from "@/data/cv/cv_en"
+import { cv_es } from "@/data/cv/cv_es"
 import { Contacts } from "@/components/cv/Contacts"
 import { Job } from "@/components/cv/Job"
 import { Education } from "@/components/cv/Education"
@@ -18,6 +20,10 @@ export default function CV() {
   const t = useTranslations("CV")
   const tContact = useTranslations("Contact")
   const tAbout = useTranslations("About")
+
+  const locale = useLocale()
+  const cv = locale === "en" ? cv_en : cv_es
+
   return (
     <section className={pageStyles.section}>
       <LayoutWrapper>

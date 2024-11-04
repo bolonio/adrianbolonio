@@ -4,7 +4,7 @@
   },
   "SEO": {
     "title": "Adrián Bolonio - Accessibility Software Engineering",
-    "description": "Hola, me llamo Adrián Bolonio. Trabajo como Senior Software Engineer intentando hacer de Internet un lugar mejor y más accesible para todos.",
+    "description": "Hola, soy Adrián Bolonio, un Senior Software Engineer con la pasión de hacer la tecnología e Internet un lugar mejor y más accesible para todos.",
     "author": "Adrián Bolonio",
     "image": {
       "path": "images/intro.jpg",
@@ -13,7 +13,7 @@
   },
   "About": {
     "title": "Sobre mi",
-    "bio": "Hola, me llamo Adrián Bolonio. Trabajo como Senior Software Engineer intentando hacer de Internet un lugar mejor y más accesible para todos. Cuando no estoy en la oficina me gusta disfrutar de una buena lectura, dedicarle tiempo a cocinar alguna deliciosa receta, o practicar mi afición por visitar nuevos lugares por el mundo.",
+    "bio": "Hola, soy Adrián Bolonio, un Senior Software Engineer con la pasión de hacer la tecnología e Internet un lugar mejor y más accesible para todos. Me gusta diseñar e implementar sistemas e interfaces que  crean una experiencia online sin obstáculos para todos. Cuento con años de experiencia en desarrollo frontend y accesibilidad, además de experiencia práctica como Engineering Manager, liderando equipos creando soluciones digitales más inclusivas. Trabajar en remoto me ha permitido conectar con equipos de todo el mundo, manteniéndome inspirado y abierto a nuevas perspectivas. Fuera del trabajo, soy un apasionado de los videojuegos, disfruto experimentando en la cocina y siempre espero con ansias el próximo viaje.",
     "contact_me": "La mejor forma de contactar conmigo es via <twitter>twitter</twitter> o puedes enviarme un <email>email</email>"
   },
   "Talks": {

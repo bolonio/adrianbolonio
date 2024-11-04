@@ -1,50 +1,6 @@
-export interface CvType {
-  jobs: JobItemType[]
-  education: EducationItemType[]
-  languages: LanguageItemType[]
-}
+import { CV } from "./types"
 
-export interface JobItemType {
-  title: string
-  company: string
-  companyUrl: string
-  companyLogo: string
-  location: Location
-  startDate: string
-  endDate: string
-  description: string
-  technologies?: string[]
-}
-
-export interface EducationItemType {
-  school: string
-  schoolUrl: string
-  schoolLogo: string
-  location: Location
-  degree: string
-  startDate: string
-  endDate: string
-  description: string
-}
-
-export interface LanguageItemType {
-  id: string
-  name: string
-  level: string
-  country: string
-}
-
-interface Location {
-  country: Country
-  city: string
-}
-
-interface Country {
-  id: string
-  name: string
-}
-
-export const cv = {
+export const cv_es: CV = {
   jobs: [
     {
       company: "Miro",
@@ -52,7 +8,7 @@ export const cv = {
       companyLogo: "miro.png",
       title: "Senior Software Engineer",
       description:
-        "Responsible for actively participating in the analysis of accessibility issues & goals, do research and determine solutions’ requirements, as well as making architectural decisions and recommendations for converting successful prototypes into mature and accessible products. I actively contribute to the design system component library with accessibility reviews, new documentation, and new behaviours and patterns definitions. I collaborate closely with people with disabilities throughout the product development lifecycle and look to innovate by exploring ways to interact with and communicate complex spatial information through various modalities such as audio. I collaborate with teams across Miro to improve our product, architecture and engineering practices, specially within Core Product, with the mission of making the Miro whiteboard accessible to everyone.",
+        "Responsible for actively participating in analyzing accessibility issues and objectives, conducting research, determining solution requirements, and making architectural recommendations to transform prototypes into fully accessible, mature products; actively contributing to the design system component library by performing accessibility reviews, enhancing documentation, and defining new behaviors and patterns. Collaborating closely with individuals with disabilities throughout the product development lifecycle, exploring innovative ways to communicate complex spatial information through modalities such as audio. Working across teams, especially within Core Product, to improve product architecture and engineering practices, all with the goal of making Miro accessible to all users.",
       technologies: [
         "HTML",
         "CSS",
@@ -72,7 +28,7 @@ export const cv = {
         city: "Vienna",
       },
       startDate: "01/16/2023",
-      endDate: "present",
+      endDate: "12/15/2024",
     },
     {
       company: "GitHub",
@@ -80,7 +36,7 @@ export const cv = {
       companyLogo: "github.png",
       title: "Software Engineer",
       description:
-        "Responsible for building better process and tooling to ensure all code shipped at GitHub meets the accessibility standards and helping address accessibility bugs and improve the process to reduce the turnaround time by directly engaging with teams to guide their accessibility fixes and improve our OSS guidance for building UI with Primer and by collaborating with the Design Systems team to build and implement accessibility as a core requirement for the Primer component libraries as well as coordinating with engineering and product leadership to define and prioritize projects that help meet business objectives and work with support to triage and debug technical support requests, documenting every built system.",
+        "Responsible for building improved processes and tools to ensure all code shipped at GitHub meets accessibility standards, addressing accessibility bugs, and refining processes to reduce turnaround time. Engaging directly with teams to guide accessibility fixes and enhancing OSS guidance for building UI with Primer. Collaborating with the Design Systems team to embed accessibility as a core requirement in the Primer component libraries. Coordinating with engineering and product leadership to define and prioritize projects that align with business objectives. Working with support teams to triage and debug technical support requests and documenting each built system.",
       technologies: [
         "HTML",
         "CSS",
@@ -128,7 +84,7 @@ export const cv = {
       title: "Senior Frontend Engineer",
       description:
         "Responsible for implementing responsible web design principles ensuring the technical feasibility of UI/UX designs maintaining consistency in design and layout. Building reusable code and libraries for future use, and developing new user interfaces. Working closely with the design team and project managers to ensured projects are delivered on time.",
-      technolgoies: [
+      technologies: [
         "HTML",
         "CSS",
         "LESS",
@@ -291,11 +247,10 @@ export const cv = {
       endDate: "08/01/2012",
     },
     {
-      company: "Universidad de Alcalá",
+      company: "Student Union (Universidad de Alcalá)",
       companyUrl: "https://uah.es/",
       companyLogo: "uah.png",
-      title:
-        "Intern at the computer and graphic design department for the student union",
+      title: "Computer and graphic design intern",
       description:
         "Responsible for the analysis, development, configuration, testing and documentation of the server and the self hosted new website. I was also responsible for supporting and maintaining websites, interfaces and reports that have been developed by the other student unions, as well as the graphic design of all posters and advertisements done by the Student Union.",
       technologies: [
@@ -337,7 +292,6 @@ export const cv = {
       endDate: "2017",
       description:
         "Business informatics subjects: Datawarehouse, Enterprise Resource Planning, SAP, Navision, System Components, Open Enterprise Computing, Supply Chain Management, Modeling Techniques, Business Process Management, Business Intelligence, Customer Relationship Management, eBusiness, eHealth, Case Studies  Computer science: Programming, Web Technologies, Software Engineering, Database Systems, IT Security, Operating Systems, Computer Architectures and Networks, IT Infrastructure, Databases  Business, management & law: IT Project Management, Software Project Management, Marketing and Sales, Business Management and Organization, Investment & Financial Controlling, Entrepreneurship, Law Fundamentals, Accounting  English: Professional and Social Communication, Technical and Creative Communication, Economics, Technology and Society, Business Communication, Advanced Communication and Ethics.",
-      "Degree Name": "Bachelor of Science in Engineering (BSc)",
     },
     {
       school: "Universidad de Alcalá",
@@ -355,7 +309,6 @@ export const cv = {
       endDate: "2012",
       description:
         "This degree teaches students to create computer programmes which are adjusted to the needs of enterprises and to have computer applications knowledge. Computer Science Management engineers analyse the computer programmes utilities which cover all the enterprise administrative, accounting and management needs. The engineers contribute to solve logical and simple enterprise problems thanks to computer programmes. The basic content in this studies are mathematics, engineering, electronic and economy.",
-      "Degree Name": "Computer Science Management Engineering",
     },
     {
       school: "Linköping University",
@@ -373,12 +326,11 @@ export const cv = {
       endDate: "2011",
       description:
         "Subjects: Computer Security, Computer Architecture, Advanced Computer Architecture, Concurrent Programming and Operating Systems, Web Programming and Interactivity, Software Engineering Theory, Advanced Software Engineering, Distributed Systems.  Research project in the department of Physics, Chemistry and Biology in Linköping University.",
-      "Degree Name": "Erasmus Exchange Program",
     },
     {
       school: "Danmarks Tekniske Universitet",
       schoolUrl: "https://www.dtu.dk/",
-      schoolLogo: "dtu.webp",
+      schoolLogo: "dtu.jpg",
       location: {
         country: {
           id: "DK",
@@ -391,7 +343,6 @@ export const cv = {
       endDate: "2008",
       description:
         "The goal of the course is to give an introduction to some of the information and techniques needed to conceptualise, design and develop innovative, profitable apps for mobile devices. The course will focus on giving an introduction to 3 aspects of developing commercial apps for mobile devices: Wireless Internet Connections, Business Innovation and Programming Techniques, Java (J2ME).",
-      "Degree Name": 'Summer School "Mobile Communications and m-Commerce',
     },
     {
       school: "I.E.S. Alonso de Avellaneda",
@@ -409,7 +360,6 @@ export const cv = {
       endDate: "2007",
       description:
         "- Analysis and detailed development of management computing applications  - Development of applications in fourth-generation environments and with case tools  - Design and implementation of display services in graphic environments  - Programming in structured languages  - Multi-user and networked computer systems.",
-      "Degree Name": "Advanced Expert in Development of Computer Applications",
     },
   ],
   languages: [

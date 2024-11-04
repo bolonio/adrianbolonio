@@ -32,7 +32,18 @@ export default function BlogPost({ params }: Params) {
       <LayoutWrapper>
         <h1 className={pageStyles.pagetitle}>{talk.title}</h1>
         <span className={styles.talksubtitle}>{talk.subtitle}</span>
-        {/* VIDEO */}
+        {talk.video && (
+          <iframe
+            width="100%"
+            height="500"
+            src={talk.video}
+            title={talk.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        )}
         <MarkdownContent content={talk.content} />
       </LayoutWrapper>
     </section>

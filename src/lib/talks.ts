@@ -14,6 +14,7 @@ export type Talk = {
   imageAlt: string
   alternate: string
   content: string
+  video: string
   preview?: boolean
 }
 

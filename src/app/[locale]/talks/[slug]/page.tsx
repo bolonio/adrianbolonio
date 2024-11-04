@@ -6,9 +6,7 @@ import { MarkdownContent } from "@/components/MarkdownContent"
 import { getTalkBySlug } from "@/lib/talks"
 
 type Params = {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: MetaDataProp) {

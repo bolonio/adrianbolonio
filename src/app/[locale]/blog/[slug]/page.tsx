@@ -10,9 +10,7 @@ import { Link } from "@/i18n/routing"
 import { MarkdownContent } from "@/components/MarkdownContent"
 
 type Params = {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: MetaDataProp) {

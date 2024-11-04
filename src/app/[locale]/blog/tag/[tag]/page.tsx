@@ -8,9 +8,7 @@ import { getPostsByTag } from "@/lib/blog"
 import { Link } from "@/i18n/routing"
 
 type Params = {
-  params: {
-    tag: string
-  }
+  params: Promise<{ tag: string }>
 }
 
 export async function generateMetadata({ params }: MetaDataProp) {

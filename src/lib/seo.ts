@@ -14,7 +14,7 @@ export type SeoMetaData = {
 }
 
 export type MetaDataProp = {
-  params: { locale: string; slug?: string; tag?: string }
+  params: Promise<{ locale: string; slug?: string; tag?: string }>
 }
 
 export async function getMetadata(metadata: SeoMetaData, locale: string) {

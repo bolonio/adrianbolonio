@@ -1,7 +1,7 @@
 import { Post } from "@/lib/blog"
 import styles from "./BlogPostCard.module.css"
 import { getFormattedDate } from "@/lib/date"
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import { useLocale, useTranslations } from "next-intl"
 
 type BlogPostCardProps = {

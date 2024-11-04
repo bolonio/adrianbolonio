@@ -1,12 +1,11 @@
 import { LayoutWrapper } from "@/components/LayoutWrapper"
-import { useLocale, useTranslations } from "next-intl"
 import pageStyles from "@/app/[locale]/pages.module.css"
 import Image from "next/image"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, getLocale } from "next-intl/server"
 import { MetaDataProp, getMetadata } from "@/lib/seo"
 import { BlogContainer } from "@/components/BlogContainer"
 import { getPostsByTag } from "@/lib/blog"
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 
 type Params = {
   params: {
@@ -14,9 +13,8 @@ type Params = {
   }
 }
 
-export async function generateMetadata({
-  params: { locale, tag },
-}: MetaDataProp) {
+export async function generateMetadata({ params }: MetaDataProp) {
+  const { locale, tag } = await params
   const t = await getTranslations({ locale, namespace: "Blog" })
   return getMetadata(
     { title: `${t("tag")}: ${tag}`, slug: `tag/${tag}` },
@@ -24,10 +22,11 @@ export async function generateMetadata({
   )
 }
 
-export default function Tag({ params }: Params) {
-  const t = useTranslations("Blog")
-  const locale = useLocale()
-  const allPosts = getPostsByTag(params.tag, locale)
+export default async function Tag({ params }: Params) {
+  const { tag } = await params
+  const t = await getTranslations("Blog")
+  const locale = await getLocale()
+  const allPosts = getPostsByTag(tag, locale)
   return (
     <section className={pageStyles.section}>
       <LayoutWrapper>
@@ -41,7 +40,7 @@ export default function Tag({ params }: Params) {
         </div>
         <div className={pageStyles.pagetitlecontainer}>
           <h1 className={pageStyles.pagetitle}>
-            {t("tag")}: {params.tag}
+            {t("tag")}: {tag}
           </h1>
           <Link className={pageStyles.pagetitleall} href="/blog">
             {t("all_posts")}

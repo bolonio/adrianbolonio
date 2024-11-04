@@ -7,7 +7,8 @@ import { MetaDataProp, getMetadata } from "@/lib/seo"
 import { BlogContainer } from "@/components/BlogContainer"
 import { getPosts } from "@/lib/blog"
 
-export async function generateMetadata({ params: { locale } }: MetaDataProp) {
+export async function generateMetadata({ params }: MetaDataProp) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: "Blog" })
   return getMetadata({ title: t("title"), slug: "blog" }, locale)
 }

@@ -1,14 +1,13 @@
 import { LayoutWrapper } from "@/components/LayoutWrapper"
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 import pageStyles from "@/app/[locale]/pages.module.css"
 import { MetaDataProp, getMetadata } from "@/lib/seo"
 import { getPostBySlug, getRelatedPosts } from "@/lib/blog"
 import { getFormattedDate } from "@/lib/date"
 import styles from "./blogpost.module.css"
 import { BlogContainer } from "@/components/BlogContainer"
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import { MarkdownContent } from "@/components/MarkdownContent"
-import { getTranslations } from "next-intl/server"
 
 type Params = {
   params: {
@@ -16,9 +15,8 @@ type Params = {
   }
 }
 
-export async function generateMetadata({
-  params: { locale, slug },
-}: MetaDataProp) {
+export async function generateMetadata({ params }: MetaDataProp) {
+  const { locale, slug } = await params
   const post = slug ? getPostBySlug(slug) : undefined
   const t = await getTranslations({ locale, namespace: "Blog" })
   return getMetadata(
@@ -38,10 +36,11 @@ export async function generateMetadata({
   )
 }
 
-export default function BlogPost({ params }: Params) {
-  const t = useTranslations("Blog")
-  const post = getPostBySlug(params.slug)
-  const relatedPosts = getRelatedPosts(params.slug)
+export default async function BlogPost({ params }: Params) {
+  const { slug } = await params
+  const t = await getTranslations("Blog")
+  const post = getPostBySlug(slug)
+  const relatedPosts = getRelatedPosts(slug)
   return (
     <>
       <section className={pageStyles.section}>

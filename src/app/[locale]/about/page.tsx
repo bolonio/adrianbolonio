@@ -5,7 +5,8 @@ import Image from "next/image"
 import { MetaDataProp, getMetadata } from "@/lib/seo"
 import { getTranslations } from "next-intl/server"
 
-export async function generateMetadata({ params: { locale } }: MetaDataProp) {
+export async function generateMetadata({ params }: MetaDataProp) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: "About" })
   return getMetadata({ title: t("title"), slug: "about" }, locale)
 }

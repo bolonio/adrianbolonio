@@ -3,13 +3,14 @@ import pageStyles from "@/app/[locale]/pages.module.css"
 import { LayoutWrapper } from "@/components/LayoutWrapper"
 import { MetaDataProp, getMetadata } from "@/lib/seo"
 import Image from "next/image"
-import { Link } from "@/navigation"
+import { Link } from "@/i18n/routing"
 import { getUpcomingTalks } from "@/lib/talks"
 import { TalksContainer } from "@/components/TalksContainer"
 import { getPosts } from "@/lib/blog"
 import { BlogContainer } from "@/components/BlogContainer"
 
-export async function generateMetadata({ params: { locale } }: MetaDataProp) {
+export async function generateMetadata({ params }: MetaDataProp) {
+  const { locale } = await params
   return getMetadata({ slug: "" }, locale)
 }
 

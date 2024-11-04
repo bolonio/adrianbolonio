@@ -6,7 +6,7 @@ import Image from "next/image"
 import styles from "./Footer.module.css"
 import { footerMenu } from "@/data/navigation"
 import { useTranslations } from "next-intl"
-import { Link } from "@/navigation"
+import { Link } from "@/i18n/routing"
 import { useIsThemeDark } from "@/hooks/useIsThemeDark"
 import { contacts } from "@/data/contact"
 

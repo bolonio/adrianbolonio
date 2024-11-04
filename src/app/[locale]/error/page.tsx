@@ -4,7 +4,8 @@ import pageStyles from "@/app/[locale]/pages.module.css"
 import { getTranslations } from "next-intl/server"
 import { MetaDataProp, getMetadata } from "@/lib/seo"
 
-export async function generateMetadata({ params: { locale } }: MetaDataProp) {
+export async function generateMetadata({ params }: MetaDataProp) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: "Blog" })
   return getMetadata({ title: t("title"), slug: "blog" }, locale)
 }

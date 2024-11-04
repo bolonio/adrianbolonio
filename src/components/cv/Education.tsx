@@ -2,7 +2,7 @@
 
 import React from "react"
 import { useLocale } from "next-intl"
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import styles from "./Education.module.css"
 import { EducationItemType } from "@/data/cv/types"
 import { getFormattedDateYYYY } from "@/lib/date"

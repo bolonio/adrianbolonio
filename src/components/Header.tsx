@@ -8,7 +8,7 @@ import Image from "next/image"
 import styles from "./Header.module.css"
 import { headerMenu } from "@/data/navigation"
 import { useTranslations } from "next-intl"
-import { Link } from "@/navigation"
+import { Link } from "@/i18n/routing"
 import { useIsThemeDark } from "@/hooks/useIsThemeDark"
 
 export const Header = () => {

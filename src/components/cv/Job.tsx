@@ -2,8 +2,7 @@
 
 import React from "react"
 import { useLocale, useTranslations } from "next-intl"
-import Link from "next/link"
-import { useIsThemeDark } from "@/hooks/useIsThemeDark"
+import { Link } from "@/i18n/routing"
 import styles from "./Job.module.css"
 import { JobItemType } from "@/data/cv/types"
 import { getFormattedDateMMMYYYY } from "@/lib/date"

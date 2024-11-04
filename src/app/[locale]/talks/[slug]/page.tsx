@@ -1,5 +1,4 @@
 import { LayoutWrapper } from "@/components/LayoutWrapper"
-import { useTranslations } from "next-intl"
 import pageStyles from "@/app/[locale]/pages.module.css"
 import { MetaDataProp, getMetadata } from "@/lib/seo"
 import styles from "./talkpage.module.css"
@@ -12,9 +11,8 @@ type Params = {
   }
 }
 
-export async function generateMetadata({
-  params: { locale, slug },
-}: MetaDataProp) {
+export async function generateMetadata({ params }: MetaDataProp) {
+  const { locale, slug } = await params
   return getMetadata(
     {
       title: "test",
@@ -24,9 +22,9 @@ export async function generateMetadata({
   )
 }
 
-export default function BlogPost({ params }: Params) {
-  const t = useTranslations("Blog")
-  const talk = getTalkBySlug(params.slug)
+export default async function BlogPost({ params }: Params) {
+  const { slug } = await params
+  const talk = getTalkBySlug(slug)
   return (
     <section className={pageStyles.section}>
       <LayoutWrapper>

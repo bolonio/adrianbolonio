@@ -1,43 +1,11 @@
-import { Header } from "@/components/Header"
-import "./global.css"
-import { Inter_Tight } from "next/font/google"
-import { ThemeProvider } from "next-themes"
-import { NextIntlClientProvider, useMessages } from "next-intl"
-import { SkipToContent } from "@/components/SkipToContent"
-import { Footer } from "@/components/Footer"
-import styles from "./layout.module.css"
+import { ReactNode } from "react"
 
-const interLight = Inter_Tight({
-  subsets: ["latin"],
-  display: "swap",
-})
+type Props = {
+  children: ReactNode
+}
 
-export default function RootLayout({
-  children,
-  params: { locale },
-}: {
-  children: React.ReactNode
-  params: { locale: string }
-}) {
-  const messages = useMessages()
-  return (
-    <html
-      lang={locale}
-      className={interLight.className}
-      suppressHydrationWarning
-    >
-      <body className={styles.body}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider>
-            <SkipToContent />
-            <Header />
-            <main id="content" className={styles.main}>
-              {children}
-            </main>
-            <Footer />
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  )
+// Since we have a `not-found.tsx` page on the root, a layout file
+// is required, even if it's just passing children through.
+export default function RootLayout({ children }: Props) {
+  return children
 }

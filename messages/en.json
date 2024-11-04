@@ -62,5 +62,9 @@
     "contact_me": "Contact me via {contact}",
     "logo_alt": "The {contact} logo",
     "librecounter": "Go to the GDPR Compliant Analytics of my site"
+  },
+  "Error": {
+    "title": "Page not found",
+    "message": "Ups, it looks like this pages doesn't exist. Why don't you give a look at my latests posts in the meantime?"
   }
 }

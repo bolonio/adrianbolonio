@@ -62,5 +62,9 @@
     "contact_me": "Contáctame via {contact}",
     "logo_alt": "Logo de {contact}",
     "librecounter": "Ir a las Analíticas de mi sitio web compatibles con el RGPD"
+  },
+  "Error": {
+    "title": "Página no encontrada",
+    "message": "Ups, parece que esta página no existe. ¿Por qué no le echas un vistazo a mis últimos posts mientras lo arreglo?"
   }
 }

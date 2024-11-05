@@ -1,0 +1,72 @@
+.talkcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+.talkdetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.talkimagecontainer {
+  display: flex;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  width: auto;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+.talkimage {
+  border-radius: 8px;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  background-size: cover;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+  }
+}
+
+.talktitle {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 2rem;
+}
+
+.talkdate {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.5rem;
+}
+
+.talklocation {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+.talkvideo {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}

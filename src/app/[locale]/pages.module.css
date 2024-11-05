@@ -1,0 +1,55 @@
+.pagetitlecontainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+}
+
+.pagetitle {
+  font-size: 4.5rem;
+  letter-spacing: -0.1rem;
+  line-height: 76px;
+  font-weight: 800;
+
+  @media (max-width: 480px) {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 8px;
+  }
+}
+
+.pagetitleall {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.section {
+  padding: 32px;
+
+  @media (max-width: 1024px) {
+    padding: 32px 16px;
+  }
+}
+
+.introimagecontainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 32px;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+.introimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}

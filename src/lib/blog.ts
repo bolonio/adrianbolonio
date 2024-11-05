@@ -1,89 +1,60 @@
 import fs from "fs"
 import matter from "gray-matter"
+import { join } from "path"
 
-export type BlogPost = {
+export type Post = {
   slug: string
-  frontmatter: {
-    [key: string]: any
+  title: string
+  description: string
+  locale: string
+  date: string
+  image: string
+  imageAlt: string
+  alternate: string
+  ogImage: {
+    url: string
   }
+  tags: string[]
   content: string
+  preview?: boolean
 }
 
-const getAllBlogPosts = async (locale: string = "en") => {
-  const files = fs.readdirSync("blog")
-  let blogPosts = files.map((fileName) => {
-    const slug = fileName.replace(".md", "")
-    const readFile = fs.readFileSync(`blog/${fileName}`, "utf-8")
-    const { data: frontmatter, content } = matter(readFile)
-    return {
-      slug,
-      frontmatter,
-      content,
-    }
-  })
-  // Sort the blog posts by date
-  blogPosts.sort((prev, post) =>
-    new Date(prev.frontmatter.publishedAt) <
-    new Date(post.frontmatter.publishedAt)
-      ? 1
-      : -1
-  )
-  // Filter by locale
-  blogPosts = blogPosts.filter(
-    ({ frontmatter }) => frontmatter.locale === locale
-  )
-  return blogPosts
+const postsDirectory = join(process.cwd(), "posts")
+
+export function getPostSlugs() {
+  return fs.readdirSync(postsDirectory)
 }
 
-export const getBlogPosts = async (locale: string = "en", limit?: number) => {
-  let blogPosts = await getAllBlogPosts(locale)
-  // Filter by limit
-  blogPosts = limit ? blogPosts.slice(0, limit) : blogPosts
-  return blogPosts
+export function getPostBySlug(slug: string) {
+  const realSlug = slug.replace(/\.md$/, "")
+  const fullPath = join(postsDirectory, `${realSlug}.md`)
+  const fileContents = fs.readFileSync(fullPath, "utf8")
+  const { data, content } = matter(fileContents)
+
+  return { ...data, slug: realSlug, content } as Post
 }
 
-export const getBlogPostsByTag = async (
-  tag: string,
-  locale: string = "en",
-  limit?: number
-) => {
-  let blogPosts = await getAllBlogPosts(locale)
-  // Filter by tag
-  blogPosts = blogPosts.filter(({ frontmatter }) =>
-    frontmatter.tags.includes(tag)
-  )
-  // Filter by limit
-  blogPosts = limit ? blogPosts.slice(0, limit) : blogPosts
-  return blogPosts
+export function getPosts(locale: string = "en", limit?: number): Post[] {
+  const slugs = getPostSlugs()
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug))
+    .filter((post) => post.locale === locale)
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  return limit ? posts.slice(0, limit) : posts
 }
 
-export const getBlogPostBySlug = async (slug: string) => {
-  const fileName = fs.readFileSync(`blog/${slug}.md`, "utf-8")
-  const { data: frontmatter, content } = matter(fileName)
-  return {
-    content,
-    frontmatter,
-  }
+export function getPostsByTag(tag: string, locale: string, limit?: number) {
+  const slugs = getPostSlugs()
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug))
+    .filter((post) => post.tags?.includes(tag) && post.locale === locale)
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  return limit ? posts.slice(0, limit) : posts
 }
 
-export type TagOptions = {
-  [key: string]: string[]
-}
-
-async function collateTags() {
-  const files = fs.readdirSync("blog")
-  let allTags = new Set<string>() // to ensure only unique tags are added
-  files.map((fileName) => {
-    const readFile = fs.readFileSync(`blog/${fileName}`, "utf-8")
-    const { data: frontmatter } = matter(readFile)
-    frontmatter.tags.forEach((tag: string) => allTags.add(tag))
-  })
-  return Array.from(allTags)
-}
-
-export async function getTags(dataType: string) {
-  const tags: TagOptions = {
-    blog: await collateTags(),
-  }
-  return tags[dataType]
+export function getRelatedPosts(slug: string) {
+  const post = getPostBySlug(slug)
+  const relatedPosts = getPostsByTag(post.tags[0], post.locale, 3)
+  // Remove the post itself from the relatedPosts
+  return relatedPosts.filter((relatedPost) => relatedPost.slug !== post.slug)
 }

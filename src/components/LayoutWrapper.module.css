@@ -1,0 +1,19 @@
+.layoutwrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+
+  @media (max-width: 1024px) {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  &.layoutwrapperblog {
+    max-width: 850px;
+  }
+}

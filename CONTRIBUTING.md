@@ -7,11 +7,22 @@ This is an open source project, so if you have suggestions for how this project 
 In general, I follow the "fork-and-pull" Git workflow:
 
 1.  **Fork and clone** the repo on GitHub.
-2.  **Configure and install** the dependencies `npm install`.
-3.  **Create** a new branch: `git checkout -b branch-name`.
-4.  **Commit** all your changes to your branch. Please write a [good commit message](https://chris.beams.io/posts/git-commit/).
-5.  **Push** your work back up to your fork.
-6.  **Submit a Pull Request** so that I can review your changes. Please add documentation and some details to the PR.
+2.  **Configure and install** the dependencies.
+
+```
+$ yarn install
+```
+
+3.  **Run** the project and open `http://localhost:3000/` in your browser to test it.
+
+```
+$ yarn dev
+```
+
+4. **Create** a new branch: `git checkout -b branch-name`.
+5. **Commit** all your changes to your branch. Please write a [good commit message](https://chris.beams.io/posts/git-commit/).
+6. **Push** your work back up to your fork.
+7. **Submit a Pull Request** so that I can review your changes. Please add documentation and details to the PR.
 
 Keep your changes as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests. Work in Progress pull requests are also welcome to get feedback early on, or if there is something blocked you.
 

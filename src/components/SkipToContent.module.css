@@ -1,0 +1,23 @@
+.skiptocontent {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 100%;
+  padding: 25px 0;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  outline: none;
+  z-index: 999;
+
+  &:not(:focus) {
+    top: -200px;
+  }
+}

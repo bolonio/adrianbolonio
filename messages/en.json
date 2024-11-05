@@ -1,0 +1,70 @@
+{
+  "Index": {
+    "title": "Hello"
+  },
+  "SEO": {
+    "title": "Adrián Bolonio - Accessibility Software Engineering",
+    "description": "Hi, I’m Adrián Bolonio, a Senior Software Engineer with a passion on making technology accessible for everyone.",
+    "author": "Adrián Bolonio",
+    "image": {
+      "path": "images/intro.jpg",
+      "alt": "Me giving a talk. The picture is taken from the back of the room, so the audience appears in foreground and the stage in background. In the picture my name Adrián Bolonio is written"
+    }
+  },
+  "About": {
+    "title": "About me",
+    "bio": "Hi, I’m Adrián Bolonio, a Senior Software Engineer with a passion on making technology accessible for everyone. I like using and designing systems and interfaces that remove barriers and create a seamless online experience for all users. I bring years of expertise in frontend engineering and accessibility, plus hands-on experience as engineering manager guiding teams toward more inclusive digital solutions. Remote work has allowed me to connect with teams from all over, which keeps me inspired and open to new perspectives. Outside of work, I’m an avid gamer, love experimenting in the kitchen, and always look forward to my next travel adventure.",
+    "contact_me": "The best way to contact me is either via my <twitter>twitter</twitter> or you can send me an <email>email</email>."
+  },
+  "Talks": {
+    "title": "Talks",
+    "speaker_invitation": "If you’d like to invite me to speak at your conference, feel free to send me an <email>email</email>, but please include the dates and location of the conference, the type of conference (topic of the conference, target audience, number of attendees, number of tracks, ...), the type of the talk (keynote, workshop, panel, lightning talk), and the accessibility details of the venue. Please be aware that I expect you to cover at least the transport and acommodation costs. Thanks.",
+    "watch_video": "Watch video",
+    "upcoming_talks": "Upcoming talks",
+    "all_talks": "All talks"
+  },
+  "Blog": {
+    "title": "Blog",
+    "latest_posts": "Latest posts",
+    "all_posts": "All posts",
+    "related_posts": "Related posts",
+    "tag": "Tag",
+    "tag_link": "View all posts with the tag {tag}",
+    "og_image_alt": "A browser with the title of the article ({title}) and the date of the article ({date}). As well there is the url of my website (www.adrianbolonio.com) and my Twitter and GitHub username (@bolonio)"
+  },
+  "CV": {
+    "title": "CV",
+    "job_experience": "Job experience",
+    "education": "Education",
+    "technologies": "Technologies"
+  },
+  "Themes": {
+    "change_theme": "Change to {theme} theme"
+  },
+  "Languages": {
+    "change_language": "Change language to {languageName}",
+    "english": "english",
+    "spanish": "spanish",
+    "flag_alt": "The flag of {languageFlag}"
+  },
+  "Navigation": {
+    "skip_to_content": "Skip to content",
+    "home": "Home",
+    "blog": "Blog",
+    "talks": "Talks",
+    "about": "About me",
+    "cv": "CV",
+    "rss": "RSS"
+  },
+  "Contact": {
+    "title": "Contact",
+    "go_to_profile": "Go to my {contact} profile",
+    "contact_me": "Contact me via {contact}",
+    "logo_alt": "The {contact} logo",
+    "librecounter": "Go to the GDPR Compliant Analytics of my site"
+  },
+  "Error": {
+    "title": "Page not found",
+    "message": "Ups, it looks like this pages doesn't exist. Why don't you give a look at my latests posts in the meantime?"
+  }
+}

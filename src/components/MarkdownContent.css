@@ -1,0 +1,36 @@
+.blogpostcontainer {
+  & img {
+    width: 100%;
+  }
+
+  & h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  & h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  & h4 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  & blockquote {
+    margin: 0;
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 6px var(--primary) solid;
+  }
+}

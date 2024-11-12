@@ -27,7 +27,7 @@ export const Header = () => {
             alt="Adrián Bolonio Logo"
           />
           <div className={styles.headermenu}>
-            <div className={styles.headermainmenu}>
+            <div className={`${styles.headermainmenu} ${styles.headermenu}`}>
               {headerMenu.map((menuItem) => (
                 <Link
                   className={styles.headermenulink}

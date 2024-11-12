@@ -16,9 +16,6 @@
 }
 
 .headermainmenu {
-  display: flex;
-  align-items: center;
-  gap: 24px;
   @media (max-width: 768px) {
     width: 100%;
     display: none;

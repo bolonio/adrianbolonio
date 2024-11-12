@@ -44,8 +44,11 @@ export default async function Tag({ params }: Params) {
             {t("all_posts")}
           </Link>
         </div>
-
-        <BlogContainer posts={allPosts} direction="vertical" />
+        {allPosts.length > 0 ? (
+          <BlogContainer posts={allPosts} direction="vertical" />
+        ) : (
+          <p>{t("tag_noposts", { tag })}</p>
+        )}
       </LayoutWrapper>
     </section>
   )

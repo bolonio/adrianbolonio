@@ -30,6 +30,7 @@
     "related_posts": "Posts similares",
     "tag": "Tag",
     "tag_link": "Ver todos los posts con la etiqueta {tag}",
+    "tag_noposts": "No se han encontrado posts con la etiqueta {tag}",
     "og_image_alt": "Un navegador con el título del post ({title}) y la fecha del post ({date}). También aparece la url de mi página web (www.adrianbolonio.com) y mi usuario de Twitter y GitHub (@bolonio)"
   },
   "CV": {

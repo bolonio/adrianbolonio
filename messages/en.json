@@ -30,6 +30,7 @@
     "related_posts": "Related posts",
     "tag": "Tag",
     "tag_link": "View all posts with the tag {tag}",
+    "tag_noposts": "There are no posts with the tag {tag}",
     "og_image_alt": "A browser with the title of the article ({title}) and the date of the article ({date}). As well there is the url of my website (www.adrianbolonio.com) and my Twitter and GitHub username (@bolonio)"
   },
   "CV": {

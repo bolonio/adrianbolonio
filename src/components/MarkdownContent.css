@@ -5,6 +5,7 @@
 
   & h2 {
     font-size: 2.75rem;
+    line-height: 2.75rem;
     font-weight: 800;
     letter-spacing: -0.03em;
     margin: 0;
@@ -13,6 +14,7 @@
 
   & h3 {
     font-size: 2rem;
+    line-height: 2rem;
     font-weight: 800;
     letter-spacing: -0.03em;
     margin: 0;
@@ -21,6 +23,7 @@
 
   & h4 {
     font-size: 1.75rem;
+    line-height: 1.75rem;
     font-weight: 800;
     letter-spacing: -0.03em;
     margin: 0;

@@ -29,8 +29,7 @@ export const talks: TalksType[] = [
           countryCode: "",
         },
         link: "https://qualityforge.io/",
-        video:
-          "https://www.youtube.com/live/4Xg48gEl2Ps?si=-JHNJtDbuUIhkVdm&t=8459",
+        video: "https://www.youtube.com/watch?v=mJ6BRwjJR2s",
         image: "qualityforge.jpg",
       },
     ],

@@ -23,7 +23,8 @@ export async function generateMetadata({ params }: MetaDataProp) {
       description: post?.description,
       slug: `blog/${slug}`,
       image: {
-        path: `images/blog/${slug}/${post?.image}`,
+        // path: `images/blog/${slug}/${post?.image}`,
+        path: `/${locale}/blog/${slug}/opengraph-image`,
         alt: t("og_image_alt", {
           title: post?.title,
           date: getFormattedDate(post?.date ?? "", post?.locale),

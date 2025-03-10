@@ -3,6 +3,33 @@ import { CV } from "./types"
 export const cv_es: CV = {
   jobs: [
     {
+      company: "kununu",
+      companyUrl: "http://www.kununu.com/",
+      companyLogo: "kununu.png",
+      title: "Senior Frontend Engineer",
+      description:
+        "Responsible for developing and optimizing frontend applications for all kununu products, contributing to the migration toward an architecture with React. Driving improvements in the design system, ensuring scalability, consistency, and accessibility. Automating testing and deployment processes to enhance efficiency and reliability. Advocating for inclusive design, collaborating with product and design teams to implement accessibility best practices. Mentoring junior engineers and promoting modern engineering practices with JavaScript, TypeScript, and cloud-based architectures.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "LESS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Styled Components",
+      ],
+      location: {
+        country: {
+          id: "AT",
+          name: "Austria",
+        },
+        city: "Vienna",
+      },
+      startDate: "02/15/2024",
+      endDate: "present",
+    },
+    {
       company: "Miro",
       companyUrl: "http://www.miro.com/",
       companyLogo: "miro.png",
@@ -61,7 +88,7 @@ export const cv_es: CV = {
       endDate: "11/18/2022",
     },
     {
-      company: "willhaben internet service GmbH & Co KG",
+      company: "willhaben",
       companyUrl: "https://www.willhaben.at/",
       companyLogo: "willhaben.webp",
       title: "Engineering Manager",
@@ -78,7 +105,7 @@ export const cv_es: CV = {
       endDate: "07/01/2021",
     },
     {
-      company: "willhaben internet service GmbH & Co KG",
+      company: "willhaben",
       companyUrl: "https://www.willhaben.at/",
       companyLogo: "willhaben.webp",
       title: "Senior Frontend Engineer",
@@ -106,7 +133,7 @@ export const cv_es: CV = {
       endDate: "10/01/2018",
     },
     {
-      company: "UpLeveled GmbH",
+      company: "UpLeveled",
       companyUrl: "https://upleveled.io/",
       companyLogo: "upleveled.png",
       title: "Guest Lecturer",
@@ -140,7 +167,7 @@ export const cv_es: CV = {
       endDate: "04/01/2020",
     },
     {
-      company: "yelster digital gmbh",
+      company: "yelster digital",
       companyUrl: "https://www.yelsterdigital.com/",
       companyLogo: "yelsterdigital.webp",
       title: "Frontend Engineer",

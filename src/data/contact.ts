@@ -24,6 +24,14 @@ export const contacts = [
     inFooter: true,
   },
   {
+    iconLight: "/images/contact/bluesky.svg",
+    iconDark: "/images/contact/bluesky_dark.svg",
+    name: "Bluesky",
+    title: "@bolonio",
+    url: "https://bsky.app/profile/bolonio.bsky.social",
+    inFooter: true,
+  },
+  {
     iconLight: "/images/contact/github.svg",
     iconDark: "/images/contact/github_dark.svg",
     name: "Github",

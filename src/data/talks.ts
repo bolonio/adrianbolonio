@@ -17,6 +17,23 @@ export type TalksType = {
 }
 
 export const talks: TalksType[] = [
+    {
+    year: "2025",
+    talks: [
+      {
+        title: "Automating JSDoc documentation generation with Github actions",
+        conference: "React Vienna",
+        date: "03/06/2025",
+        location: {
+          city: "Vienna",
+          countryCode: "AT",
+        },
+        link: "https://twitter.com/reactvienna",
+        video: "",
+        image: "reactvienna.jpg",
+      },
+    ],
+  },
   {
     year: "2024",
     talks: [

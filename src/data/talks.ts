@@ -18,6 +18,23 @@ export type TalksType = {
 
 export const talks: TalksType[] = [
     {
+      year: "2026",
+      talks: [
+        {
+          title: "Automating JSDoc documentation generation with Github actions",
+          conference: "World Usability Congress",
+          date: "10/15/2026",
+          location: {
+            city: "Graz",
+            countryCode: "AT",
+          },
+          link: "https://worldusabilitycongress.com/agenda-26/?agenda=8XhR0I",
+          video: "",
+          image: "worldusabilitycongress.jpg",
+        },
+      ],
+    },
+    {
     year: "2025",
     talks: [
       {

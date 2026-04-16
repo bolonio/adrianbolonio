@@ -23,6 +23,9 @@ export default async function Layout({
   // side is the easiest way to get started
   const messages = await getMessages()
 
+  const scriptProps =
+    typeof window === 'undefined' ? undefined : ({ type: 'application/json' } as const);
+
   return (
     <html
       lang={locale}
@@ -31,7 +34,7 @@ export default async function Layout({
     >
       <body className={styles.body}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider>
+          <ThemeProvider scriptProps={scriptProps}>
             <SkipToContent />
             <Header />
             <main id="content" className={styles.main}>

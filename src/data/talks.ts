@@ -21,7 +21,7 @@ export const talks: TalksType[] = [
       year: "2026",
       talks: [
         {
-          title: "Automating JSDoc documentation generation with Github actions",
+          title: "",
           conference: "World Usability Congress",
           date: "10/15/2026",
           location: {
@@ -32,6 +32,18 @@ export const talks: TalksType[] = [
           video: "",
           image: "worldusabilitycongress.jpg",
         },
+        {
+          title: "Podcast",
+          conference: "Tech Effect by TestDevLab",
+          date: "05/01/2026",
+          location: {
+            city: "Podcast",
+            countryCode: "",
+          },
+          link: "https://www.testdevlab.com/content-library/podcasts",
+          video: "",
+          image: "techeffect.avif",
+        }
       ],
     },
     {

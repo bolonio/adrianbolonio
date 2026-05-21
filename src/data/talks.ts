@@ -51,8 +51,8 @@ export const talks: TalksType[] = [
       talks: [
       {
         title: "#4 Apps for Everyone: How to Write Accessible Code",
-        conference: "React Vienna",
-        date: "03/06/2025",
+        conference: "IT Innovation by Jules Pabst",
+        date: "06/16/2025",
         location: {
           city: "Podcast",
           countryCode: "",
@@ -63,7 +63,7 @@ export const talks: TalksType[] = [
       },
       {
         title: "Automating JSDoc documentation generation with Github actions",
-        conference: "IT Innovation by Jules Pabst",
+        conference: "React Vienna",
         date: "03/06/2025",
         location: {
           city: "Vienna",

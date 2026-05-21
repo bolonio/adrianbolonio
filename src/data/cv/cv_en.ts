@@ -26,7 +26,7 @@ export const cv_en: CV = {
         },
         city: "Vienna",
       },
-      startDate: "02/15/2024",
+      startDate: "02/15/2025",
       endDate: "present",
     },
     {

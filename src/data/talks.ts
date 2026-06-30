@@ -33,6 +33,18 @@ export const talks: TalksType[] = [
           image: "worldusabilitycongress.jpg",
         },
         {
+          title: "",
+          conference: "HalfStack Vienna",
+          date: "11/16/2026",
+          location: {
+            city: "Vienna",
+            countryCode: "AT",
+          },
+          link: "https://halfstackconf.com/vienna",
+          video: "",
+          image: "halfstackconf.jpg",
+        },
+        {
           title: "Podcast",
           conference: "Tech Effect by TestDevLab",
           date: "05/01/2026",

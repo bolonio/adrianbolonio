@@ -22,18 +22,6 @@ export const talks: TalksType[] = [
       talks: [
         {
           title: "",
-          conference: "World Usability Congress",
-          date: "10/15/2026",
-          location: {
-            city: "Graz",
-            countryCode: "AT",
-          },
-          link: "https://worldusabilitycongress.com/agenda-26/?agenda=8XhR0I",
-          video: "",
-          image: "worldusabilitycongress.jpg",
-        },
-        {
-          title: "",
           conference: "HalfStack Vienna",
           date: "11/16/2026",
           location: {
@@ -53,7 +41,7 @@ export const talks: TalksType[] = [
             countryCode: "",
           },
           link: "https://www.testdevlab.com/content-library/podcasts",
-          video: "",
+          video: "https://www.testdevlab.com/content-library/podcasts/adrian-bolonio-miro-accessibility-design-systems-ai",
           image: "techeffect.avif",
         }
       ],

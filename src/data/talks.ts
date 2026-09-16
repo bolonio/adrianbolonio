@@ -42,7 +42,7 @@ export const talks: TalksType[] = [
           },
           link: "https://www.testdevlab.com/content-library/podcasts",
           video: "https://www.testdevlab.com/content-library/podcasts/adrian-bolonio-miro-accessibility-design-systems-ai",
-          image: "techeffect.avif",
+          image: "techeffect.webp",
         }
       ],
     },

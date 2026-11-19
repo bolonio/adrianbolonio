@@ -19,9 +19,21 @@ export type TalksType = {
 export const talks: TalksType[] = [
     {
       year: "2026",
-      talks: [
+    talks: [
         {
-          title: "",
+          title: "The A11y Game: when the screen reader is the main character",
+          conference: "ViennaJS",
+          date: "11/25/2026",
+          location: {
+            city: "Vienna",
+            countryCode: "AT",
+          },
+          link: "https://viennajs.org/en/",
+          video: "",
+          image: "viennajs2026.avif",
+        },
+        {
+          title: "The A11y Game: when the screen reader is the main character",
           conference: "HalfStack Vienna",
           date: "11/16/2026",
           location: {
